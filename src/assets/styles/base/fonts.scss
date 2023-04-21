@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Futurica";
+  src: local("Futurica Medium"), local("Futurica-Medium"),
+    url("../fonts/Futurica-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futurica";
+  src: local("Futurica Extra Light"), local("Futurica-Extra-Light"),
+    url("../fonts/Futurica-Extra-Light.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futurica";
+  src: local("Futurica Bold"), local("Futurica-Bold"),
+    url("../fonts/Futurica-Bold.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
