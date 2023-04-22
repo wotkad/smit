@@ -3,6 +3,22 @@ body {
   @apply h-full font-futurica text-white
 }
 
+.custom-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: dark;
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    border: 8px solid #fff;
+    background-color: transparent;
+  }
+}
+
 .render {
   @apply fixed top-0 left-0 z-[99999] h-full w-full bg-white
 }
@@ -13,6 +29,10 @@ body {
 
 .page-wrapper {
   @apply w-full
+}
+
+.bg {
+  @apply fixed top-0 left-0 w-full h-full bg-black opacity-50 z-10 hidden
 }
 
 .page-container {

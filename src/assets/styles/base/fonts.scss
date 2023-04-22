@@ -21,3 +21,11 @@
   font-weight: 500;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "Futurica";
+  src: local("Futurica Regular"), local("Futurica-Regular"),
+    url("../fonts/Futurica-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}

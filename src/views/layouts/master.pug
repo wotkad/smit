@@ -67,6 +67,7 @@ html(lang="ru")
       else window.onload = autorun;
     noscript.
       Похоже у вас отключён Javascript, поэтому вы видете это сообщение.
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
 
   body
     .render
@@ -74,5 +75,7 @@ html(lang="ru")
     include ../components/header.pug
 
     block content
+
+    .bg
 
     block js

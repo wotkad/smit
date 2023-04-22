@@ -9,9 +9,11 @@
 
 require("./base/preloader");
 require("./base/checkInternalLinks");
-require("./base/routing/routing");
 require("./base/smoothScroll");
 require("./base/scrollReveal");
 require("./base/checkTarget");
 require("./base/currentYear");
 require("./base/getHeaderHeight");
+
+require("./components/mobile-menu");
+require("./components/fixed-header");

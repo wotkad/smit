@@ -1,3 +1,25 @@
 .hero {
-  
+  h1 {
+    br {
+      @apply block lg:hidden
+    }
+    @apply mb-8 text-white text-[28px] leading-[38px] md:text-5xl md:leading-[64px] font-bold max-w-[400px] lg:max-w-[637px]
+  }
+  &__button {
+    @include button;
+    @apply absolute bottom-[46px] w-full justify-center md:justify-start md:w-auto md:static
+  }
+  &__wrapper {
+    @apply min-h-[500px] md:min-h-screen z-10 relative flex flex-col items-start justify-center
+  }
+  &__video {
+    &:before {
+      @apply content-[''] absolute top-0 left-0 w-full h-full z-[5] bg-black opacity-60
+    }
+    video {
+      @apply min-h-[500px] md:min-h-screen w-full object-cover
+    }
+    @apply absolute top-0 left-0 w-full min-h-[500px] md:min-h-screen
+  }
+  @apply min-h-[500px] md:min-h-screen
 }

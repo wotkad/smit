@@ -1,3 +1,220 @@
 .header {
-  
+  &-other {
+    .header {
+      &__logo {
+        svg {
+          path {
+            @apply fill-green-400
+          }
+        }
+      }
+      &__link {
+        a {
+          @apply text-gray-200
+        }
+      }
+      &__phone {
+        span {
+          @apply text-green-400
+        }
+        svg {
+          path {
+            @apply fill-green-400
+          }
+        }
+        &:hover {
+          span {
+            @apply text-white
+          }
+          svg {
+            path {
+              @apply fill-white
+            }
+          }
+          @apply bg-gray-400
+        }
+        @apply bg-green-300
+      }
+      &__dropdown {
+        & > svg {
+          path {
+            @apply stroke-gray-200
+          }
+        }
+      }
+      @apply py-[43px] bg-white
+    }
+    &.active {
+      .header {
+        &__link {
+          a {
+            &:hover {
+              @apply text-green-400
+            }
+          }
+        }
+        &__dropdown {
+          &:hover {
+            & > a {
+              @apply text-green-400
+            }
+            & > svg {
+              path {
+                @apply stroke-green-400
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.active {
+    .header__logo {
+      svg {
+        path {
+          @apply fill-green-400
+        }
+      }
+    }
+    .header__link {
+      a {
+        @apply text-gray-200
+      }
+      svg {
+        path {
+          @apply stroke-gray-200
+        }
+      }
+    }
+    @apply py-5 bg-white
+  }
+  &__logo {
+    svg {
+      path {
+        @apply transition-[fill]
+      }
+    }
+  }
+  &__wrapper {
+    @apply flex items-center justify-between
+  }
+  &__menu {
+    @apply hidden lg:flex items-stretch gap-[52px]
+  }
+  &__link {
+    a {
+      &:hover {
+        @apply text-green-400
+      }
+      @apply transition-[color] tracking-[0.02em] text-base duration-300
+    }
+    svg {
+      path {
+        @apply transition-[stroke] duration-300
+      }
+      @apply transition-transform duration-300
+    }
+    @apply flex items-center relative gap-[10px] cursor-pointer py-[10px]
+  }
+  &__dropdown {
+    &:hover {
+      .header__list {
+        @apply opacity-100 visible
+      }
+      & > a {
+        @apply text-green-400
+      }
+      & > svg {
+        path {
+          @apply stroke-green-400
+        }
+        @apply rotate-180
+      }
+    }
+  }
+  &__list {
+    .header__link {
+      &:first-child {
+        @apply pt-0 border-none
+      }
+      &:last-child {
+        @apply pb-0
+      }
+      &:hover {
+        & > a {
+          @apply text-green-400
+        }
+        svg {
+          path {
+            @apply stroke-green-400
+          }
+        }
+      }
+      @apply py-6 border-t border-gray-300 text-gray-200
+    }
+    @apply absolute top-[44px] left-0 w-[394px] p-6 bg-white opacity-0 invisible transition-[opacity,visibility] will-change-[opacity,visibility] duration-300
+  }
+  &__phone {
+    span {
+      @apply text-white text-sm leading-6 tracking-[0.02em] transition-colors duration-300
+    }
+    svg {
+      path {
+        @apply transition-colors duration-300
+      }
+    }
+    &:hover {
+      span {
+        @apply text-green-400
+      }
+      svg {
+        path {
+          @apply fill-green-400
+        }
+      }
+      @apply bg-green-300
+    }
+    @apply hidden lg:flex gap-[10px] items-center transition-colors duration-300 rounded-[5px] shadow-[0_4px_10px_rgba(0,_0,_0,_0.07)] bg-gray-400 py-[6px] px-3
+  }
+  &__burger {
+    @apply block lg:hidden
+  }
+  &__mobmenu {
+    &__phone {
+      span {
+        @apply text-white text-sm leading-6 tracking-[0.02em] transition-colors duration-300
+      }
+      @apply flex gap-[10px] items-center rounded-[5px] bg-green-600 py-[6px] px-3 absolute bottom-[34px]
+    }
+    &.active {
+      @apply translate-x-0
+    }
+    &__container {
+      @apply flex flex-col items-start gap-6 md:gap-9 max-h-[calc(100vh-143px)] md:max-h-[calc(100vh-170px)] overflow-y-auto
+    }
+    &__list {
+      &__link {
+        @apply text-white font-extralight text-sm leading-5 mt-4 md:mt-6 inline-block tracking-[0.02em]
+      }
+      @apply hidden pl-[10px] md:pl-4
+    }
+    &__dropdown {
+      &__main {
+        &.active {
+          img {
+            @apply rotate-180
+          }
+        }
+        @apply flex items-center gap-[10px] 
+      }
+      img {
+        @apply transition-transform duration-300
+      }
+    }
+    &__close {
+      @apply absolute right-[29px] top-5
+    }
+    @apply translate-x-full right-0 duration-300 transition-transform fixed w-[254px] md:w-[319px] min-h-screen top-0 bg-green-400 pl-[34px] md:pl-10 pr-[35px] md:pr-[53px] pb-[29px] md:pb-[34px] pt-[39px] md:pt-[66px]
+  }
+  @apply fixed top-0 left-0 w-full z-50 py-[43px] duration-300 transition-[padding,background-color]
 }
