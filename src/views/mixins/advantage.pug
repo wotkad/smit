@@ -1,0 +1,8 @@
+mixin advantage(title, subtitle, text, src, alt)
+  .advantage
+    .advantage__header
+      h3.advantage__title= title 
+      span.advantage__subtitle= subtitle
+      .advantage__icon
+        img(src=""+src, alt=""+alt)
+    p.advantage__text !{text}

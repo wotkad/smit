@@ -20,6 +20,7 @@
   Миксины
 */
 @import "./mixins/button";
+@import "./mixins/advantage";
 
 /*
   Компоненты
@@ -27,3 +28,4 @@
 @import "./components/header";
 @import "./components/footer";
 @import "./components/hero";
+@import "./components/advantages";

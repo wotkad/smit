@@ -69,21 +69,60 @@
     }
   }
   &.active {
-    .header__logo {
-      svg {
-        path {
-          @apply fill-green-400
+    .header {
+      &__logo {
+        svg {
+          path {
+            @apply fill-green-400
+          }
         }
       }
-    }
-    .header__link {
-      a {
-        @apply text-gray-200
-      }
-      svg {
-        path {
-          @apply stroke-gray-200
+      &__dropdown {
+        &:hover {
+          & > a {
+            @apply text-green-400
+          }
+          & > svg {
+            path {
+              @apply stroke-green-400
+            }
+          }
         }
+      }
+      &__link {
+        a {
+          &:hover {
+            @apply text-green-400
+          }
+          @apply text-gray-200
+        }
+        svg {
+          path {
+            @apply stroke-gray-200
+          }
+        }
+      }
+      &__phone {
+        span {
+          @apply text-green-400
+        }
+        svg {
+          path {
+            @apply fill-green-400
+          }
+        }
+        &:hover {
+          span {
+            @apply text-white
+          }
+          svg {
+            path {
+              @apply fill-white
+            }
+          }
+          @apply bg-gray-400
+        }
+        @apply bg-green-300
       }
     }
     @apply py-5 bg-white
@@ -91,7 +130,7 @@
   &__logo {
     svg {
       path {
-        @apply transition-[fill]
+        @apply transition-[fill] duration-300 will-change-[fill]
       }
     }
   }
@@ -106,13 +145,13 @@
       &:hover {
         @apply text-green-400
       }
-      @apply transition-[color] tracking-[0.02em] text-base duration-300
+      @apply transition-[color] tracking-[0.02em] text-base duration-300 will-change-[color] text-white
     }
     svg {
       path {
-        @apply transition-[stroke] duration-300
+        @apply transition-[stroke] duration-300 will-change-[stroke]
       }
-      @apply transition-transform duration-300
+      @apply transition-[transform,opacity] duration-300 will-change-[transform,opacity] min-w-[12px] min-h-[12px]
     }
     @apply flex items-center relative gap-[10px] cursor-pointer py-[10px]
   }
@@ -140,6 +179,9 @@
       &:last-child {
         @apply pb-0
       }
+      svg {
+        @apply opacity-0 absolute right-0
+      }
       &:hover {
         & > a {
           @apply text-green-400
@@ -148,19 +190,20 @@
           path {
             @apply stroke-green-400
           }
+          @apply opacity-100
         }
       }
-      @apply py-6 border-t border-gray-300 text-gray-200
+      @apply py-6 border-t border-gray-300 pr-3 text-gray-200
     }
-    @apply absolute top-[44px] left-0 w-[394px] p-6 bg-white opacity-0 invisible transition-[opacity,visibility] will-change-[opacity,visibility] duration-300
+    @apply shadow-md absolute top-[44px] left-0 w-[394px] p-6 bg-white opacity-0 invisible transition-[opacity,visibility] will-change-[opacity,visibility] duration-300
   }
   &__phone {
     span {
-      @apply text-white text-sm leading-6 tracking-[0.02em] transition-colors duration-300
+      @apply text-white text-sm leading-6 tracking-[0.02em] transition-[color] duration-300
     }
     svg {
       path {
-        @apply transition-colors duration-300
+        @apply transition-[fill] duration-300
       }
     }
     &:hover {
@@ -174,7 +217,7 @@
       }
       @apply bg-green-300
     }
-    @apply hidden lg:flex gap-[10px] items-center transition-colors duration-300 rounded-[5px] shadow-[0_4px_10px_rgba(0,_0,_0,_0.07)] bg-gray-400 py-[6px] px-3
+    @apply hidden lg:flex gap-[10px] items-center will-change-[background-color] transition-[background-color] duration-300 rounded-[5px] shadow-[0_4px_10px_rgba(0,_0,_0,_0.07)] bg-gray-400 py-[6px] px-3
   }
   &__burger {
     @apply block lg:hidden
@@ -182,7 +225,7 @@
   &__mobmenu {
     &__phone {
       span {
-        @apply text-white text-sm leading-6 tracking-[0.02em] transition-colors duration-300
+        @apply text-white text-sm leading-6 tracking-[0.02em] transition-[color] duration-300 will-change-[color]
       }
       @apply flex gap-[10px] items-center rounded-[5px] bg-green-600 py-[6px] px-3 absolute bottom-[34px]
     }
@@ -208,13 +251,13 @@
         @apply flex items-center gap-[10px] 
       }
       img {
-        @apply transition-transform duration-300
+        @apply transition-transform duration-300 will-change-transform
       }
     }
     &__close {
       @apply absolute right-[29px] top-5
     }
-    @apply translate-x-full right-0 duration-300 transition-transform fixed w-[254px] md:w-[319px] min-h-screen top-0 bg-green-400 pl-[34px] md:pl-10 pr-[35px] md:pr-[53px] pb-[29px] md:pb-[34px] pt-[39px] md:pt-[66px]
+    @apply translate-x-full right-0 duration-300 will-change-transform transition-transform fixed w-[254px] md:w-[319px] min-h-screen top-0 bg-green-400 pl-[34px] md:pl-10 pr-[35px] md:pr-[53px] pb-[29px] md:pb-[34px] pt-[39px] md:pt-[66px]
   }
   @apply fixed top-0 left-0 w-full z-50 py-[43px] duration-300 transition-[padding,background-color]
 }

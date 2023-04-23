@@ -1,0 +1,5 @@
+.advantages {
+  &__wrapper {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-[30px] lg:gap-x-5
+  }
+}

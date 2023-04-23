@@ -1,3 +1,56 @@
 .footer {
-  
+  &__wrapper {
+    @apply flex flex-col gap-8
+  }
+  &__grid {
+    &-second {
+      .footer__col {
+        &:has(div) {
+          @apply flex
+        }
+        @apply hidden lg:flex
+      }
+      @apply gap-y-2 md:gap-y-12 lg:gap-y-0
+    }
+    @apply grid grid-cols-2 lg:grid-cols-4 gap-y-[42px] md:gap-y-12 lg:gap-y-0
+  }
+  &__link {
+    span {
+      @apply text-base tracking-[0.02em] max-w-[211px] font-medium will-change-[color] duration-300 transition-[color]
+    }
+    &:hover {
+      span {
+        @apply text-green-400
+      }
+    }
+    @apply flex items-start gap-[11px]
+  }
+  &__col {
+    &-fill {
+      @apply col-span-2 md:col-auto
+    }
+    @apply flex flex-col items-start gap-[15px]
+  }
+  &__social {
+    @apply flex gap-[11px]
+  }
+  &__phone {
+    span {
+      @apply font-bold text-sm leading-6 md:text-base
+    }
+  }
+  &__mail {
+    span {
+      @apply font-bold text-sm leading-6 md:text-base
+    }
+  }
+  &__location {
+    span {
+      @apply font-extralight text-sm leading-6 md:text-base
+    }
+  }
+  &__copy {
+    @apply font-extralight
+  }
+  @apply w-full py-10 md:py-12 lg:py-20
 }

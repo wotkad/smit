@@ -1,6 +1,10 @@
 html,
 body {
-  @apply h-full font-futurica text-white
+  @apply h-full font-futurica text-gray-200
+}
+
+.section-gapper {
+  @apply py-10 md:py-14
 }
 
 .custom-scroll {
