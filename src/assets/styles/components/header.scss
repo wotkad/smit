@@ -241,6 +241,9 @@
       }
       @apply hidden pl-[10px] md:pl-4
     }
+    &__link {
+      @apply text-white tracking-[0.02em]
+    }
     &__dropdown {
       &__main {
         &.active {
