@@ -21,6 +21,10 @@
 */
 @import "./mixins/button";
 @import "./mixins/advantage";
+@import "./mixins/client";
+@import "./mixins/product";
+@import "./mixins/work";
+@import "./mixins/service";
 
 /*
   Компоненты
@@ -29,3 +33,8 @@
 @import "./components/footer";
 @import "./components/hero";
 @import "./components/advantages";
+@import "./components/clients";
+@import "./components/production";
+@import "./components/about";
+@import "./components/works";
+@import "./components/services";

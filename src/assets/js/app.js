@@ -17,3 +17,7 @@ require("./base/getHeaderHeight");
 
 require("./components/mobile-menu");
 require("./components/fixed-header");
+require("./components/show-clients");
+require("./components/show-product");
+require("./components/show-works");
+require("./components/services-slider");

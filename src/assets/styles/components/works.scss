@@ -1,0 +1,36 @@
+.works {
+  &__title {
+    h2 {
+      @apply mb-0
+    }
+    &__more {
+      p {
+        @apply text-green-400 will-change-[color,border-color] duration-300 transition-[color] border-b-2 border-green-400 tracking-[0.02em] leading-6 text-xl font-medium
+      }
+      &:hover {
+        p {
+          @apply lg:text-green-500 lg:border-green-500
+        }
+        svg {
+          path {
+            @apply lg:fill-green-500
+          }
+        }
+      }
+      svg {
+        path {
+          @apply will-change-[fill] duration-300 transition-[fill]
+        }
+      }
+      @apply hidden md:flex items-center gap-[5px]
+    }
+    @apply flex items-center justify-between mb-6 md:mb-[50px]
+  }
+  &__items {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[26px] md:gap-[30px] lg:gap-5
+  }
+  &__more {
+    @include button;
+    @apply block md:hidden w-full justify-center mt-[26px]
+  }
+}

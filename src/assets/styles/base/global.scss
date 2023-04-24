@@ -3,8 +3,16 @@ body {
   @apply h-full font-futurica text-gray-200
 }
 
-.section-gapper {
-  @apply py-10 md:py-14
+.section {
+  &__gapper {
+    @apply py-10 md:py-[50px]
+  }
+  &__title {
+    @apply text-[28px] leading-[38px] md:text-4xl mb-6 md:mb-[50px] md:leading-6 font-bold
+  }
+  &-gray {
+    @apply bg-gray-100
+  }
 }
 
 .custom-scroll {

@@ -14,10 +14,12 @@ module.exports = {
     extend: {
       colors: {
         'gray': {
+          '100': '#F2F2F2',
           '200': '#333333',
           '300': '#D9D9D9',
           '400': '#202020',
-          '500': '#CCCCCC'
+          '500': '#CCCCCC',
+          '600': '#C8C8C8'
         },
         'green': {
           '200': '#E5F1F4',
@@ -31,5 +33,8 @@ module.exports = {
     fontFamily: {
       'futurica': ['Futurica'],
     }
-  }
+  },
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
 }

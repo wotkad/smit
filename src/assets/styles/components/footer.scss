@@ -20,7 +20,7 @@
     }
     &:hover {
       span {
-        @apply text-green-400
+        @apply lg:text-green-400
       }
     }
     @apply flex items-start gap-[11px]
@@ -32,6 +32,12 @@
     @apply flex flex-col items-start gap-[15px]
   }
   &__social {
+    a {
+      &:hover {
+        @apply lg:opacity-80
+      }
+      @apply transition-[opacity] will-change-[opacity] duration-300
+    }
     @apply flex gap-[11px]
   }
   &__phone {

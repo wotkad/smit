@@ -1,0 +1,9 @@
+mixin service(href, src, alt, tags, title)
+  .swiper-slide
+    a(href=""+href).service.reveal
+      .service__image 
+        img(src=""+src, alt=""+alt)
+      span.service__tags= tags
+      h3.service__title= title
+      svg.service__link(width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg")
+        path(d="M25.3645 22.6163L23.9286 21.1291L27.5696 17.4881H1.21515L1.21515 15.4368H27.5696L23.9286 11.7958L25.3645 10.3086L31.5183 16.4624L25.3645 22.6163Z" fill="#00738E")

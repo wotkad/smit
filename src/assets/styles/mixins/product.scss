@@ -1,0 +1,21 @@
+.product {
+  &__image {
+    img {
+      @apply object-cover w-full h-full
+    }
+    @apply mb-5 md:mb-7 h-[227px]
+  }
+  &__title {
+    @apply text-2xl leading-6 md:text-[22px] md:leading-8 lg:text-2xl lg:leading-6 mb-[18px] font-medium
+  }
+  &__text {
+    @apply line-clamp-4 text-base font-extralight tracking-[0.02em]
+  }
+  &:after {
+    @apply content-[''] absolute bottom-0 left-0 h-[1px] w-[75px] bg-gray-200
+  }
+  &-hidden {
+    @apply hidden md:block
+  }
+  @apply pb-6
+}

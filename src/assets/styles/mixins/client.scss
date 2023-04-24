@@ -1,0 +1,10 @@
+.client {
+  &__icon {
+    img {
+      @apply max-w-[118px] object-contain w-full
+    }
+  }
+  &-hidden {
+    @apply hidden md:block
+  }
+}

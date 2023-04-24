@@ -3,7 +3,7 @@
     @apply text-white text-sm leading-6 md:text-xl tracking-[0.02em] font-medium
   }
   &:hover {
-    @apply bg-green-500
+    @apply lg:bg-green-500
   }
   @apply bg-green-400 duration-300 inline-flex items-center gap-[10px] md:gap-[14px] rounded-[5px] px-12 py-[10px] md:py-4 transition-[background-color] will-change-[background-color]
 }

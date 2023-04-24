@@ -1,0 +1,9 @@
+.production {
+  &__items {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-y-[56px] md:gap-y-[61px] md:gap-x-[31px] lg:gap-y-[69px] lg:gap-x-[74px]
+  }
+  &__more {
+    @include button;
+    @apply block md:hidden w-full justify-center mt-14
+  }
+}

@@ -24,14 +24,14 @@
         }
         &:hover {
           span {
-            @apply text-white
+            @apply lg:text-white
           }
           svg {
             path {
-              @apply fill-white
+              @apply lg:fill-white
             }
           }
-          @apply bg-gray-400
+          @apply lg:bg-gray-400
         }
         @apply bg-green-300
       }
@@ -49,18 +49,18 @@
         &__link {
           a {
             &:hover {
-              @apply text-green-400
+              @apply lg:text-green-400
             }
           }
         }
         &__dropdown {
           &:hover {
             & > a {
-              @apply text-green-400
+              @apply lg:text-green-400
             }
             & > svg {
               path {
-                @apply stroke-green-400
+                @apply lg:stroke-green-400
               }
             }
           }
@@ -80,11 +80,11 @@
       &__dropdown {
         &:hover {
           & > a {
-            @apply text-green-400
+            @apply lg:text-green-400
           }
           & > svg {
             path {
-              @apply stroke-green-400
+              @apply lg:stroke-green-400
             }
           }
         }
@@ -92,7 +92,7 @@
       &__link {
         a {
           &:hover {
-            @apply text-green-400
+            @apply lg:text-green-400
           }
           @apply text-gray-200
         }
@@ -113,14 +113,14 @@
         }
         &:hover {
           span {
-            @apply text-white
+            @apply lg:text-white
           }
           svg {
             path {
-              @apply fill-white
+              @apply lg:fill-white
             }
           }
-          @apply bg-gray-400
+          @apply lg:bg-gray-400
         }
         @apply bg-green-300
       }
@@ -143,7 +143,7 @@
   &__link {
     a {
       &:hover {
-        @apply text-green-400
+        @apply lg:text-green-400
       }
       @apply transition-[color] tracking-[0.02em] text-base duration-300 will-change-[color] text-white
     }
@@ -158,16 +158,16 @@
   &__dropdown {
     &:hover {
       .header__list {
-        @apply opacity-100 visible
+        @apply lg:opacity-100 lg:visible lg:pointer-events-auto
       }
       & > a {
-        @apply text-green-400
+        @apply lg:text-green-400
       }
       & > svg {
         path {
-          @apply stroke-green-400
+          @apply lg:stroke-green-400
         }
-        @apply rotate-180
+        @apply lg:rotate-180
       }
     }
   }
@@ -184,18 +184,18 @@
       }
       &:hover {
         & > a {
-          @apply text-green-400
+          @apply lg:text-green-400
         }
         svg {
           path {
-            @apply stroke-green-400
+            @apply lg:stroke-green-400
           }
-          @apply opacity-100
+          @apply lg:opacity-100
         }
       }
       @apply py-6 border-t border-gray-300 pr-3 text-gray-200
     }
-    @apply shadow-md absolute top-[44px] left-0 w-[394px] p-6 bg-white opacity-0 invisible transition-[opacity,visibility] will-change-[opacity,visibility] duration-300
+    @apply pointer-events-none shadow-md absolute top-[44px] left-0 w-[394px] p-6 bg-white opacity-0 invisible transition-[opacity,visibility] will-change-[opacity,visibility] duration-300
   }
   &__phone {
     span {
@@ -208,14 +208,14 @@
     }
     &:hover {
       span {
-        @apply text-green-400
+        @apply lg:text-green-400
       }
       svg {
         path {
-          @apply fill-green-400
+          @apply lg:fill-green-400
         }
       }
-      @apply bg-green-300
+      @apply lg:bg-green-300
     }
     @apply hidden lg:flex gap-[10px] items-center will-change-[background-color] transition-[background-color] duration-300 rounded-[5px] shadow-[0_4px_10px_rgba(0,_0,_0,_0.07)] bg-gray-400 py-[6px] px-3
   }
