@@ -1,0 +1,20 @@
+extends ../layouts/master.pug
+
+block title
+  title SMIT | Оборудование
+
+block basicSeo
+  meta(content="Оборудование" name="description")
+  meta(content="Оборудование" name="keywords")
+
+block manifestBrowserconfigFiles
+  link(href="../manifest.json" rel="manifest" crossorigin)
+  meta(content="../browserconfig.xml" name="msapplication-config")
+
+block content
+  main
+    .page-container
+      .page-wrapper
+        include ../components/works.pug
+        include ../components/clients.pug
+      include ../components/footer.pug

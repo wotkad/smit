@@ -1,0 +1,21 @@
+extends ../layouts/master.pug
+
+block title
+  title SMIT | Услуги
+
+block basicSeo
+  meta(content="Услуги" name="description")
+  meta(content="Услуги" name="keywords")
+
+block manifestBrowserconfigFiles
+  link(href="../manifest.json" rel="manifest" crossorigin)
+  meta(content="../browserconfig.xml" name="msapplication-config")
+
+block content
+  main
+    .page-container
+      .page-wrapper
+        include ../components/calculator.pug
+        include ../components/works.pug
+        include ../components/clients.pug
+      include ../components/footer.pug

@@ -11,8 +11,13 @@ body {
     @apply text-[28px] leading-[38px] md:text-4xl mb-6 md:mb-[50px] md:leading-6 font-bold
   }
   &-gray {
-    @apply bg-gray-100
+    @apply md:bg-gray-100
   }
+}
+
+input,
+button {
+  @apply font-futurica
 }
 
 .custom-scroll {
@@ -39,12 +44,16 @@ body {
   @apply container mx-auto
 }
 
+main {
+  @apply pt-[86px] md:pt-[126px] lg:pt-[139px]
+}
+
 .page-wrapper {
   @apply w-full
 }
 
 .bg {
-  @apply fixed top-0 left-0 w-full h-full bg-black opacity-50 z-10 hidden
+  @apply fixed top-0 left-0 w-full h-full bg-black opacity-50 z-50 hidden
 }
 
 .page-container {

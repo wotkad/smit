@@ -1,4 +1,4 @@
-import {enablePageScroll , disablePageScroll} from 'scroll-lock'
+import {enablePageScroll , disablePageScroll} from 'scroll-lock';
 
 function mobileMenu() {
   let button = $('.header__burger');

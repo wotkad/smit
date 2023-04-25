@@ -1,0 +1,19 @@
+.success-popup {
+  &__title {
+    h3 {
+      @apply text-[22px] leading-6 md:text-4xl font-bold
+    }
+    img {
+      @apply w-8 h-8 md:w-[42px] md:h-[42px]
+    }
+    @apply flex items-center gap-x-3 md:gap-x-4 mb-[10px] md:mb-5
+  }
+  &__text {
+    @apply tracking-[0.02em] md:text-[22px] md:leading-8 font-medium mb-5 md:mb-8
+  }
+  &__button {
+    @include button;
+    @apply w-full justify-center uppercase text-white
+  }
+  @apply hidden fixed w-[340px] md:w-[558px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-[5px] p-[21px] md:p-12 z-[100]
+}

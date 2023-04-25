@@ -8,6 +8,13 @@
           }
         }
       }
+      &__burger {
+        svg {
+          path {
+            @apply stroke-gray-200
+          }
+        }
+      }
       &__link {
         a {
           @apply text-gray-200
@@ -65,6 +72,13 @@
             }
           }
         }
+        &__burger {
+          svg {
+            path {
+              @apply stroke-gray-200
+            }
+          }
+        }
       }
     }
   }
@@ -86,6 +100,13 @@
             path {
               @apply lg:stroke-green-400
             }
+          }
+        }
+      }
+      &__burger {
+        svg {
+          path {
+            @apply stroke-gray-200
           }
         }
       }
@@ -152,6 +173,11 @@
         @apply transition-[stroke] duration-300 will-change-[stroke]
       }
       @apply transition-[transform,opacity] duration-300 will-change-[transform,opacity] min-w-[12px] min-h-[12px]
+    }
+    &.active {
+      a {
+        @apply lg:text-green-400
+      }
     }
     @apply flex items-center relative gap-[10px] cursor-pointer py-[10px]
   }
@@ -220,6 +246,11 @@
     @apply hidden lg:flex gap-[10px] items-center will-change-[background-color] transition-[background-color] duration-300 rounded-[5px] shadow-[0_4px_10px_rgba(0,_0,_0,_0.07)] bg-gray-400 py-[6px] px-3
   }
   &__burger {
+    svg {
+      path {
+        @apply transition-[stroke] will-change-[stroke] duration-300
+      }
+    }
     @apply block lg:hidden
   }
   &__mobmenu {
@@ -262,5 +293,5 @@
     }
     @apply translate-x-full right-0 duration-300 will-change-transform transition-transform fixed w-[254px] md:w-[319px] min-h-screen top-0 bg-green-400 pl-[34px] md:pl-10 pr-[35px] md:pr-[53px] pb-[29px] md:pb-[34px] pt-[39px] md:pt-[66px]
   }
-  @apply fixed top-0 left-0 w-full z-50 py-[43px] duration-300 transition-[padding,background-color]
+  @apply fixed top-0 left-0 w-full z-[60] py-5 lg:py-[47px] duration-300 transition-[padding,background-color]
 }
