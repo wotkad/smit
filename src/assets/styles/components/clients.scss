@@ -6,7 +6,7 @@
     @apply lg:max-w-[919px] font-extralight mb-11 md:mb-16 tracking-[0.02em]
   }
   &__items {
-    @apply px-6  md:px-0 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-[42px] gap-x-[52px] md:gap-[70px] lg:gap-y-[60px] lg:gap-x-[145px]
+    @apply px-6 md:px-0 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-[42px] gap-x-[52px] md:gap-[70px] lg:gap-y-[60px] lg:gap-x-[145px]
   }
   &__more {
     @include button;

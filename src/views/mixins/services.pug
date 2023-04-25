@@ -1,0 +1,26 @@
+mixin services(heading)
+  include ../mixins/service.pug
+  section.services.section__gapper
+    .wrapper
+      .services__wrapper
+        .services__title
+          h2.section__title.reveal 
+            span= heading
+          a(href="#").services__title__more.reveal
+            p все услуги
+            svg(width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg")
+              path(d="M14 18.5L12.6 17.05L16.15 13.5H4V11.5H16.15L12.6 7.95L14 6.5L20 12.5L14 18.5Z" fill="#00738E")
+        .services__slider.reveal 
+          .swiper 
+            .swiper-wrapper
+              +service('#', '/assets/images/service.png', 'service', 'палитра 5000 цветов · камера 14 метров · логистика', 'Порошковая покраска металлоконструкций')
+              +service('#', '/assets/images/service.png', 'service', 'палитра 5000 цветов · камера 14 метров · логистика', 'Производство НВФ, доборных элементов, подсистемы, профнастила')
+              +service('#', '/assets/images/service.png', 'service', 'палитра 5000 цветов · камера 14 метров · логистика', 'Проектирование фасадов зданий и строений различного назначения')
+              +service('#', '/assets/images/service.png', 'service', 'палитра 5000 цветов · камера 14 метров · логистика', 'Проектирование фасадов зданий и строений различного назначения')
+            .swiper-pagination
+          .swiper-button-prev
+            svg(width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg")
+              path(d="M21 27L12 18L21 9L23.1 11.1L16.2 18L23.1 24.9L21 27Z" fill="#969696")
+          .swiper-button-next
+            svg(width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg")
+              path(d="M15 9L24 18L15 27L12.9 24.9L19.8 18L12.9 11.1L15 9Z" fill="#969696")

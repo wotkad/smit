@@ -1,0 +1,7 @@
+mixin review(src, alt, title, text)
+  .swiper-slide
+    .review
+      .review__image 
+        img(src=""+src, alt=""+alt)
+      span.review__title= title
+      h3.review__text= text

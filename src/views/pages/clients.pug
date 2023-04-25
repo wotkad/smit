@@ -15,6 +15,17 @@ block content
   main
     .page-container
       .page-wrapper
+        include ../mixins/breadcrumbs.pug
+        +breadcrumbs(
+          [
+            {
+              href: '',
+              title: 'Клиенты'
+            }
+          ]
+        )
+        include ../components/docs.pug
+        include ../components/reviews.pug
         include ../components/works.pug
         include ../components/clients.pug
       include ../components/footer.pug

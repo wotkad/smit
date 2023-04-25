@@ -1,0 +1,15 @@
+mixin breadcrumbs(data)
+  .breadcrumbs
+    .wrapper
+      ul.breadcrumbs__list
+        li 
+          a(href="/") Главная
+        for link in data
+          if link.href == ''
+            span /
+            li
+              p= link.title
+          else 
+            li
+              span /
+              a(href=""+link.href)= link.title

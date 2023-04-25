@@ -1,6 +1,8 @@
 import Swiper, { Navigation, Pagination } from 'swiper';
 
-function servicesSlider() {
+function slider() {
+  let nextArrow = document.querySelector('.swiper ~ .swiper-button-next');
+  let prevArrow = document.querySelector('.swiper ~ .swiper-button-prev');
   new Swiper('.swiper', {
     modules: [Navigation, Pagination],
     slidesPerView: 1,
@@ -11,8 +13,8 @@ function servicesSlider() {
       clickable: true
     },
     navigation: {
-      nextEl: '.services__slider .swiper-button-next',
-      prevEl: '.services__slider .swiper-button-prev',
+      nextEl: nextArrow,
+      prevEl: prevArrow,
     },
     breakpoints: {
       744: {
@@ -26,4 +28,4 @@ function servicesSlider() {
     }
   });
 }
-servicesSlider();
+slider();

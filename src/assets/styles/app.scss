@@ -25,6 +25,9 @@
 @import "./mixins/product";
 @import "./mixins/work";
 @import "./mixins/service";
+@import "./mixins/review";
+@import "./mixins/breadcrumbs";
+@import "./mixins/doc";
 
 /*
   Компоненты
@@ -37,7 +40,10 @@
 @import "./components/production";
 @import "./components/about";
 @import "./components/works";
+@import "./components/swiper";
 @import "./components/services";
 @import "./components/calculator";
 @import "./components/success-popup";
 @import "./components/error-popup";
+@import "./components/reviews";
+@import "./components/docs";

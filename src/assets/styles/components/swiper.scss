@@ -1,0 +1,54 @@
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  @apply mx-2
+}
+.swiper-horizontal>.swiper-pagination-bullets {
+  @apply lg:hidden bottom-0 flex items-center justify-center w-full
+}
+.swiper {
+  &-wrapper {
+    @apply items-stretch
+  }
+  &-slide {
+    @apply h-auto
+  }
+  &-pagination {
+    &-bullet {
+      &-active {
+        @apply bg-green-400
+      }
+      @apply w-2 h-2 opacity-100 transition-[background-color] will-change-[background-color] duration-300 bg-gray-600
+    }
+  }
+  &-button {
+    &-prev,
+    &-next {
+      &:after {
+        @apply hidden
+      }
+      svg {
+        path {
+          @apply will-change-[fill] duration-300 transition-[fill]
+        }
+      }
+      &:hover {
+        svg {
+          path {
+            @apply lg:fill-green-500
+          }
+        }
+      }
+      @apply hidden lg:block w-auto h-auto transition-[opacity] duration-300 will-change-[opacity]
+    }
+    &-disabled {
+      @apply opacity-50
+    }
+    &-prev {
+      @apply -left-[60px]
+    }
+    &-next {
+      @apply -right-[60px]
+    }
+    @apply transition-[opacity] duration-300 will-change-[opacity]
+  }
+  @apply pb-8 md:pb-11 lg:pb-0
+}

@@ -1,0 +1,24 @@
+.breadcrumbs {
+  &__list {
+    li {
+      a,
+      p {
+        @apply text-lg leading-[18px] font-medium 
+      }
+      p {
+        @apply text-green-400
+      }
+      a {
+        &:hover {
+          @apply lg:text-green-400 border-green-400
+        }
+        @apply duration-300 transition-[color,border-color] will-change-[color,border-color] mb-[1px] border-b-2
+      }
+      @apply flex items-center
+    }
+    span {
+      @apply inline-block mx-1 text-lg leading-[22px] font-medium
+    }
+    @apply flex items-center flex-wrap mb-7
+  }
+}

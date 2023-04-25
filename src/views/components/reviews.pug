@@ -1,0 +1,20 @@
+include ../mixins/review.pug
+section.reviews.section__gapper
+  .wrapper
+    .reviews__wrapper
+      .reviews__title
+        h2.section__title.reveal Отзывы
+      .reviews__slider.reveal 
+        .swiper 
+          .swiper-wrapper
+            +review('/assets/images/review.png', 'review', 'Автор_отзыва', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis.')
+            +review('/assets/images/review.png', 'review', 'Автор_отзыва', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis.')
+            +review('/assets/images/review.png', 'review', 'Автор_отзыва', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis.')
+            +review('/assets/images/review.png', 'review', 'Автор_отзыва', 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis.')
+          .swiper-pagination
+        .swiper-button-prev
+          svg(width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg")
+            path(d="M21 27L12 18L21 9L23.1 11.1L16.2 18L23.1 24.9L21 27Z" fill="#969696")
+        .swiper-button-next
+          svg(width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg")
+            path(d="M15 9L24 18L15 27L12.9 24.9L19.8 18L12.9 11.1L15 9Z" fill="#969696")

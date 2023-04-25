@@ -15,6 +15,15 @@ block content
   main
     .page-container
       .page-wrapper
+        include ../mixins/breadcrumbs.pug
+        +breadcrumbs(
+          [
+            {
+              href: '',
+              title: 'Контакты'
+            }
+          ]
+        )
         include ../components/works.pug
         include ../components/clients.pug
       include ../components/footer.pug

@@ -13,6 +13,9 @@ body {
   &-gray {
     @apply md:bg-gray-100
   }
+  &__heading {
+    @apply text-[28px] leading-[38px] md:text-4xl mb-6 md:mb-[33px] font-bold
+  }
 }
 
 input,
