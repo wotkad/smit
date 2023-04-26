@@ -1,4 +1,4 @@
-import {enablePageScroll , disablePageScroll} from 'scroll-lock';
+import {enablePageScroll , disablePageScroll, clearQueueScrollLocks} from 'scroll-lock';
 
 export default function errorPopup() {
   let popup = $('.error-popup');
@@ -12,6 +12,7 @@ export default function errorPopup() {
   button.on('click', function() {
     popup.fadeOut();
     bg.fadeOut(function() {
+      clearQueueScrollLocks();
       enablePageScroll();
     });
   });

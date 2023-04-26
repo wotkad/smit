@@ -1,10 +1,6 @@
-import successPopup from "./success-popup";
-import errorPopup from "./error-popup";
 import {enablePageScroll} from 'scroll-lock';
 
 function calculator() {
-
-  let form = $('.calculator__form');
   let popup = $('.success-popup');
   let bg = $('.bg');
 
@@ -15,48 +11,42 @@ function calculator() {
     let input = $('.calculator__select input');
     let inputs = $('.calculator__label input');
     button.on('click', function() {
-      container.toggle();
       $(this).toggleClass('active');
+      container.toggle();
     });
     items.on('click', function() {
-      button.removeClass('active');
+      const index = $(this).index();
       input.val($(this).text());
+      $('.service-popup__input[name="service_name"]').val($(this).text());
       items.removeClass('active');
       $(this).addClass('active');
+      $('.calculator__dropdown p').eq(index).addClass('active');
+      $('.service-popup__dropdown p').eq(index).addClass('active');
       container.hide();
+      button.removeClass('active');
     });
     inputs.on('input', function() {
-      if ($(this).val()) {
-        $(this).parent().addClass('success');
-      } else {
-        $(this).parent().removeClass('success');
+      if ($(this).prop('name') == 'count') {
+        $('.service-popup__input[name="count"]').val($(this).val());
+      }
+      if ($(this).prop('name') == 'param_value') {
+        $('.service-popup__input[name="param_value"]').val($(this).val());
+      }
+      const name = $(this).attr('name');
+      $('.service-popup__label input[name="' + name + '"]').parent().addClass('success');
+      $('.calculator__label input[name="' + name + '"]').parent().addClass('success');
+    });
+    $(document).on('mousedown', (event) => {
+      if (container.css('display') == 'block' && !container.is(event.target) && !items.is(event.target)) {
+        button.removeClass('active');
+        container.hide();
       }
     });
   }
   selectServices();
-
-  if (form) {
-    form.submit(function(e) {
-      e.preventDefault();
-        fetch('/assets/files/calculator.php', {
-          method: 'POST',
-          body: new FormData(form.get(0))
-        }).then((response) => {
-          if (response.status == 200) {
-            successPopup('Ваша заявка принята', 'Наши менеджеры перезвонят вам в ближайшее время');
-            localStorage.setItem('service', $('.calculator__label input[name="service_name"]').val());
-            localStorage.setItem('count', $('.calculator__label input[name="count"]').val());
-            localStorage.setItem('param', $('.calculator__label input[name="param_value"]').val());
-            form.get(0).reset();
-          } else if (response.status !== 200) {
-            errorPopup();
-          }
-        });
-    });
-  }
   
   $('input[name="param_value"], input[name="count"]').on('keydown', function(e) {
-    if(e.key.length == 1 && e.key.match(/[^0-9'".]/)){
+    if (e.key.length == 1 && e.key.match(/[^0-9'".]/)) {
       return false;
     }
   });

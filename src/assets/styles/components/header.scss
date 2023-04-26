@@ -291,7 +291,7 @@
     &__close {
       @apply absolute right-[29px] top-5
     }
-    @apply translate-x-full right-0 duration-300 will-change-transform transition-transform fixed w-[254px] md:w-[319px] min-h-screen top-0 bg-green-400 pl-[34px] md:pl-10 pr-[35px] md:pr-[53px] pb-[29px] md:pb-[34px] pt-[39px] md:pt-[66px]
+    @apply z-[70] translate-x-full right-0 duration-300 will-change-transform transition-transform fixed w-[254px] md:w-[319px] min-h-screen top-0 bg-green-400 pl-[34px] md:pl-10 pr-[35px] md:pr-[53px] pb-[29px] md:pb-[34px] pt-[39px] md:pt-[66px]
   }
-  @apply fixed top-0 left-0 w-full z-[60] py-5 lg:py-[47px] duration-300 transition-[padding,background-color]
+  @apply fixed top-0 left-0 w-full z-[50] py-5 lg:py-[47px] duration-300 transition-[padding,background-color]
 }

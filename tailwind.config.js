@@ -32,14 +32,14 @@ module.exports = {
           '500': '#00576B',
           '600': '#338FA5',
           '700': '#73B4C3',
+        },
+        'red': {
+          '400': '#FF0303'
         }
       }
     },
     fontFamily: {
       'futurica': ['Futurica'],
     }
-  },
-  plugins: [
-    require('@tailwindcss/line-clamp'),
-  ],
+  }
 }

@@ -1,4 +1,4 @@
-import {enablePageScroll , disablePageScroll} from 'scroll-lock';
+import {enablePageScroll , disablePageScroll, clearQueueScrollLocks} from 'scroll-lock';
 
 export default function successPopup(title, text) {
   let popup = $('.success-popup');
@@ -18,6 +18,7 @@ export default function successPopup(title, text) {
     bg.fadeOut(function() {
       heading.text('');
       content.text('');
+      clearQueueScrollLocks();
       enablePageScroll();
     });
   });

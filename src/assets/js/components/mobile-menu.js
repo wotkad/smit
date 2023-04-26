@@ -16,11 +16,6 @@ function mobileMenu() {
     bg.fadeOut();
     enablePageScroll();
   });
-  bg.on('click', function() {
-    menu.removeClass('active');
-    bg.fadeOut();
-    enablePageScroll();
-  });
 }
 mobileMenu();
 

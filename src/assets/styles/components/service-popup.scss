@@ -1,0 +1,97 @@
+.service-popup {
+  &__title {
+    h3 {
+      @apply text-4xl leading-6 font-bold
+    }
+    svg {
+      path {
+        @apply duration-300 transition-[fill] will-change-[fill]
+      }
+      &:hover {
+        path {
+          @apply lg:fill-green-400
+        }
+      }
+      @apply w-8 h-8 cursor-pointer
+    }
+    @apply flex items-center mb-10 justify-between
+  }
+  &__form {
+    @apply grid grid-cols-2 gap-x-8 gap-y-[26px]
+  }
+  &__label {
+    &-required {
+      @apply text-red-400
+    }
+    &:first-child {
+      @apply z-20
+    }
+    input {
+      &:focus {
+        @apply bg-green-100 border-green-700
+      }
+      @apply mt-3 outline-none transition-[background-color,border-color] duration-300 will-change-[background-color,border-color]
+    }
+    span {
+      @apply inline-block font-medium text-base
+    }
+    img {
+      .error,
+      .success {
+        @apply hidden
+      }
+      @apply hidden absolute right-4 bottom-4
+    }
+    &.success {
+      img.success {
+        @apply block
+      }
+    }
+    &.error {
+      img.error {
+        @apply block
+      }
+    }
+    @apply w-full relative
+  }
+  &__select {
+    &.active {
+      .service-popup__input__icon {
+        @apply rotate-180
+      }
+    }
+    .service-popup__input {
+      @apply cursor-pointer caret-transparent text-green-400
+    }
+    @apply flex items-center w-full
+  }
+  &__input {
+    &__inner {
+      @apply relative flex items-center
+    }
+    &__icon {
+      @apply absolute right-4 bottom-4 transition-[transform] duration-300 will-change-[transform] cursor-pointer
+    }
+    @apply text-sm leading-6 font-medium bg-transparent p-4 w-full border border-gray-500 rounded-[5px]
+  }
+  &__dropdown {
+    p {
+      &:hover {
+        @apply lg:text-green-400
+      }
+      &.active {
+        @apply text-green-400
+      }
+      @apply p-4 cursor-pointer transition-[color] duration-300 will-change-[color] text-sm font-medium
+    }
+    @apply absolute hidden shadow-md top-[75px] border border-gray-500 rounded-[5px] w-full bg-white z-20
+  }
+  &__button {
+    @include button;
+    @apply w-full justify-center text-white col-span-2
+  }
+  &__policy {
+    @apply text-[11px] font-extralight tracking-[0.02em] leading-4 col-span-2 -mt-4
+  }
+  @apply hidden fixed w-[882px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-[5px] p-12 z-[100]
+}

@@ -5,7 +5,7 @@
     }
     &__more {
       p {
-        @apply text-green-400 will-change-[color,border-color] duration-300 transition-[color] border-b-2 border-green-400 tracking-[0.02em] leading-4 md:leading-[18px] md:text-xl font-medium
+        @apply text-green-400 will-change-[color,border-color] duration-300 transition-[color] border-b-2 border-green-400 tracking-[0.02em] leading-4 md:leading-[22px] md:text-xl font-medium
       }
       &:hover {
         p {

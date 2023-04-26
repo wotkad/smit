@@ -2,13 +2,13 @@ section.calculator.section__gapper.section-gray
   .wrapper
     .calculator__wrapper
       h2.section__title.reveal Калькулятор стоимости
-      form(action="#").calculator__form
+      .calculator__form
         .calculator__inputs 
           .calculator__label.reveal
             span Выберите услугу
             .calculator__input__inner
               .calculator__select
-                input(autocomplete="off" required type="text" name="service_name" placeholder="Выберите услугу").calculator__input
+                input(readonly autocomplete="off" type="text" name="service_name" placeholder="Выберите услугу").calculator__input
                 svg.calculator__input__icon(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
                   path(d="M18 10L12 16L6 10L7.4 8.6L12 13.2L16.6 8.6L18 10Z" fill="#969696")
               .calculator__dropdown
@@ -17,12 +17,12 @@ section.calculator.section__gapper.section-gray
                 p(data-price="166 000") Лазерная резка металла 3
           .calculator__label.reveal
             span Количество (м)
-            input(autocomplete="off" type="text" name="count" required placeholder="Введите количество").calculator__input
-            img(src="/assets/images/icons/check-circle-green.svg", alt="check-circle-green")
+            input(autocomplete="off" type="text" name="count" placeholder="Введите количество").calculator__input
+            img.success(src="/assets/images/icons/check-circle-green.svg", alt="check-circle-green")
           .calculator__label.reveal
             span И еще какой-то параметр
-            input(autocomplete="off" type="text" name="param_value" required placeholder="Введите значение параметра").calculator__input
-            img(src="/assets/images/icons/check-circle-green.svg", alt="check-circle-green")
+            input(autocomplete="off" type="text" name="param_value" placeholder="Введите значение параметра").calculator__input
+            img.success(src="/assets/images/icons/check-circle-green.svg", alt="check-circle-green")
         .calculator__content 
           .calculator__header.reveal 
             .calculator__price
@@ -42,7 +42,7 @@ section.calculator.section__gapper.section-gray
                 li Amet minim mollit non deserunt ullamco
           .calculator__footer.reveal 
             .calculator__tip Расчет стоимости услуги является предварительным. Точная стоимость рассчитывается менеджером во время заключения договора.
-            button(type="submit").calculator__button
+            button(type="button").calculator__button
               span Оформить заказ
               svg(width='24', height='24', viewBox='0 0 24 24', fill='none', xmlns='http://www.w3.org/2000/svg')
                 path(d='M14 18L12.6 16.55L16.15 13H4V11H16.15L12.6 7.45L14 6L20 12L14 18Z', fill='white')

@@ -3,7 +3,7 @@
     @apply grid md:grid-cols-[325px_1fr] lg:grid-cols-[377px_1fr] gap-y-6 md:gap-y-0 md:gap-x-[31px] lg:gap-x-[61px]
   }
   &__inputs {
-    @apply flex flex-col items-start gap-y-6 md:gap-y-[26px]
+    @apply flex flex-col items-start gap-y-6 md:gap-y-[26px] col-start-1 row-start-1 lg:col-start-auto lg:row-start-auto
   }
   &__label {
     &:first-child {
@@ -13,16 +13,25 @@
       &:focus {
         @apply bg-green-100 border-green-700
       }
-      @apply outline-none transition-[background-color,border-color] duration-300 will-change-[background-color,border-color]
+      @apply mt-3 outline-none transition-[background-color,border-color] duration-300 will-change-[background-color,border-color]
     }
     span {
-      @apply inline-block font-medium text-base mb-3
+      @apply inline-block font-medium text-base
     }
     img {
+      .error,
+      .success {
+        @apply hidden
+      }
       @apply hidden absolute right-4 bottom-4
     }
     &.success {
-      img {
+      img.success {
+        @apply block
+      }
+    }
+    &.error {
+      img.error {
         @apply block
       }
     }
@@ -44,7 +53,7 @@
       @apply relative flex items-center
     }
     &__icon {
-      @apply absolute right-4 transition-[transform] duration-300 will-change-[transform] cursor-pointer
+      @apply absolute right-4 bottom-4 transition-[transform] duration-300 will-change-[transform] cursor-pointer
     }
     @apply text-sm leading-6 font-medium bg-transparent p-4 w-full border border-gray-500 rounded-[5px]
   }
@@ -54,11 +63,11 @@
         @apply lg:text-green-400
       }
       &.active {
-        @apply lg:text-green-400
+        @apply text-green-400
       }
-      @apply p-4 cursor-pointer transition-[color] duration-300 will-change-[color]
+      @apply p-4 cursor-pointer transition-[color] duration-300 will-change-[color] text-sm font-medium
     }
-    @apply absolute hidden shadow-md top-[62px] border border-gray-500 rounded-[5px] w-full bg-white z-20
+    @apply absolute hidden shadow-md top-[75px] border border-gray-500 rounded-[5px] w-full bg-white z-20
   }
   &__content {
     @apply md:mt-[35px] flex flex-col lg:block gap-y-6 md:gap-y-9 lg:gap-y-0 md:col-start-1 md:col-end-3 md:row-start-1 lg:row-start-auto lg:col-start-auto lg:col-end-auto
@@ -76,9 +85,6 @@
       }
       @apply text-[38px] leading-[38px] text-green-400 font-bold flex items-center
     }
-  }
-  &__inputs {
-    @apply col-start-1 row-start-1 lg:col-start-auto lg:row-start-auto
   }
   &__includes {
     ul {

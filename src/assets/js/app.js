@@ -24,3 +24,5 @@ require("./components/show-docs");
 require("./components/slider");
 require("./components/calculator");
 require("./components/success-popup");
+require("./components/service-popup");
+require("./components/validator");
