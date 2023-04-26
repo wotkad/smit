@@ -44,13 +44,20 @@ function servicesPopup() {
       button.removeClass('active');
     });
     inputs.on('input', function() {
+      const index = $(this).index();
+      const name = $(this).attr('name');
+      if ($(this).prop('name') == 'service_name') {
+        $(this).val('');
+        $('.calculator__input[name="service_name"]').val('');
+        $('.calculator__dropdown p').eq(index).removeClass('active');
+        $('.service-popup__dropdown p').eq(index).removeClass('active');
+      }
       if ($(this).prop('name') == 'count') {
         $('.calculator__input[name="count"]').val($(this).val());
       }
       if ($(this).prop('name') == 'param_value') {
         $('.calculator__input[name="param_value"]').val($(this).val());
       }
-      const name = $(this).attr('name');
       $('.service-popup__label input[name="' + name + '"]').parent().addClass('success');
       $('.calculator__label input[name="' + name + '"]').parent().addClass('success');
     });
@@ -62,6 +69,21 @@ function servicesPopup() {
     });
   }
   selectServices();
+
+  function isFadedPopup() {
+    const form = $('.service-popup__form');
+    form.on('scroll', function () {
+      if (form.scrollTop() > 0) {
+        form.addClass('scrolled');
+      } else {
+        form.removeClass('scrolled');
+      }
+      if (form.scrollTop == 0) {
+        form.removeClass('scrolled');
+      }
+    });
+  }
+  isFadedPopup();
 
   if (form) {
     form.submit(function(e) {

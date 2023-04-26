@@ -26,13 +26,20 @@ function calculator() {
       button.removeClass('active');
     });
     inputs.on('input', function() {
+      const index = $(this).index();
+      const name = $(this).attr('name');
+      if ($(this).prop('name') == 'service_name') {
+        $(this).val('');
+        $('.service-popup__input[name="service_name"]').val('');
+        $('.calculator__dropdown p').eq(index).removeClass('active');
+        $('.service-popup__dropdown p').eq(index).removeClass('active');
+      }
       if ($(this).prop('name') == 'count') {
         $('.service-popup__input[name="count"]').val($(this).val());
       }
       if ($(this).prop('name') == 'param_value') {
         $('.service-popup__input[name="param_value"]').val($(this).val());
       }
-      const name = $(this).attr('name');
       $('.service-popup__label input[name="' + name + '"]').parent().addClass('success');
       $('.calculator__label input[name="' + name + '"]').parent().addClass('success');
     });

@@ -1,7 +1,7 @@
 .service-popup {
   &__title {
     h3 {
-      @apply text-4xl leading-6 font-bold
+      @apply text-[22px] md:text-4xl leading-6 font-bold
     }
     svg {
       path {
@@ -14,10 +14,18 @@
       }
       @apply w-8 h-8 cursor-pointer
     }
-    @apply flex items-center mb-10 justify-between
+    @apply flex items-center mb-5 md:mb-[37px] lg:mb-10 justify-between
   }
   &__form {
-    @apply grid grid-cols-2 gap-x-8 gap-y-[26px]
+    &.scrolled {
+      &:before {
+        @apply opacity-0
+      }
+    }
+    &:before {
+      @apply block md:hidden transition-[opacity] will-change-[opacity] duration-300 content-[''] absolute bottom-[132px] left-5 w-[calc(100%-40px)] h-16 bg-gradient-to-t from-white to-transparent z-10
+    }
+    @apply grid grid-cols-1 md:grid-cols-2 gap-x-0 md:gap-x-6 lg:gap-x-8 gap-y-6 md:gap-y-[26px] max-h-[386px] md:max-h-full overflow-y-auto md:overflow-y-hidden
   }
   &__label {
     &-required {
@@ -30,10 +38,10 @@
       &:focus {
         @apply bg-green-100 border-green-700
       }
-      @apply mt-3 outline-none transition-[background-color,border-color] duration-300 will-change-[background-color,border-color]
+      @apply text-sm md:text-base mt-3 outline-none transition-[background-color,border-color] duration-300 will-change-[background-color,border-color]
     }
     span {
-      @apply inline-block font-medium text-base
+      @apply inline-block font-medium text-sm leading-6 md:text-base
     }
     img {
       .error,
@@ -52,7 +60,7 @@
         @apply block
       }
     }
-    @apply w-full relative
+    @apply w-full relative col-span-2 md:col-auto
   }
   &__select {
     &.active {
@@ -88,10 +96,10 @@
   }
   &__button {
     @include button;
-    @apply w-full justify-center text-white col-span-2
+    @apply md:w-full justify-center text-white col-span-2 absolute bottom-16 md:static left-5 w-[calc(100%-40px)]
   }
   &__policy {
-    @apply text-[11px] font-extralight tracking-[0.02em] leading-4 col-span-2 -mt-4
+    @apply text-[11px] font-extralight tracking-[0.02em] leading-4 col-span-2 -mt-4 absolute bottom-5 md:static left-5 w-[calc(100%-40px)]
   }
-  @apply hidden fixed w-[882px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-[5px] p-12 z-[100]
+  @apply hidden fixed h-[590px] md:h-auto w-[340px] md:w-[688px] lg:w-[882px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-[5px] p-5 md:p-12 z-[100]
 }
