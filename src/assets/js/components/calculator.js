@@ -1,6 +1,6 @@
 import {enablePageScroll} from 'scroll-lock';
 
-function calculator() {
+export default function calculator() {
   let popup = $('.success-popup');
   let bg = $('.bg');
 

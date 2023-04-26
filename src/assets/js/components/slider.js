@@ -1,6 +1,6 @@
 import Swiper, { Navigation, Pagination } from 'swiper';
 
-function slider() {
+export default function slider() {
   let nextArrow = document.querySelector('.swiper ~ .swiper-button-next');
   let prevArrow = document.querySelector('.swiper ~ .swiper-button-prev');
   new Swiper('.swiper', {

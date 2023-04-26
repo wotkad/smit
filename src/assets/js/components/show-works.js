@@ -1,4 +1,4 @@
-function showWork() {
+export default function showWork() {
   let button = $('.works__more');
   let work = $('.work-hidden');
   button.on('click', function() {

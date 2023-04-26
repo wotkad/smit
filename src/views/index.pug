@@ -13,22 +13,24 @@ block manifestBrowserconfigFiles
 
 block content
   main
-    .page-container
-      .page-wrapper
-        include ./components/hero.pug
-        include ./mixins/advantage.pug
-        section.advantages.section__gapper
-          .wrapper
-            .advantages__items
-              +advantage('55 000', 'кв.м. в месяц', 'мощность производства <br> навесных фасадных систем', '/assets/images/icons/grid-green.svg', 'grid-green')
-              +advantage('3 700', 'кв.м. ', 'производственная <br> площадь', '/assets/images/icons/zoom-out-green.svg', 'zoom-out-green')
-              +advantage('175', '', 'завершенных <br> проектов', '/assets/images/icons/square-check-green.svg', 'square-check-green')
-              +advantage('100+', '', 'специалистов <br> в штате компании', '/assets/images/icons/users-green.svg', 'users-green')
-        include ./mixins/services.pug
-        +services('Услуги')
-        include ./components/production.pug
-        include ./components/about.pug
-        include ./components/works.pug
-        include ./components/clients.pug
-        include ./components/calculator.pug
-      include ./components/footer.pug
+    .barba(data-barba="wrapper")
+      .barba-container(data-barba="container" data-barba-namespace="main")
+        .page-container
+          .page-wrapper
+            include ./components/hero.pug
+            include ./mixins/advantage.pug
+            section.advantages.section__gapper
+              .wrapper
+                .advantages__items
+                  +advantage('55 000', 'кв.м. в месяц', 'мощность производства <br> навесных фасадных систем', '/assets/images/icons/grid-green.svg', 'grid-green')
+                  +advantage('3 700', 'кв.м. ', 'производственная <br> площадь', '/assets/images/icons/zoom-out-green.svg', 'zoom-out-green')
+                  +advantage('175', '', 'завершенных <br> проектов', '/assets/images/icons/square-check-green.svg', 'square-check-green')
+                  +advantage('100+', '', 'специалистов <br> в штате компании', '/assets/images/icons/users-green.svg', 'users-green')
+            include ./mixins/services.pug
+            +services('Услуги')
+            include ./components/production.pug
+            include ./components/about.pug
+            include ./components/works.pug
+            include ./components/clients.pug
+            include ./components/calculator.pug
+          include ./components/footer.pug

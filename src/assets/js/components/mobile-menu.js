@@ -1,9 +1,10 @@
 import {enablePageScroll , disablePageScroll} from 'scroll-lock';
 
-function mobileMenu() {
+export default function mobileMenu() {
   let button = $('.header__burger');
   let menu = $('.header__mobmenu');
   let close = $('.header__mobmenu__close');
+  let items = $('.header__mobmenu a');
   let bg = $('.bg');
   let scrollableElement = document.querySelector('.header__mobmenu__list');
   button.on('click', function() {
@@ -15,6 +16,13 @@ function mobileMenu() {
     menu.removeClass('active');
     bg.fadeOut();
     enablePageScroll();
+  });
+  Array.from(items).forEach(link => {
+    $(link).on('click', function() {
+      menu.removeClass('active');
+      bg.fadeOut();
+      enablePageScroll();
+    });
   });
 }
 mobileMenu();

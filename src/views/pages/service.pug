@@ -13,31 +13,33 @@ block manifestBrowserconfigFiles
 
 block content
   main
-    .page-container
-      .page-wrapper
-        include ../mixins/breadcrumbs.pug
-        +breadcrumbs(
-          [
-            {
-              href: '/services',
-              title: 'Услуги'
-            },
-            {
-              href: '',
-              title: 'Порошковая покраска изделий'
-            }
-          ]
-        )
-        include ../mixins/advantage.pug
-        section.advantages.section__gapper
-          .wrapper
-            .advantages__items
-              +advantage('5 000', 'цветов и оттенков', 'палитра <br> по RAL', '', '')
-              +advantage('14', 'метров ', 'длина <br> камеры', '', '')
-              +advantage('1200', 'кв.м. в сутки', 'мощность <br> участка', '', '')
-              +advantage('100', '', 'еще одно <br> важное преимущество', '', '')
-        include ../mixins/services.pug
-        +services('Закажите также')
-        include ../components/works.pug
-        include ../components/clients.pug
-      include ../components/footer.pug
+    .barba(data-barba="wrapper")
+      .barba-container(data-barba="container" data-barba-namespace="service")
+        .page-container
+          .page-wrapper
+            include ../mixins/breadcrumbs.pug
+            +breadcrumbs(
+              [
+                {
+                  href: '/services',
+                  title: 'Услуги'
+                },
+                {
+                  href: '',
+                  title: 'Порошковая покраска изделий'
+                }
+              ]
+            )
+            include ../mixins/advantage.pug
+            section.advantages.section__gapper
+              .wrapper
+                .advantages__items
+                  +advantage('5 000', 'цветов и оттенков', 'палитра <br> по RAL', '', '')
+                  +advantage('14', 'метров ', 'длина <br> камеры', '', '')
+                  +advantage('1200', 'кв.м. в сутки', 'мощность <br> участка', '', '')
+                  +advantage('100', '', 'еще одно <br> важное преимущество', '', '')
+            include ../mixins/services.pug
+            +services('Закажите также')
+            include ../components/works.pug
+            include ../components/clients.pug
+          include ../components/footer.pug

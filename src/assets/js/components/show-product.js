@@ -1,4 +1,4 @@
-function showProduct() {
+export default function showProduct() {
   let button = $('.production__more');
   let product = $('.product-hidden');
   button.on('click', function() {

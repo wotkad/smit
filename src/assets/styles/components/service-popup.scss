@@ -60,6 +60,33 @@
         @apply block
       }
     }
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(6) {
+      @apply md:-order-none
+    }
+    &:nth-child(1) {
+      order: 1;
+    }
+    &:nth-child(2) {
+      order: 4;
+    }
+    &:nth-child(3) {
+      order: 2;
+    }
+    &:nth-child(4) {
+      order: 5;
+    }
+    &:nth-child(5) {
+      order: 3;
+    }
+    &:nth-child(6) {
+      order: 6;
+      
+    }
     @apply w-full relative col-span-2 md:col-auto
   }
   &__select {

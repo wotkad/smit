@@ -3,7 +3,7 @@ import errorPopup from "./error-popup";
 import {enablePageScroll, disablePageScroll} from 'scroll-lock';
 import { validateEmail, validatePhone, validateName } from "./validator";
 
-function servicesPopup() {
+export default function servicesPopup() {
 
   let button = $('.calculator__button');
   let popup = $('.service-popup');

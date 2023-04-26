@@ -1,4 +1,4 @@
-function showClients() {
+export default function showClients() {
   let button = $('.clients__more');
   let client = $('.client-hidden');
   button.on('click', function() {

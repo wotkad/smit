@@ -13,17 +13,19 @@ block manifestBrowserconfigFiles
 
 block content
   main
-    .page-container
-      .page-wrapper
-        include ../mixins/breadcrumbs.pug
-        +breadcrumbs(
-          [
-            {
-              href: '',
-              title: 'О компании'
-            }
-          ]
-        )
-        include ../components/works.pug
-        include ../components/clients.pug
-      include ../components/footer.pug
+    .barba(data-barba="wrapper")
+      .barba-container(data-barba="container" data-barba-namespace="about")
+        .page-container
+          .page-wrapper
+            include ../mixins/breadcrumbs.pug
+            +breadcrumbs(
+              [
+                {
+                  href: '',
+                  title: 'О компании'
+                }
+              ]
+            )
+            include ../components/works.pug
+            include ../components/clients.pug
+          include ../components/footer.pug
