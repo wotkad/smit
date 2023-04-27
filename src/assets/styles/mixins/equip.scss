@@ -1,0 +1,60 @@
+.equip {
+  &__content {
+    h3 {
+      @apply text-2xl leading-8 md:text-[32px] md:leading-10 font-bold uppercase mb-6 md:mb-7 lg:mb-9
+    }
+    p {
+      span {
+        @apply font-medium
+      }
+      @apply tracking-[0.02em] font-extralight
+    }
+    @apply col-span-2 lg:col-span-1
+  }
+  .swiper {
+    &-slide {
+      img {
+        @apply w-full h-full object-cover
+      }
+      @apply min-h-[227px] max-h-[227px] md:min-h-[294px] md:max-h-[294px]
+    }
+    &.swiper-horizontal > .swiper-pagination-bullets {
+      @apply flex md:w-auto md:right-[43px] bottom-[17px] md:bottom-9 md:left-auto
+    }
+    @apply w-full pb-0
+  }
+  &__slider {
+    @apply col-span-1
+  }
+  &__facts {
+    h4 {
+      @apply col-span-2 lg:col-span-3 text-2xl leading-10 font-bold
+    }
+    @apply col-span-2 grid grid-cols-1 md:grid-cols-[327px_327px] lg:grid-cols-[327px_327px_327px] md:gap-x-[35px] lg:gap-x-[103px] gap-y-6 md:gap-y-[31px] lg:gap-y-9
+  }
+  &:first-child {
+    @apply pt-0
+  }
+  &:last-child {
+    @apply pb-0 border-b-0
+  }
+  &__fact {
+    h5 {
+      @apply leading-[22px] font-medium
+    }
+    @apply flex items-center gap-x-6 col-span-2 md:col-auto
+  }
+  &__icon {
+    @apply min-w-[50px] min-h-[50px] bg-green-200 rounded-md flex items-center justify-center
+  }
+  &.no-padding {
+    @apply pb-0
+  }
+  &.no-border {
+    @apply border-b-0
+  }
+  &-hidden {
+    @apply hidden
+  }
+  @apply grid grid-cols-1 lg:grid-cols-2 lg:gap-x-20 gap-y-6 md:gap-y-[46px] lg:gap-y-[42px] py-9 md:py-20 border-b border-gray-300
+}

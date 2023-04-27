@@ -8,8 +8,8 @@ module.exports = {
     },
     container: {
       padding: {
-        DEFAULT: '1.25rem',
-        md: '30px',
+        sm: '1.25rem',
+        md: '1.875rem',
       },
     },
     extend: {

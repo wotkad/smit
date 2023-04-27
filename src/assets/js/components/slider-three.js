@@ -1,9 +1,9 @@
 import Swiper, { Navigation, Pagination } from 'swiper';
 
-export default function slider() {
+export default function sliderThree() {
   let nextArrow = document.querySelector('.swiper ~ .swiper-button-next');
   let prevArrow = document.querySelector('.swiper ~ .swiper-button-prev');
-  new Swiper('.swiper', {
+  new Swiper('.swiper.slider-three', {
     modules: [Navigation, Pagination],
     slidesPerView: 1,
     spaceBetween: 20,
@@ -24,8 +24,8 @@ export default function slider() {
       1212: {
         slidesPerView: 3,
         spaceBetween: 27
-      },
+      }
     }
   });
 }
-slider();
+sliderThree();

@@ -1,5 +1,5 @@
 mixin product(title, text, src, alt, isHidden)
-  .product.reveal(class=""+isHidden)
+  .product(class=""+isHidden)
     .product__image
       img(src=""+src, alt=""+alt)
     h3.product__title= title

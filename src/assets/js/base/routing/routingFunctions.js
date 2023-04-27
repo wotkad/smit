@@ -7,7 +7,9 @@ import showClients from '../../components/show-clients';
 import showDocs from '../../components/show-docs';
 import showProduct from '../../components/show-product';
 import showWorks from '../../components/show-works';
-import slider from '../../components/slider';
+import sliderThree from '../../components/slider-three';
+import sliderOne from '../../components/slider-one';
+import showEquipment from '../../components/show-equipment';
 
 export default function routingFunctions() {
   isCurrentPage();
@@ -19,5 +21,7 @@ export default function routingFunctions() {
   showDocs();
   showProduct();
   showWorks();
-  slider();
+  sliderThree();
+  sliderOne();
+  showEquipment();
 }

@@ -28,6 +28,7 @@
 @import "./mixins/review";
 @import "./mixins/breadcrumbs";
 @import "./mixins/doc";
+@import "./mixins/equip";
 
 /*
   Компоненты
@@ -48,3 +49,4 @@
 @import "./components/reviews";
 @import "./components/docs";
 @import "./components/service-popup";
+@import "./components/equipment";
