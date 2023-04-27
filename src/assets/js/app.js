@@ -10,6 +10,7 @@
 require("./base/preloader");
 require("./base/checkInternalLinks");
 require("./base/routing/routing");
+require("./base/smoothScroll");
 require("./base/checkTarget");
 require("./base/currentYear");
 require("./base/getHeaderHeight");
