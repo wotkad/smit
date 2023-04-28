@@ -28,3 +28,4 @@ require("./components/service-popup");
 require("./components/validator");
 require("./components/slider-one");
 require("./components/show-equipment");
+require("./components/toggle-tech");

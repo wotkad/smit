@@ -10,6 +10,7 @@ import showWorks from '../../components/show-works';
 import sliderThree from '../../components/slider-three';
 import sliderOne from '../../components/slider-one';
 import showEquipment from '../../components/show-equipment';
+import toggleTech from '../../components/toggle-tech';
 
 export default function routingFunctions() {
   isCurrentPage();
@@ -24,4 +25,5 @@ export default function routingFunctions() {
   sliderThree();
   sliderOne();
   showEquipment();
+  toggleTech();
 }
