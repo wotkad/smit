@@ -69,22 +69,22 @@
       @apply md:-order-none
     }
     &:nth-child(1) {
-      order: 1;
+      @apply order-1 md:-order-none
     }
     &:nth-child(2) {
-      order: 4;
+      @apply order-4 md:-order-none
     }
     &:nth-child(3) {
-      order: 2;
+      @apply order-2 md:-order-none
     }
     &:nth-child(4) {
-      order: 5;
+      @apply order-5 md:-order-none
     }
     &:nth-child(5) {
-      order: 3;
+      @apply order-3 md:-order-none
     }
     &:nth-child(6) {
-      order: 6;
+      @apply order-6 md:-order-none
       
     }
     @apply w-full relative col-span-2 md:col-auto

@@ -20,6 +20,7 @@
   Миксины
 */
 @import "./mixins/button";
+@import "./mixins/advantages";
 @import "./mixins/advantage";
 @import "./mixins/client";
 @import "./mixins/product";
@@ -30,19 +31,19 @@
 @import "./mixins/doc";
 @import "./mixins/equip";
 @import "./mixins/tech";
+@import "./mixins/opportunity";
 
 /*
   Компоненты
 */
+@import "./components/swiper";
 @import "./components/header";
 @import "./components/footer";
 @import "./components/hero";
-@import "./components/advantages";
 @import "./components/clients";
 @import "./components/production";
 @import "./components/about";
 @import "./components/works";
-@import "./components/swiper";
 @import "./components/services";
 @import "./components/calculator";
 @import "./components/success-popup";
@@ -52,3 +53,5 @@
 @import "./components/service-popup";
 @import "./components/equipment";
 @import "./components/tech-cycle";
+@import "./components/opportunities";
+@import "./components/service-hero";

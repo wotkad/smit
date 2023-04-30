@@ -1,6 +1,6 @@
 import successPopup from "./success-popup";
 import errorPopup from "./error-popup";
-import {enablePageScroll, disablePageScroll} from 'scroll-lock';
+import { enablePageScroll, disablePageScroll } from 'scroll-lock';
 import { validateEmail, validatePhone, validateName } from "./validator";
 
 export default function servicesPopup() {
@@ -44,6 +44,9 @@ export default function servicesPopup() {
       button.removeClass('active');
     });
     inputs.on('input', function() {
+      if ($(this).val()) {
+        $(this).parent().removeClass('success');
+      }
       const index = $(this).index();
       const name = $(this).attr('name');
       if ($(this).prop('name') == 'service_name') {
@@ -58,8 +61,13 @@ export default function servicesPopup() {
       if ($(this).prop('name') == 'param_value') {
         $('.calculator__input[name="param_value"]').val($(this).val());
       }
-      $('.service-popup__label input[name="' + name + '"]').parent().addClass('success');
-      $('.calculator__label input[name="' + name + '"]').parent().addClass('success');
+      if ($(this).val()) {
+        $('.service-popup__label input[name="' + name + '"]').parent().addClass('success');
+        $('.calculator__label input[name="' + name + '"]').parent().addClass('success');
+      } else {
+        $('.service-popup__label input[name="' + name + '"]').parent().removeClass('success');
+        $('.calculator__label input[name="' + name + '"]').parent().removeClass('success');
+      }
     });
     $(document).on('mousedown', (event) => {
       if (container.css('display') == 'block' && !container.is(event.target) && !items.is(event.target)) {

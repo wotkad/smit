@@ -40,8 +40,13 @@ export default function calculator() {
       if ($(this).prop('name') == 'param_value') {
         $('.service-popup__input[name="param_value"]').val($(this).val());
       }
-      $('.service-popup__label input[name="' + name + '"]').parent().addClass('success');
-      $('.calculator__label input[name="' + name + '"]').parent().addClass('success');
+      if ($(this).val()) {
+        $('.service-popup__label input[name="' + name + '"]').parent().addClass('success');
+        $('.calculator__label input[name="' + name + '"]').parent().addClass('success');
+      } else {
+        $('.service-popup__label input[name="' + name + '"]').parent().removeClass('success');
+        $('.calculator__label input[name="' + name + '"]').parent().removeClass('success');
+      }
     });
     $(document).on('mousedown', (event) => {
       if (container.css('display') == 'block' && !container.is(event.target) && !items.is(event.target)) {

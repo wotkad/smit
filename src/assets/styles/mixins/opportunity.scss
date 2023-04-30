@@ -1,0 +1,23 @@
+.opportunity {
+  &__icon {
+    img {
+      @apply w-12 h-12
+    }
+  }
+  &__text {
+    h3 {
+      &:not(:first-child) {
+        @apply mt-3
+      }
+      @apply block mb-3 font-medium
+    }
+    span {
+      @apply font-medium
+    }
+    @apply font-extralight py-[42px] tracking-[0.03em]
+  }
+  &:after {
+    @apply content-[''] absolute bottom-0 left-0 h-[1px] w-[75px] bg-gray-200
+  }
+  @apply flex flex-col items-start relative
+}

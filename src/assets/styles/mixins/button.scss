@@ -1,6 +1,6 @@
 @mixin button {
   span {
-    @apply text-white text-sm leading-6 md:text-xl tracking-[0.02em] font-medium
+    @apply text-white text-sm leading-6 md:text-lg tracking-[0.02em] font-medium
   }
   &:hover {
     @apply lg:bg-green-500

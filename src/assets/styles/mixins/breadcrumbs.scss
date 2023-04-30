@@ -14,11 +14,11 @@
         }
         @apply duration-300 transition-[color,border-color] will-change-[color,border-color] mb-[1px] border-b-2
       }
-      @apply flex items-center
+      @apply flex items-center mt-2
     }
     span {
       @apply inline-block mx-1 text-lg leading-[22px] font-medium
     }
-    @apply flex items-center flex-wrap mb-7
+    @apply flex items-center flex-wrap -mt-2
   }
 }

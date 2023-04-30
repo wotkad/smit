@@ -1,0 +1,48 @@
+.service-hero {
+  &__wrapper {
+    @apply grid grid-cols-1 lg:grid-cols-[1fr_575px] gap-y-11 gap-x-20 lg:gap-y-12
+  }
+  &__slider {
+    @apply lg:w-[575px] lg:row-span-2 w-full
+  }
+  .swiper {
+    &-slide {
+      img {
+        @apply w-full h-full object-cover
+      }
+      @apply min-h-[227px] md:min-h-[250px] lg:min-h-[404px] max-h-[227px] md:max-h-[250px] lg:max-h-[404px]
+    }
+    &.swiper-horizontal > .swiper-pagination-bullets {
+      @apply flex md:w-auto md:right-[30px] bottom-[30px] left-auto
+    }
+    @apply lg:w-full pb-0 order-2 md:order-3 lg:order-2
+  }
+  &__content {
+    h1 {
+      @apply leading-[38px] md:leading-10 mb-[14px] md:mb-8 lg:mb-9
+    }
+    p {
+      span {
+        @apply font-medium
+      }
+      @apply font-extralight tracking-[0.03em]
+    }
+    @apply order-1
+  }
+  &__price {
+    &__inner {
+      svg {
+        @apply ml-2
+      }
+      @apply text-4xl leading-8 flex items-end font-bold
+    }
+    @apply flex gap-2 items-end text-green-400 leading-4
+  }
+  button {
+    @include button;
+    @apply mt-8 md:mt-0 lg:mt-8 justify-center md:justify-start
+  }
+  &__footer {
+    @apply flex justify-between flex-col md:flex-row order-3 md:order-2 lg:order-3 lg:block
+  }
+}

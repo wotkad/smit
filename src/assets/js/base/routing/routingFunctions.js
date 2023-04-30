@@ -11,6 +11,7 @@ import sliderThree from '../../components/slider-three';
 import sliderOne from '../../components/slider-one';
 import showEquipment from '../../components/show-equipment';
 import toggleTech from '../../components/toggle-tech';
+import serviceSlider from '../../components/service-slider';
 
 export default function routingFunctions() {
   isCurrentPage();
@@ -26,4 +27,5 @@ export default function routingFunctions() {
   sliderOne();
   showEquipment();
   toggleTech();
+  serviceSlider();
 }

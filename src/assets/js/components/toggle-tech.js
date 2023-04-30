@@ -1,4 +1,4 @@
-function toggleTech() {
+export default function toggleTech() {
   let button = $('.tech-cycle__item__header');
   button.on('click', function() {
     button.not($(this)).next().slideUp();

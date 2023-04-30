@@ -1,4 +1,4 @@
-import {enablePageScroll , disablePageScroll, clearQueueScrollLocks} from 'scroll-lock';
+import { enablePageScroll , disablePageScroll, clearQueueScrollLocks } from 'scroll-lock';
 
 export default function successPopup(title, text) {
   let popup = $('.success-popup');
