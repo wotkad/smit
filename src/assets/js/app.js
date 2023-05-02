@@ -30,3 +30,4 @@ require("./components/slider-one");
 require("./components/show-equipment");
 require("./components/toggle-tech");
 require("./components/service-slider");
+require("./components/slider-four-mobonly");

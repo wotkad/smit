@@ -1,0 +1,14 @@
+.management {
+  &__text {
+    span {
+      @apply font-medium
+    }
+    @apply lg:max-w-[1070px] font-extralight mb-[42px] md:mb-[55px] lg:mb-[45px] tracking-[0.02em]
+  }
+  .swiper {
+    &-pagination {
+      @apply flex md:hidden
+    }
+    @apply pb-[42px]
+  }
+}

@@ -1,0 +1,36 @@
+.vacancy {
+  &-hidden {
+    @apply hidden
+  }
+  &__header {
+    h3 {
+      @apply text-2xl leading-6 font-medium
+    }
+    @apply mb-7 flex items-center justify-between
+  }
+  &__text {
+    span {
+      @apply font-medium
+    }
+    @apply tracking-[0.02em] mt-7 font-extralight
+  }
+  &__heading {
+    @apply mt-[23px] text-lg leading-6 font-medium
+  }
+  ul {
+    li {
+
+    }
+    @apply mt-[17px] list-disc
+  }
+  &__requirments {
+    @apply flex flex-wrap gap-x-[14px]
+  }
+  &__requirment {
+    span {
+      @apply text-green-400 text-sm leading-6
+    }
+    @apply flex items-center gap-x-[10px] py-[6px] px-3 rounded-[5px] bg-green-50
+  }
+  @apply border border-gray-500 rounded-[10px] p-8 bg-gray-100
+}

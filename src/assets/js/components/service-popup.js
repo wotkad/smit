@@ -5,7 +5,8 @@ import { validateEmail, validatePhone, validateName } from "./validator";
 
 export default function servicesPopup() {
 
-  let button = $('.calculator__button');
+  let button = $('.calculator__button, .service-hero__button');
+  let buttonService = $('.service-hero__button');
   let popup = $('.service-popup');
   let bg = $('.bg');
   let close = $('.service-popup__close');
@@ -19,6 +20,18 @@ export default function servicesPopup() {
     popup.fadeOut();
     bg.fadeOut(function() {
       enablePageScroll();
+    });
+  });
+
+  buttonService.on('click', function() {
+    let items = $('.service-popup__dropdown p');
+    const index = $(this).attr('data-id');
+    Array.from(items).forEach(function(item) {
+      $(item).removeClass('active');
+      if ($(item).attr('data-id') == index) {
+        $(item).addClass('active')
+        $('.service-popup__select input').val($(item).text());
+      }
     });
   });
 

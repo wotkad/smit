@@ -1,0 +1,7 @@
+.vacancies {
+  &__button {
+    @include button;
+    @apply w-full justify-center text-white md:mt-[50px] lg:max-w-[230px] lg:relative lg:left-1/2 lg:-translate-x-1/2 mt-6 lg:mt-10
+  }
+  @apply flex flex-col items-start gap-y-6
+}

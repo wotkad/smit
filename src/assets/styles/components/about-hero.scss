@@ -1,0 +1,19 @@
+.about-hero {
+  &__content {
+    p {
+      span {
+        @apply font-medium
+      }
+      a {
+        @apply text-green-400
+      }
+      &:first-child {
+        @apply mt-0
+      }
+      @apply font-extralight mt-3 md:mt-[14px] tracking-[0.02em]
+    }
+    img {
+      @apply float-right mb-[23px] md:ml-[38px] md:mb-[34px] lg:ml-[102px] lg:mb-[65px] object-cover w-full h-[227px] md:w-[328px] md:h-[324px] lg:w-[573px] lg:h-[285px]
+    }
+  }
+}

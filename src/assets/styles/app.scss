@@ -32,6 +32,8 @@
 @import "./mixins/equip";
 @import "./mixins/tech";
 @import "./mixins/opportunity";
+@import "./mixins/manager";
+@import "./mixins/vacancy";
 
 /*
   Компоненты
@@ -55,3 +57,6 @@
 @import "./components/tech-cycle";
 @import "./components/opportunities";
 @import "./components/service-hero";
+@import "./components/about-hero";
+@import "./components/management";
+@import "./components/vacancies";
