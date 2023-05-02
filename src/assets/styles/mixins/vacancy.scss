@@ -4,27 +4,33 @@
   }
   &__header {
     h3 {
-      @apply text-2xl leading-6 font-medium
+      @apply text-lg md:text-2xl leading-6 font-medium
     }
-    @apply mb-7 flex items-center justify-between
+    @apply mb-6 md:pb-7 flex items-center justify-between cursor-pointer pt-6 md:pt-8
   }
   &__text {
     span {
       @apply font-medium
     }
-    @apply tracking-[0.02em] mt-7 font-extralight
+    @apply tracking-[0.02em] mt-4 lg:mt-7 font-extralight
   }
   &__heading {
-    @apply mt-[23px] text-lg leading-6 font-medium
+    @apply mt-[14px] md:mt-[30px] lg:mt-6 text-lg leading-6 font-medium
   }
   ul {
     li {
-
+      span {
+        @apply font-medium
+      }
+      &:before {
+        @apply content-[''] absolute left-0 w-[6px] h-[6px] rounded-full bg-gray-200 top-2
+      }
+      @apply font-extralight line-clamp-1 pl-5 relative text-sm leading-5 md:text-base
     }
-    @apply mt-[17px] list-disc
+    @apply mt-[17px] list-disc flex flex-col items-start gap-y-3 tracking-[0.02em]
   }
   &__requirments {
-    @apply flex flex-wrap gap-x-[14px]
+    @apply flex flex-wrap gap-[14px]
   }
   &__requirment {
     span {
@@ -32,5 +38,28 @@
     }
     @apply flex items-center gap-x-[10px] py-[6px] px-3 rounded-[5px] bg-green-50
   }
-  @apply border border-gray-500 rounded-[10px] p-8 bg-gray-100
+  &__button {
+    @include button;
+    @apply mt-8 lg:mt-3 relative left-full -translate-x-full w-full md:w-auto justify-center
+  }
+  &__close {
+    svg {
+      path {
+        @apply transition-[stroke] duration-300 will-change-[stroke]
+      }
+      @apply transition-[transform] duration-300 will-change-[transform] w-4 md:w-6
+    }
+  }
+  &.active {
+    .vacancy__close {
+      svg {
+        path {
+          @apply stroke-green-400
+        }
+        @apply rotate-180
+      }
+    }
+    @apply overflow-visible max-h-full
+  }
+  @apply border border-gray-500 rounded-[10px] px-6 pb-6 lg:px-8 lg:pb-8 bg-gray-100 max-h-[480px] md:max-h-[370px] lg:max-h-[300px] overflow-hidden
 }

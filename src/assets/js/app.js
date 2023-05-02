@@ -31,3 +31,5 @@ require("./components/show-equipment");
 require("./components/toggle-tech");
 require("./components/service-slider");
 require("./components/slider-four-mobonly");
+require("./components/show-vacancies");
+require("./components/toggle-vacancy");

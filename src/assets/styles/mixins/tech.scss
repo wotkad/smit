@@ -27,7 +27,7 @@
         path {
           @apply transition-[stroke] duration-300 will-change-[stroke]
         }
-        @apply transition-[transform] duration-300 will-change-[stroke] w-4 md:w-6
+        @apply transition-[transform] duration-300 will-change-[transform] w-4 md:w-6
       }
       &:hover {
         svg {

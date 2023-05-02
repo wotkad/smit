@@ -13,6 +13,8 @@ import showEquipment from '../../components/show-equipment';
 import toggleTech from '../../components/toggle-tech';
 import serviceSlider from '../../components/service-slider';
 import sliderFourMobOnly from '../../components/slider-four-mobonly';
+import showVacancies from '../../components/show-vacancies';
+import toggleVacancy from '../../components/toggle-vacancy';
 
 export default function routingFunctions() {
   isCurrentPage();
@@ -30,4 +32,6 @@ export default function routingFunctions() {
   toggleTech();
   serviceSlider();
   sliderFourMobOnly();
+  showVacancies();
+  toggleVacancy();
 }
