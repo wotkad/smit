@@ -1,0 +1,23 @@
+.contact {
+  h3 {
+    span {
+      @apply uppercase text-lg leading-6 md:text-xl md:leading-5 font-medium tracking-[0.02em]
+    }
+    img {
+      @apply w-6 h-6 md:w-9 md:h-9
+    }
+    @apply flex mb-3 md:mb-4 items-center gap-x-3 md:gap-x-[14px]
+  }
+  &__content {
+    p, a {
+      @apply ml-9 md:ml-12 font-medium text-sm leading-6 md:leading-7 md:text-base
+    }
+    a {
+      &:hover {
+        @apply lg:text-green-400
+      }
+      @apply transition-[color] duration-300 will-change-[color]
+    }
+    @apply flex flex-col items-start
+  }
+}

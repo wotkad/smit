@@ -1,0 +1,20 @@
+.contacts {
+  &__text {
+    span {
+      @apply font-medium
+    }
+    @apply lg:max-w-[1014px] text-base md:text-xl md:leading-7 font-extralight mb-[42px] md:mb-[68px] lg:mb-[86px] tracking-[0.02em]
+  }
+  &__container {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-y-[42px] md:gap-y-14 lg:gap-y-0 lg:gap-x-5
+  }
+  &__map {
+    img {
+      @apply w-full h-full object-cover
+    }
+    @apply rounded-[6px] border border-gray-550 overflow-hidden h-[520px]
+  }
+  &__list {
+    @apply flex flex-col gap-y-11 lg:gap-y-[70px]
+  }
+}
