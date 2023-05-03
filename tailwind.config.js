@@ -10,6 +10,7 @@ module.exports = {
       padding: {
         sm: '1.25rem',
         md: '1.875rem',
+        lg: '1.3125rem'
       },
     },
     extend: {
@@ -23,6 +24,7 @@ module.exports = {
           '500': '#CCCCCC',
           '550': '#C6C6C6',
           '600': '#C8C8C8',
+          '650': '#A4A4A4',
           '700': '#979797',
           '800': '#5C6670'
         },

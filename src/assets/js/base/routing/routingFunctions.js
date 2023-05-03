@@ -15,6 +15,7 @@ import sliderFourMobOnly from '../../components/slider-four-mobonly';
 import showVacancies from '../../components/show-vacancies';
 import toggleVacancy from '../../components/toggle-vacancy';
 import callback from '../../components/callback';
+import sliderOneCentered from '../../components/slider-one-centered';
 
 export default function routingFunctions() {
   isCurrentPage();
@@ -34,4 +35,5 @@ export default function routingFunctions() {
   showVacancies();
   toggleVacancy();
   callback();
+  sliderOneCentered();
 }

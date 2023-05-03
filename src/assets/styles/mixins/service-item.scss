@@ -1,0 +1,67 @@
+.service-item {
+  &__slider {
+    @apply lg:w-[560px] lg:row-span-2 w-full
+  }
+  &__title {
+    br {
+      @apply hidden lg:block
+    }
+    @apply text-2xl md:text-[32px] md:leading-10 mb-[14px] md:mb-3 lg:mb-[11px] font-bold
+  }
+  &__tags {
+    span {
+      &:last-child {
+        @apply hidden
+      }
+      @apply text-gray-650 inline-block mx-[6px]
+    }
+    @apply flex items-center flex-wrap mb-[15px] md:mb-7
+  }
+  &__tag {
+    @apply text-gray-650
+  }
+  .swiper {
+    &-slide {
+      img {
+        @apply w-full h-full object-cover
+      }
+      @apply min-h-[227px] md:min-h-[354px] max-h-[227px] md:max-h-[354px]
+    }
+    &.swiper-horizontal > .swiper-pagination-bullets {
+      @apply flex md:w-auto md:right-[30px] bottom-[30px] left-auto
+    }
+    @apply lg:w-full pb-0 order-1 lg:order-2
+  }
+  &__content {
+    p {
+      span {
+        @apply font-medium
+      }
+      @apply font-extralight tracking-[0.03em] line-clamp-3
+    }
+    @apply order-2 lg:order-1 lg:mt-0 md:mt-8 mt-[25px]
+  }
+  &__price {
+    &__inner {
+      svg {
+        @apply ml-2
+      }
+      @apply text-4xl leading-8 flex items-end font-bold
+    }
+    @apply flex gap-2 items-end text-green-400 leading-4
+  }
+  a {
+    @include button;
+    @apply mt-8 md:mt-0 lg:mt-8 justify-center md:justify-start w-full md:w-auto
+  }
+  &__footer {
+    @apply flex justify-between flex-col md:flex-row order-3 md:items-end md:self-end lg:mt-0 md:mt-[42px] mt-8
+  }
+  &:first-child {
+    @apply pt-0
+  }
+  &:last-child {
+    @apply border-none
+  }
+  @apply grid grid-cols-1 lg:grid-cols-[1fr_560px] gap-x-20 items-start py-9 md:py-16 border-b border-gray-300
+}
