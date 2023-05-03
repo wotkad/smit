@@ -1,0 +1,86 @@
+.callback {
+  &__wrapper {
+    @apply grid grid-cols-1 lg:grid-cols-[1fr_578px] lg:gap-x-[166px]
+  }
+  &__header {
+    h2 {
+      @apply mb-0
+    }
+    h3 {
+      @apply text-lg md:text-[22px] leading-6 font-medium tracking-[0.02em]
+    }
+    p {
+      br {
+        @apply hidden lg:block
+      }
+      @apply md:text-[22px] md:leading-8 font-extralight tracking-[0.02em]
+    }
+    @apply flex flex-col gap-y-6 md:gap-y-11
+  }
+  &__footer {
+    p {
+      span {
+        @apply font-medium
+      }
+      @apply font-extralight tracking-[0.02em] text-sm leading-6 md:text-base -mt-[1px] md:mt-0
+    }
+    img {
+      @apply w-5 h-5 md:w-6 md:h-6
+    }
+    @apply flex gap-x-[7px] md:gap-x-3 items-start lg:items-end mt-9 lg:mt-0
+  }
+  &__form {
+    &__label {
+      &-required {
+        @apply text-red-400
+      }
+      &:first-child {
+        @apply z-20
+      }
+      input {
+        &:focus {
+          @apply bg-green-100 border-green-700
+        }
+        @apply text-sm md:text-base mt-3 outline-none transition-[background-color,border-color] duration-300 will-change-[background-color,border-color]
+      }
+      span {
+        @apply tracking-[0.02em] inline-block font-medium text-sm leading-6 md:text-base
+      }
+      img {
+        .error,
+        .success {
+          @apply hidden
+        }
+        @apply hidden absolute right-4 bottom-4
+      }
+      &.success {
+        img.success {
+          @apply block
+        }
+      }
+      &.error {
+        img.error {
+          @apply block
+        }
+      }
+      @apply w-full relative
+    }
+    &__input {
+      &__inner {
+        @apply relative flex items-center
+      }
+      &__icon {
+        @apply absolute right-4 bottom-4 transition-[transform] duration-300 will-change-[transform] cursor-pointer
+      }
+      @apply text-sm leading-6 font-medium bg-transparent p-4 w-full border border-gray-500 rounded-[5px]
+    }
+    &__button {
+      @include button;
+      @apply w-full justify-center text-white
+    }
+    &__policy {
+      @apply text-[11px] font-extralight tracking-[0.02em] leading-4 -mt-[17px]
+    }
+    @apply mt-[31px] md:mt-[50px] lg:mt-0 row-span-2 md:p-9 md:border md:border-gray-350 md:rounded-[5px] flex flex-col items-start gap-y-6 md:gap-y-[27px]
+  }
+}

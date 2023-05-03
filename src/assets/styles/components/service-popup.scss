@@ -41,7 +41,7 @@
       @apply text-sm md:text-base mt-3 outline-none transition-[background-color,border-color] duration-300 will-change-[background-color,border-color]
     }
     span {
-      @apply inline-block font-medium text-sm leading-6 md:text-base
+      @apply tracking-[0.02em] inline-block font-medium text-sm leading-6 md:text-base
     }
     img {
       .error,

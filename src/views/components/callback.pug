@@ -1,0 +1,28 @@
+section.callback.section__gapper.section-gray
+  .wrapper 
+    .callback__wrapper
+      .callback__header
+        h2.section__title Обратная связь
+        h3 У вас есть вопросы? Закажите звонок!
+        p Оставьте ваши контактные данные, <br>наши менеджеры свяжутся с вами в ближайшее время и проконсультируют по вашему вопросу
+      form(action="#").callback__form
+        .callback__form__label.label-name
+          span Ваше имя <span class="service-popup__label-required">*</span>
+          input(autocomplete="off" minlength="2" maxlength="50" type="text" name="name" required placeholder="Введите имя").callback__form__input
+          img.success(src="/assets/images/icons/check-circle-green.svg", alt="check-circle-green")
+          img.error(src="/assets/images/icons/error-circle-red.svg", alt="error-circle-red")
+        .callback__form__label.label-phone
+          span Телефон <span class="service-popup__label-required">*</span>
+          input(autocomplete="off" type="text" name="phone" required placeholder="+7 (___) ___-__-__").callback__form__input
+          img.success(src="/assets/images/icons/check-circle-green.svg", alt="check-circle-green")
+          img.error(src="/assets/images/icons/error-circle-red.svg", alt="error-circle-red")
+        .callback__form__label.label-email
+          span E-mail
+          input(autocomplete="off" type="email" name="email" placeholder="Введите ваш e-mail").callback__form__input
+          img.success(src="/assets/images/icons/check-circle-green.svg", alt="check-circle-green")
+          img.error(src="/assets/images/icons/error-circle-red.svg", alt="error-circle-red")
+        button.callback__form__button(type="submit") Оформить заказ
+        .callback__form__policy Нажимая кнопку "Оформить заказ", вы даете согласие на обработку ваших персональных данных.
+      .callback__footer 
+        img(src="/assets/images/icons/info-green.svg", alt="info-green")
+        p Звонки осуществляются с <span>Пн.- Пт.: 09:00-18:00</span>

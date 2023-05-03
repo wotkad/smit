@@ -16,7 +16,7 @@
       @apply mt-3 outline-none transition-[background-color,border-color] duration-300 will-change-[background-color,border-color]
     }
     span {
-      @apply inline-block font-medium text-base
+      @apply tracking-[0.02em] inline-block font-medium text-base
     }
     img {
       .error,

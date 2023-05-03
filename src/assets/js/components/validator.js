@@ -19,49 +19,49 @@ const validatePhone = (phone) => {
 }
 
 const validatedName = () => {
-  const name = $('.service-popup__label-name input').val();
+  const name = $('.label-name input').val();
 
   if (validateName(name)) {
-    $('.service-popup__label-name').removeClass('error').addClass('success');
+    $('.label-name').removeClass('error').addClass('success');
   } else {
-    $('.service-popup__label-name').addClass('error').removeClass('success');
+    $('.label-name').addClass('error').removeClass('success');
   }
   if (name == '') {
-    $('.service-popup__label-name').removeClass('error').removeClass('success');
+    $('.label-name').removeClass('error').removeClass('success');
   }
   return false;
 }
 
 const validatedEmail = () => {
-  const email = $('.service-popup__label-email input').val();
+  const email = $('.label-email input').val();
 
   if (validateEmail(email)) {
-    $('.service-popup__label-email').removeClass('error').addClass('success');
+    $('.label-email').removeClass('error').addClass('success');
   } else {
-    $('.service-popup__label-email').addClass('error').removeClass('success');
+    $('.label-email').addClass('error').removeClass('success');
   }
   if (email == '') {
-    $('.service-popup__label-email').removeClass('error').removeClass('success');
+    $('.label-email').removeClass('error').removeClass('success');
   }
   return false;
 }
 
 const validatedPhone = () => {
-  const phone = $('.service-popup__label-phone input').val();
+  const phone = $('.label-phone input').val();
 
   if (validatePhone(phone)) {
-    $('.service-popup__label-phone').removeClass('error').addClass('success');
+    $('.label-phone').removeClass('error').addClass('success');
   } else {
-    $('.service-popup__label-phone').addClass('error').removeClass('success');
+    $('.label-phone').addClass('error').removeClass('success');
   }
   if (phone == '') {
-    $('.service-popup__label-phone').removeClass('error').removeClass('success');
+    $('.label-phone').removeClass('error').removeClass('success');
   }
   return false;
 }
 
-$('.service-popup__label-name input').on('input', validatedName);
-$('.service-popup__label-email input').on('input', validatedEmail);
-$('.service-popup__label-phone input').on('input', validatedPhone);
+$('.label-name input').on('input', validatedName);
+$('.label-email input').on('input', validatedEmail);
+$('.label-phone input').on('input', validatedPhone);
 
 export { validateName, validateEmail, validatePhone }

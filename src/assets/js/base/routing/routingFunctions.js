@@ -11,10 +11,10 @@ import sliderThree from '../../components/slider-three';
 import sliderOne from '../../components/slider-one';
 import showEquipment from '../../components/show-equipment';
 import toggleTech from '../../components/toggle-tech';
-import serviceSlider from '../../components/service-slider';
 import sliderFourMobOnly from '../../components/slider-four-mobonly';
 import showVacancies from '../../components/show-vacancies';
 import toggleVacancy from '../../components/toggle-vacancy';
+import callback from '../../components/callback';
 
 export default function routingFunctions() {
   isCurrentPage();
@@ -30,8 +30,8 @@ export default function routingFunctions() {
   sliderOne();
   showEquipment();
   toggleTech();
-  serviceSlider();
   sliderFourMobOnly();
   showVacancies();
   toggleVacancy();
+  callback();
 }
