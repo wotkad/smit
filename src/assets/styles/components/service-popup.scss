@@ -1,20 +1,20 @@
 .service-popup {
   &__title {
     h3 {
-      @apply text-[22px] md:text-4xl leading-6 font-bold
+      @apply text-[22px] font-bold leading-6 md:text-4xl
     }
     svg {
       path {
-        @apply duration-300 transition-[fill] will-change-[fill]
+        @apply transition-[fill] duration-300 will-change-[fill]
       }
       &:hover {
         path {
           @apply lg:fill-green-400
         }
       }
-      @apply w-8 h-8 cursor-pointer
+      @apply h-8 w-8 cursor-pointer
     }
-    @apply flex items-center mb-5 md:mb-[37px] lg:mb-10 justify-between
+    @apply mb-5 flex items-center justify-between md:mb-[37px] lg:mb-10
   }
   &__form {
     &.scrolled {
@@ -23,9 +23,9 @@
       }
     }
     &:before {
-      @apply block md:hidden transition-[opacity] will-change-[opacity] duration-300 content-[''] absolute bottom-[132px] left-5 w-[calc(100%-40px)] h-16 bg-gradient-to-t from-white to-transparent z-10
+      @apply absolute bottom-[132px] left-5 z-10 block h-16 w-[calc(100%-40px)] bg-gradient-to-t from-white to-transparent transition-[opacity] duration-300 will-change-[opacity] content-[''] md:hidden
     }
-    @apply grid grid-cols-1 md:grid-cols-2 gap-x-0 md:gap-x-6 lg:gap-x-8 gap-y-6 md:gap-y-[26px] max-h-[386px] md:max-h-full overflow-y-auto md:overflow-y-hidden
+    @apply grid max-h-[386px] grid-cols-1 gap-x-0 gap-y-6 overflow-y-auto md:max-h-full md:grid-cols-2 md:gap-x-6 md:gap-y-[26px] md:overflow-y-hidden lg:gap-x-8
   }
   &__label {
     &-required {
@@ -36,19 +36,19 @@
     }
     input {
       &:focus {
-        @apply bg-green-100 border-green-700
+        @apply border-green-700 bg-green-100
       }
-      @apply text-sm md:text-base mt-3 outline-none transition-[background-color,border-color] duration-300 will-change-[background-color,border-color]
+      @apply mt-3 text-sm outline-none transition-[background-color,border-color] duration-300 will-change-[background-color,border-color] md:text-base
     }
     span {
-      @apply tracking-[0.02em] inline-block font-medium text-sm leading-6 md:text-base
+      @apply inline-block text-sm font-medium leading-6 tracking-[0.02em] md:text-base
     }
     img {
       .error,
       .success {
         @apply hidden
       }
-      @apply hidden absolute right-4 bottom-4
+      @apply absolute bottom-4 right-4 hidden
     }
     &.success {
       img.success {
@@ -85,9 +85,8 @@
     }
     &:nth-child(6) {
       @apply order-6 md:-order-none
-      
     }
-    @apply w-full relative col-span-2 md:col-auto
+    @apply relative col-span-2 w-full md:col-auto
   }
   &__select {
     &.active {
@@ -96,18 +95,18 @@
       }
     }
     .service-popup__input {
-      @apply cursor-pointer caret-transparent text-green-400
+      @apply cursor-pointer text-green-400 caret-transparent
     }
-    @apply flex items-center w-full
+    @apply flex w-full items-center
   }
   &__input {
     &__inner {
       @apply relative flex items-center
     }
     &__icon {
-      @apply absolute right-4 bottom-4 transition-[transform] duration-300 will-change-[transform] cursor-pointer
+      @apply absolute bottom-4 right-4 cursor-pointer transition-[transform] duration-300 will-change-[transform]
     }
-    @apply text-sm leading-6 font-medium bg-transparent p-4 w-full border border-gray-500 rounded-[5px]
+    @apply w-full rounded-[5px] border border-gray-500 bg-transparent p-4 text-sm font-medium leading-6
   }
   &__dropdown {
     p {
@@ -117,16 +116,16 @@
       &.active {
         @apply text-green-400
       }
-      @apply p-4 cursor-pointer transition-[color] duration-300 will-change-[color] text-sm font-medium
+      @apply cursor-pointer p-4 text-sm font-medium transition-[color] duration-300 will-change-[color]
     }
-    @apply absolute hidden shadow-md top-[75px] border border-gray-500 rounded-[5px] w-full bg-white z-20
+    @apply absolute top-[75px] z-20 hidden w-full rounded-[5px] border border-gray-500 bg-white shadow-md
   }
   &__button {
     @include button;
-    @apply md:w-full justify-center text-white col-span-2 absolute bottom-16 md:static left-5 w-[calc(100%-40px)]
+    @apply absolute bottom-16 left-5 col-span-2 w-[calc(100%-40px)] justify-center text-white md:static md:w-full
   }
   &__policy {
-    @apply text-[11px] font-extralight tracking-[0.02em] leading-4 col-span-2 -mt-4 absolute bottom-5 md:static left-5 w-[calc(100%-40px)]
+    @apply absolute bottom-5 left-5 col-span-2 -mt-4 w-[calc(100%-40px)] text-[11px] font-extralight leading-4 tracking-[0.02em] md:static
   }
-  @apply hidden fixed h-[590px] md:h-auto w-[340px] md:w-[688px] lg:w-[882px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-[5px] p-5 md:p-12 z-[100]
+  @apply fixed left-1/2 top-1/2 z-[100] hidden h-[590px] w-[340px] -translate-x-1/2 -translate-y-1/2 rounded-[5px] bg-white p-5 md:h-auto md:w-[688px] md:p-12 lg:w-[882px]
 }

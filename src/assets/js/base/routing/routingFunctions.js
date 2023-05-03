@@ -16,6 +16,8 @@ import showVacancies from '../../components/show-vacancies';
 import toggleVacancy from '../../components/toggle-vacancy';
 import callback from '../../components/callback';
 import sliderOneCentered from '../../components/slider-one-centered';
+import sliderThreeCentered from '../../components/slider-three-centered';
+import showCases from '../../components/show-cases';
 
 export default function routingFunctions() {
   isCurrentPage();
@@ -36,4 +38,6 @@ export default function routingFunctions() {
   toggleVacancy();
   callback();
   sliderOneCentered();
+  sliderThreeCentered();
+  showCases();
 }

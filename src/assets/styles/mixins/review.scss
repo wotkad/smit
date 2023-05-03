@@ -1,7 +1,7 @@
 .review {
   &__image {
     img {
-      @apply object-cover w-full h-full
+      @apply h-full w-full object-cover
     }
     @apply mb-4 h-[308px]
   }
@@ -14,5 +14,5 @@
     }
     @apply line-clamp-3 font-extralight  tracking-[0.02em]
   }
-  @apply p-[34px] flex flex-col gap-5 items-start relative border border-gray-500 rounded-[10px]
+  @apply relative flex flex-col items-start gap-5 rounded-[10px] border border-gray-500 p-[34px]
 }

@@ -6,60 +6,8 @@ section.contacts.section__gapper
       p.contacts__text Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. <span>Velit officia consequat duis enim velit mollit.</span> Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
       .contacts__container
         .contacts__list
-          +contact(
-            'Центральный офис в Москве',
-            '/assets/images/icons/location-green.svg',
-            'location-green',  
-            [
-              {
-                href: 'https://yandex.ru/maps/-/CCUcU2bFkC',
-                text: '115230, г. Москва, Каширское шоссе, д.3, к.2, стр.2'
-              }
-            ],
-            [
-              {
-                text: 'Режим работы: Пн.-Пт.: 09:00-18:00'
-              },
-              {
-                text: 'Сб.-Вс.: выходной'
-              }
-            ]
-          )
-          +contact(
-            'Центральный офис в Москве',
-            '/assets/images/icons/location-green.svg',
-            'location-green',  
-            [
-              {
-                href: 'https://yandex.ru/maps/-/CCUrMUsXwB',
-                text: 'Московская область, г. Климовск Бережковский пр-д, д 4'
-              }
-            ],
-            [
-              {
-                text: 'Режим работы: Пн.-Вс.: 07:00-24:00'
-              }
-            ]
-          )
-          +contact(
-            'Связаться с нами',
-            '/assets/images/icons/mail-green.svg',
-            'mail-green',  
-            [
-              {
-                href: 'tel:+7 (495) 023-01-41',
-                text: '+7 (495) 023-01-41'
-              },
-              {
-                href: 'tel:info@smit-metal.ru',
-                text: 'info@smit-metal.ru'
-              },
-              {
-                href: 'www.smit-metal.ru',
-                text: 'www.smit-metal.ru'
-              }
-            ],
-            []
-          )
+          +contact('Центральный офис в Москве', '/assets/images/icons/location-green.svg', 'location-green', [ { href: 'https://yandex.ru/maps/-/CCUcU2bFkC', text: '115230, г. Москва, Каширское шоссе, д.3, к.2, стр.2' } ], [ { text: 'Режим работы: Пн.-Пт.: 09:00-18:00' }, { text: 'Сб.-Вс.: выходной' } ])
+          +contact('Центральный офис в Москве', '/assets/images/icons/location-green.svg', 'location-green', [ { href: 'https://yandex.ru/maps/-/CCUrMUsXwB', text: 'Московская область, г. Климовск Бережковский пр-д, д 4' } ], [ { text: 'Режим работы: Пн.-Вс.: 07:00-24:00' } ])
+          +contact('Связаться с нами', '/assets/images/icons/mail-green.svg', 'mail-green', [ { href: 'tel:+7 (495) 023-01-41', text: '+7 (495) 023-01-41' }, { href: 'tel:info@smit-metal.ru', text: 'info@smit-metal.ru' }, { href: 'www.smit-metal.ru', text: 'www.smit-metal.ru' } ], [])
         .contacts__map
-          img(src="/assets/images/map.png", alt="map")
+          img(src="/assets/images/map.png" alt="map")

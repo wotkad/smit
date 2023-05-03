@@ -1,7 +1,7 @@
 .opportunity {
   &__icon {
     img {
-      @apply w-12 h-12
+      @apply h-12 w-12
     }
   }
   &__text {
@@ -9,15 +9,15 @@
       &:not(:first-child) {
         @apply mt-3
       }
-      @apply block mb-3 font-medium
+      @apply mb-3 block font-medium
     }
     span {
       @apply font-medium
     }
-    @apply font-extralight py-[42px] tracking-[0.03em]
+    @apply py-[42px] font-extralight tracking-[0.03em]
   }
   &:after {
-    @apply content-[''] absolute bottom-0 left-0 h-[1px] w-[75px] bg-gray-200
+    @apply absolute bottom-0 left-0 h-[1px] w-[75px] bg-gray-200 content-['']
   }
-  @apply flex flex-col items-start relative
+  @apply relative flex flex-col items-start
 }

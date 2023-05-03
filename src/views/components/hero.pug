@@ -1,10 +1,19 @@
 section.hero
   .hero__video
-    video(src="/assets/video/video.mp4" poster="/assets/images/poster.png") 
+    video(src="/assets/video/video.mp4" poster="/assets/images/poster.png")
   .wrapper
     .hero__wrapper
       h1 Производство <br> и покраска металлоизделий
-      a(href="#calculator").hero__button
+      a.hero__button(href="#calculator")
         span Заказать услугу
-        svg(width='24', height='24', viewBox='0 0 24 24', fill='none', xmlns='http://www.w3.org/2000/svg')
-          path(d='M14 18L12.6 16.55L16.15 13H4V11H16.15L12.6 7.45L14 6L20 12L14 18Z', fill='white')
+        svg(
+          fill="none"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        )
+          path(
+            d="M14 18L12.6 16.55L16.15 13H4V11H16.15L12.6 7.45L14 6L20 12L14 18Z"
+            fill="white"
+          )

@@ -1,21 +1,21 @@
 .product {
   &__image {
     img {
-      @apply object-cover w-full h-full
+      @apply h-full w-full object-cover
     }
-    @apply mb-5 md:mb-7 h-[227px]
+    @apply mb-5 h-[227px] md:mb-7
   }
   &__title {
-    @apply text-2xl leading-6 md:text-[22px] md:leading-8 lg:text-2xl lg:leading-6 mb-[18px] font-medium
+    @apply mb-[18px] text-2xl font-medium leading-6 md:text-[22px] md:leading-8 lg:text-2xl lg:leading-6
   }
   &__text {
     @apply line-clamp-4 text-base font-extralight tracking-[0.02em]
   }
   &:after {
-    @apply content-[''] absolute bottom-0 left-0 h-[1px] w-[75px] bg-gray-200
+    @apply absolute bottom-0 left-0 h-[1px] w-[75px] bg-gray-200 content-['']
   }
   &-hidden {
     @apply hidden md:block
   }
-  @apply pb-6
+  @apply relative pb-6
 }

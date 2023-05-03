@@ -1,8 +1,9 @@
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
   @apply mx-2
 }
-.swiper-horizontal>.swiper-pagination-bullets {
-  @apply lg:hidden bottom-0 flex items-center justify-center w-full
+.swiper-horizontal > .swiper-pagination-bullets {
+  @apply bottom-0 flex w-full items-center justify-center lg:hidden
 }
 .swiper {
   &-wrapper {
@@ -16,7 +17,7 @@
       &-active {
         @apply bg-green-400
       }
-      @apply w-2 h-2 opacity-100 transition-[background-color] will-change-[background-color] duration-300 bg-gray-600
+      @apply h-2 w-2 bg-gray-600 opacity-100 transition-[background-color] duration-300 will-change-[background-color]
     }
   }
   &-button {
@@ -27,7 +28,7 @@
       }
       svg {
         path {
-          @apply will-change-[fill] duration-300 transition-[fill]
+          @apply transition-[fill] duration-300 will-change-[fill]
         }
       }
       &:hover {
@@ -37,7 +38,7 @@
           }
         }
       }
-      @apply hidden lg:block w-auto h-auto transition-[opacity] duration-300 will-change-[opacity]
+      @apply hidden h-auto w-auto transition-[opacity] duration-300 will-change-[opacity] lg:block
     }
     &-disabled {
       @apply opacity-50

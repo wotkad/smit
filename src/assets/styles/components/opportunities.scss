@@ -1,5 +1,5 @@
 .opportunities {
   &__items {
-    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[58px] gap-y-[75px] md:gap-y-20 lg:gap-x-[100px]
+    @apply grid grid-cols-1 gap-x-[58px] gap-y-[75px] md:grid-cols-2 md:gap-y-20 lg:grid-cols-3 lg:gap-x-[100px]
   }
 }

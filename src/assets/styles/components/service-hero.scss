@@ -1,25 +1,25 @@
 .service-hero {
   &__wrapper {
-    @apply grid grid-cols-1 lg:grid-cols-[1fr_575px] gap-y-11 gap-x-20 lg:gap-y-12
+    @apply grid grid-cols-1 gap-x-20 gap-y-11 lg:grid-cols-[1fr_575px] lg:gap-y-12
   }
   &__slider {
-    @apply lg:w-[575px] lg:row-span-2 w-full
+    @apply w-full lg:row-span-2 lg:w-[575px]
   }
   .swiper {
     &-slide {
       img {
-        @apply w-full h-full object-cover
+        @apply h-full w-full object-cover
       }
-      @apply min-h-[227px] md:min-h-[250px] lg:min-h-[404px] max-h-[227px] md:max-h-[250px] lg:max-h-[404px]
+      @apply max-h-[227px] min-h-[227px] md:max-h-[250px] md:min-h-[250px] lg:max-h-[404px] lg:min-h-[404px]
     }
     &.swiper-horizontal > .swiper-pagination-bullets {
-      @apply hidden lg:flex md:w-auto md:right-[30px] bottom-[30px] left-auto
+      @apply bottom-[30px] left-auto hidden md:right-[30px] md:w-auto lg:flex
     }
-    @apply lg:w-full pb-0 order-2 md:order-3 lg:order-2 lg:mx-0 -mx-[21px] md:-mx-[30px] w-[calc(100%+42px)] md:w-[calc(100%+60px)]
+    @apply order-2 -mx-[21px] w-[calc(100%+42px)] pb-0 md:order-3 md:-mx-[30px] md:w-[calc(100%+60px)] lg:order-2 lg:mx-0 lg:w-full
   }
   &__content {
     h1 {
-      @apply leading-[38px] md:leading-10 mb-[14px] md:mb-8 lg:mb-9
+      @apply mb-[14px] leading-[38px] md:mb-8 md:leading-10 lg:mb-9
     }
     p {
       span {
@@ -34,15 +34,15 @@
       svg {
         @apply ml-2
       }
-      @apply text-4xl leading-8 flex items-end font-bold
+      @apply flex items-end text-4xl font-bold leading-8
     }
-    @apply flex gap-2 items-end text-green-400 leading-4
+    @apply flex items-end gap-2 leading-4 text-green-400
   }
   button {
     @include button;
-    @apply mt-8 md:mt-0 lg:mt-8 justify-center md:justify-start
+    @apply mt-8 justify-center md:mt-0 md:justify-start lg:mt-8
   }
   &__footer {
-    @apply flex justify-between flex-col md:flex-row order-3 md:order-2 lg:order-3 lg:block
+    @apply order-3 flex flex-col justify-between md:order-2 md:flex-row lg:order-3 lg:block
   }
 }

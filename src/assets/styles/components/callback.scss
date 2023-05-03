@@ -7,13 +7,13 @@
       @apply mb-0
     }
     h3 {
-      @apply text-lg md:text-[22px] leading-6 font-medium tracking-[0.02em]
+      @apply text-lg font-medium leading-6 tracking-[0.02em] md:text-[22px]
     }
     p {
       br {
         @apply hidden lg:block
       }
-      @apply md:text-[22px] md:leading-8 font-extralight tracking-[0.02em]
+      @apply font-extralight tracking-[0.02em] md:text-[22px] md:leading-8
     }
     @apply flex flex-col gap-y-6 md:gap-y-11
   }
@@ -22,12 +22,12 @@
       span {
         @apply font-medium
       }
-      @apply font-extralight tracking-[0.02em] text-sm leading-6 md:text-base -mt-[1px] md:mt-0
+      @apply -mt-[1px] text-sm font-extralight leading-6 tracking-[0.02em] md:mt-0 md:text-base
     }
     img {
-      @apply w-5 h-5 md:w-6 md:h-6
+      @apply h-5 w-5 md:h-6 md:w-6
     }
-    @apply flex gap-x-[7px] md:gap-x-3 items-start lg:items-end mt-9 lg:mt-0
+    @apply mt-9 flex items-start gap-x-[7px] md:gap-x-3 lg:mt-0 lg:items-end
   }
   &__form {
     &__label {
@@ -39,19 +39,19 @@
       }
       input {
         &:focus {
-          @apply bg-green-100 border-green-700
+          @apply border-green-700 bg-green-100
         }
-        @apply text-sm md:text-base mt-3 outline-none transition-[background-color,border-color] duration-300 will-change-[background-color,border-color]
+        @apply mt-3 text-sm outline-none transition-[background-color,border-color] duration-300 will-change-[background-color,border-color] md:text-base
       }
       span {
-        @apply tracking-[0.02em] inline-block font-medium text-sm leading-6 md:text-base
+        @apply inline-block text-sm font-medium leading-6 tracking-[0.02em] md:text-base
       }
       img {
         .error,
         .success {
           @apply hidden
         }
-        @apply hidden absolute right-4 bottom-4
+        @apply absolute bottom-4 right-4 hidden
       }
       &.success {
         img.success {
@@ -63,24 +63,24 @@
           @apply block
         }
       }
-      @apply w-full relative
+      @apply relative w-full
     }
     &__input {
       &__inner {
         @apply relative flex items-center
       }
       &__icon {
-        @apply absolute right-4 bottom-4 transition-[transform] duration-300 will-change-[transform] cursor-pointer
+        @apply absolute bottom-4 right-4 cursor-pointer transition-[transform] duration-300 will-change-[transform]
       }
-      @apply text-sm leading-6 font-medium bg-transparent p-4 w-full border border-gray-500 rounded-[5px]
+      @apply w-full rounded-[5px] border border-gray-500 bg-transparent p-4 text-sm font-medium leading-6
     }
     &__button {
       @include button;
       @apply w-full justify-center text-white
     }
     &__policy {
-      @apply text-[11px] font-extralight tracking-[0.02em] leading-4 -mt-[17px]
+      @apply -mt-[17px] text-[11px] font-extralight leading-4 tracking-[0.02em]
     }
-    @apply mt-[31px] md:mt-[50px] lg:mt-0 row-span-2 md:p-9 md:border md:border-gray-350 md:rounded-[5px] flex flex-col items-start gap-y-6 md:gap-y-[27px]
+    @apply row-span-2 mt-[31px] flex flex-col items-start gap-y-6 md:mt-[50px] md:gap-y-[27px] md:rounded-[5px] md:border md:border-gray-350 md:p-9 lg:mt-0
   }
 }

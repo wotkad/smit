@@ -8,7 +8,7 @@ body {
     @apply py-10 md:py-[50px]
   }
   &__title {
-    @apply text-[28px] leading-[38px] md:text-4xl mb-8 md:mb-[50px] md:leading-6 font-bold
+    @apply mb-8 text-[28px] font-bold leading-[38px] md:mb-[50px] md:text-4xl md:leading-6
   }
   &-gray {
     @apply bg-gray-100
@@ -37,7 +37,7 @@ button {
 }
 
 .render {
-  @apply fixed top-0 left-0 z-[99999] h-full w-full bg-white
+  @apply fixed left-0 top-0 z-[99999] h-full w-full bg-white
 }
 
 .wrapper {
@@ -53,7 +53,7 @@ main {
 }
 
 .bg {
-  @apply fixed top-0 left-0 w-full h-full bg-black opacity-50 z-[60] hidden
+  @apply fixed left-0 top-0 z-[60] hidden h-full w-full bg-black opacity-50
 }
 
 .page-container {

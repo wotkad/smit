@@ -1,25 +1,25 @@
 .equip {
   &__content {
     h3 {
-      @apply text-2xl leading-8 md:text-[32px] md:leading-10 font-bold uppercase mb-6 md:mb-7 lg:mb-9
+      @apply mb-6 text-2xl font-bold uppercase leading-8 md:mb-7 md:text-[32px] md:leading-10 lg:mb-9
     }
     p {
       span {
         @apply font-medium
       }
-      @apply tracking-[0.02em] font-extralight
+      @apply font-extralight tracking-[0.02em]
     }
     @apply col-span-2 lg:col-span-1
   }
   .swiper {
     &-slide {
       img {
-        @apply w-full h-full object-cover
+        @apply h-full w-full object-cover
       }
-      @apply min-h-[227px] max-h-[227px] md:min-h-[294px] md:max-h-[294px]
+      @apply max-h-[227px] min-h-[227px] md:max-h-[294px] md:min-h-[294px]
     }
     &.swiper-horizontal > .swiper-pagination-bullets {
-      @apply flex md:w-auto md:right-[43px] bottom-[17px] md:bottom-9 md:left-auto
+      @apply bottom-[17px] flex md:bottom-9 md:left-auto md:right-[43px] md:w-auto
     }
     @apply w-full pb-0
   }
@@ -28,24 +28,24 @@
   }
   &__facts {
     h4 {
-      @apply col-span-2 lg:col-span-3 text-2xl leading-10 font-bold
+      @apply col-span-2 text-2xl font-bold leading-10 lg:col-span-3
     }
-    @apply col-span-2 grid grid-cols-1 md:grid-cols-[327px_327px] lg:grid-cols-[327px_327px_327px] md:gap-x-[35px] lg:gap-x-[103px] gap-y-6 md:gap-y-[31px] lg:gap-y-9
+    @apply col-span-2 grid grid-cols-1 gap-y-6 md:grid-cols-[327px_327px] md:gap-x-[35px] md:gap-y-[31px] lg:grid-cols-[327px_327px_327px] lg:gap-x-[103px] lg:gap-y-9
   }
   &:first-child {
     @apply pt-0
   }
   &:last-child {
-    @apply pb-0 border-b-0
+    @apply border-b-0 pb-0
   }
   &__fact {
     h5 {
-      @apply leading-[22px] font-medium
+      @apply font-medium leading-[22px]
     }
-    @apply flex items-center gap-x-6 col-span-2 md:col-auto
+    @apply col-span-2 flex items-center gap-x-6 md:col-auto
   }
   &__icon {
-    @apply min-w-[50px] min-h-[50px] bg-green-200 rounded-md flex items-center justify-center
+    @apply flex min-h-[50px] min-w-[50px] items-center justify-center rounded-md bg-green-200
   }
   &.no-padding {
     @apply pb-0
@@ -56,5 +56,5 @@
   &-hidden {
     @apply hidden
   }
-  @apply grid grid-cols-1 lg:grid-cols-2 lg:gap-x-20 gap-y-6 md:gap-y-[46px] lg:gap-y-[42px] py-9 md:py-20 border-b border-gray-300
+  @apply grid grid-cols-1 gap-y-6 border-b border-gray-300 py-9 md:gap-y-[46px] md:py-20 lg:grid-cols-2 lg:gap-x-20 lg:gap-y-[42px]
 }

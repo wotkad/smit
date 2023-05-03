@@ -1,0 +1,36 @@
+.case {
+  &__slider {
+    @apply relative
+  }
+  .swiper {
+    &-slide {
+      img {
+        @apply h-full w-full object-cover
+      }
+      @apply max-h-[227px] min-h-[227px] md:max-h-[250px] md:min-h-[250px]
+    }
+    @apply -mx-[21px] w-[calc(100%+42px)] pb-0 md:-mx-[30px] md:w-[calc(100%+60px)] lg:mx-0 lg:w-full
+  }
+  &:first-child {
+    @apply pt-0
+  }
+  &:nth-last-child(2) {
+    @apply border-none
+  }
+  &__title {
+    @apply mb-4 text-2xl font-bold md:mb-8 md:text-[32px] md:leading-10 lg:mb-7
+  }
+  &__text {
+    span {
+      @apply font-medium
+    }
+    @apply mb-8 font-extralight tracking-[0.02em] md:mb-12 lg:mb-[60px]
+  }
+  &-noborder {
+    @apply border-none
+  }
+  &-hidden {
+    @apply hidden
+  }
+  @apply border-b border-gray-300 py-9 md:py-[70px] lg:py-20
+}

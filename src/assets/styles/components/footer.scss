@@ -12,7 +12,7 @@
       }
       @apply gap-y-2 md:gap-y-12 lg:gap-y-0
     }
-    @apply grid grid-cols-2 lg:grid-cols-4 gap-y-[42px] md:gap-y-12 lg:gap-y-0
+    @apply grid grid-cols-2 gap-y-[42px] md:gap-y-12 lg:grid-cols-4 lg:gap-y-0
   }
   &__link {
     &.active {
@@ -21,7 +21,7 @@
       }
     }
     span {
-      @apply text-base tracking-[0.02em] max-w-[211px] font-medium will-change-[color] duration-300 transition-[color]
+      @apply max-w-[211px] text-base font-medium tracking-[0.02em] transition-[color] duration-300 will-change-[color]
     }
     &:hover {
       span {
@@ -41,23 +41,23 @@
       &:hover {
         @apply lg:opacity-80
       }
-      @apply transition-[opacity] will-change-[opacity] duration-300
+      @apply transition-[opacity] duration-300 will-change-[opacity]
     }
     @apply flex gap-[11px]
   }
   &__phone {
     span {
-      @apply font-bold text-sm leading-6 md:text-base
+      @apply text-sm font-bold leading-6 md:text-base
     }
   }
   &__mail {
     span {
-      @apply font-bold text-sm leading-6 md:text-base
+      @apply text-sm font-bold leading-6 md:text-base
     }
   }
   &__location {
     span {
-      @apply font-extralight text-sm leading-6 md:text-base
+      @apply text-sm font-extralight leading-6 md:text-base
     }
   }
   &__copy {

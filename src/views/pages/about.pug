@@ -18,15 +18,7 @@ block content
         .page-container
           .page-wrapper
             include ../mixins/breadcrumbs.pug
-            +breadcrumbs(
-              [
-                {
-                  href: '',
-                  title: 'О компании'
-                }
-              ],
-              false
-            )
+            +breadcrumbs([ { href: '', title: 'О компании' } ], false)
             include ../components/about-hero.pug
             include ../components/management.pug
             include ../components/vacancies.pug

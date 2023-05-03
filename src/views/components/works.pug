@@ -3,12 +3,21 @@ section.works.section__gapper
   .wrapper
     .works__wrapper
       .works__title
-        h2.section__title 
+        h2.section__title
           span Наши работы
-        a(href="#").works__title__more
+        a.works__title__more(href="#")
           p смотреть все
-          svg(width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg")
-            path(d="M14 18.5L12.6 17.05L16.15 13.5H4V11.5H16.15L12.6 7.95L14 6.5L20 12.5L14 18.5Z" fill="#00738E")
+          svg(
+            fill="none"
+            viewBox="0 0 24 25"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="25"
+          )
+            path(
+              d="M14 18.5L12.6 17.05L16.15 13.5H4V11.5H16.15L12.6 7.95L14 6.5L20 12.5L14 18.5Z"
+              fill="#00738E"
+            )
       .works__items
         +work('/assets/images/work.png', 'work', 'Жилой комплекс “Play”', '')
         +work('/assets/images/work.png', 'work', 'Жилой комплекс “Play”', '')
@@ -16,5 +25,5 @@ section.works.section__gapper
         +work('/assets/images/work.png', 'work', 'Жилой комплекс “Play”', 'work-hidden')
         +work('/assets/images/work.png', 'work', 'Жилой комплекс “Play”', 'work-hidden')
         +work('/assets/images/work.png', 'work', 'Жилой комплекс “Play”', 'work-hidden')
-      button(type="button").works__more 
+      button.works__more(type="button")
         span Показать еще

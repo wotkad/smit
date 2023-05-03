@@ -36,6 +36,7 @@
 @import "./mixins/vacancy";
 @import "./mixins/contact";
 @import "./mixins/service-item";
+@import "./mixins/case";
 
 /*
   Компоненты
@@ -64,3 +65,4 @@
 @import "./components/vacancies";
 @import "./components/contacts";
 @import "./components/callback";
+@import "./components/cases";

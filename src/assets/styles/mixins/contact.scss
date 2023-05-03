@@ -1,16 +1,17 @@
 .contact {
   h3 {
     span {
-      @apply uppercase text-lg leading-6 md:text-xl md:leading-5 font-medium tracking-[0.02em]
+      @apply text-lg font-medium uppercase leading-6 tracking-[0.02em] md:text-xl md:leading-5
     }
     img {
-      @apply w-6 h-6 md:w-9 md:h-9
+      @apply h-6 w-6 md:h-9 md:w-9
     }
-    @apply flex mb-3 md:mb-4 items-center gap-x-3 md:gap-x-[14px]
+    @apply mb-3 flex items-center gap-x-3 md:mb-4 md:gap-x-[14px]
   }
   &__content {
-    p, a {
-      @apply ml-9 md:ml-12 font-medium text-sm leading-6 md:leading-7 md:text-base
+    p,
+    a {
+      @apply ml-9 text-sm font-medium leading-6 md:ml-12 md:text-base md:leading-7
     }
     a {
       &:hover {

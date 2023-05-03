@@ -34,3 +34,4 @@ require("./components/show-vacancies");
 require("./components/toggle-vacancy");
 require("./components/callback");
 require("./components/slider-one-centered");
+require("./components/slider-three-centered");

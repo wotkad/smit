@@ -3,23 +3,23 @@
     li {
       a,
       p {
-        @apply text-sm md:text-lg leading-[18px] font-medium tracking-[0.01em]
+        @apply text-sm font-medium leading-[18px] tracking-[0.01em] md:text-lg
       }
       p {
         @apply text-green-400
       }
       a {
         &:hover {
-          @apply lg:text-green-400 lg:border-green-400
+          @apply lg:border-green-400 lg:text-green-400
         }
-        @apply duration-300 transition-[color,border-color] will-change-[color,border-color] mb-[1px] border-b-2
+        @apply mb-[1px] border-b-2 transition-[color,border-color] duration-300 will-change-[color,border-color]
       }
       @apply flex items-center
     }
     span {
-      @apply inline-block text-sm md:text-lg leading-[22px] font-medium tracking-[0.01em]
+      @apply inline-block text-sm font-medium leading-[22px] tracking-[0.01em] md:text-lg
     }
-    @apply flex items-center flex-wrap gap-2 relative
+    @apply relative flex flex-wrap items-center gap-2
   }
   &__button {
     &:hover {
@@ -36,10 +36,10 @@
       path {
         @apply transition-[fill] duration-300 will-change-[fill]
       }
-      @apply w-5 h-5 md:w-6 md:h-6
+      @apply h-5 w-5 md:h-6 md:w-6
     }
     span {
-      @apply text-green-400 transition-[color] duration-300 will-change-[color] md:text-xl leading-6 font-normal tracking-[0.02em]
+      @apply font-normal leading-6 tracking-[0.02em] text-green-400 transition-[color] duration-300 will-change-[color] md:text-xl
     }
     @apply absolute right-0 flex items-center gap-x-[5px]
   }

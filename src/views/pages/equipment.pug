@@ -18,15 +18,7 @@ block content
         .page-container
           .page-wrapper
             include ../mixins/breadcrumbs.pug
-            +breadcrumbs(
-              [
-                {
-                  href: '',
-                  title: 'Оборудование'
-                }
-              ],
-              false
-            )
+            +breadcrumbs([ { href: '', title: 'Оборудование' } ], false)
             include ../components/equipment.pug
             include ../components/works.pug
             include ../components/clients.pug

@@ -1,18 +1,18 @@
 mixin equip(title, text, slides, facts, isHidden)
-  .equip(class=""+isHidden)
-    .equip__content 
-      h3= title 
-      p !{text}
+  .equip(class="" + isHidden)
+    .equip__content
+      h3= title
+      p !{ text }
     .swiper.equip__slider.slider-one
-      .swiper-wrapper 
-        for slide in slides
-          .swiper-slide 
-            img(src=""+slide.src, alt=""+slide.alt)
+      .swiper-wrapper
+        each slide in slides
+          .swiper-slide
+            img(src="" + slide.src alt="" + slide.alt)
       .swiper-pagination
     .equip__facts
       h4 Преимущества
-      for fact in facts
+      each fact in facts
         .equip__fact
           .equip__icon
-            img(src=""+fact.src, alt=""+fact.alt)
-          h5 !{fact.title}
+            img(src="" + fact.src alt="" + fact.alt)
+          h5 !{ fact.title }

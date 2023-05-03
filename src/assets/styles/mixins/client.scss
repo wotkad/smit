@@ -1,7 +1,7 @@
 .client {
   &__icon {
     img {
-      @apply max-w-[118px] object-contain w-full
+      @apply w-full max-w-[118px] object-contain
     }
   }
   &-hidden {

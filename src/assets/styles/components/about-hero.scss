@@ -10,10 +10,10 @@
       &:first-child {
         @apply mt-0
       }
-      @apply font-extralight mt-3 md:mt-[14px] tracking-[0.02em]
+      @apply mt-3 font-extralight tracking-[0.02em] md:mt-[14px]
     }
     img {
-      @apply float-right mb-[23px] md:ml-[38px] md:mb-[34px] lg:ml-[102px] lg:mb-[65px] object-cover w-full h-[227px] md:w-[328px] md:h-[324px] lg:w-[573px] lg:h-[285px]
+      @apply float-right mb-[23px] h-[227px] w-full object-cover md:mb-[34px] md:ml-[38px] md:h-[324px] md:w-[328px] lg:mb-[65px] lg:ml-[102px] lg:h-[285px] lg:w-[573px]
     }
   }
 }

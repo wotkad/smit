@@ -1,6 +1,6 @@
 .about {
   &__items {
-    @apply  grid grid-cols-1 gap-[22px] md:grid-cols-2 md:gap-[30px] lg:gap-x-[102px]
+    @apply grid grid-cols-1 gap-[22px] md:grid-cols-2 md:gap-[30px] lg:gap-x-[102px]
   }
   &__text {
     span {
@@ -9,16 +9,16 @@
     &:first-child {
       @apply mt-0
     }
-    @apply text-base font-extralight mt-2 lg:mt-4 tracking-[0.02em]
+    @apply mt-2 text-base font-extralight tracking-[0.02em] lg:mt-4
   }
   &__button {
     @include button;
-    @apply mt-[33px] lg:mt-[49px] text-sm leading-6 md:text-lg w-full justify-center md:w-auto
+    @apply mt-[33px] w-full justify-center text-sm leading-6 md:w-auto md:text-lg lg:mt-[49px]
   }
   &__image {
     img {
-      @apply object-cover w-full h-full
+      @apply h-full w-full object-cover
     }
-    @apply h-[227px] md:h-[339px] lg:h-[285px] -order-1 md:order-1
+    @apply -order-1 h-[227px] md:order-1 md:h-[339px] lg:h-[285px]
   }
 }

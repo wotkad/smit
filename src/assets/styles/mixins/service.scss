@@ -1,15 +1,15 @@
 .service {
   &__image {
     img {
-      @apply object-cover w-full h-full
+      @apply h-full w-full object-cover
     }
     @apply mb-4 h-[227px]
   }
   &__tags {
-    @apply mb-[14px] inline-block text-xs leading-6 tracking-[0.02em] duration-300 will-change-[color] transition-[color]
+    @apply mb-[14px] inline-block text-xs leading-6 tracking-[0.02em] transition-[color] duration-300 will-change-[color]
   }
   &__title {
-    @apply line-clamp-3 pr-8 text-xl leading-6 font-medium duration-300 will-change-[color] transition-[color]
+    @apply line-clamp-3 pr-8 text-xl font-medium leading-6 transition-[color] duration-300 will-change-[color]
   }
   &:hover {
     .service {
@@ -29,9 +29,9 @@
   }
   &__link {
     path {
-      @apply duration-300 will-change-[fill] transition-[fill]
+      @apply transition-[fill] duration-300 will-change-[fill]
     }
     @apply absolute bottom-6 right-[30px]
   }
-  @apply h-full lg:p-[30px] block relative duration-300 will-change-[background-color] transition-[background-color]
+  @apply relative block h-full transition-[background-color] duration-300 will-change-[background-color] lg:p-[30px]
 }

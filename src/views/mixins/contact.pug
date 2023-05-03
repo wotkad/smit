@@ -1,10 +1,10 @@
 mixin contact(title, src, alt, links, texts)
-  .contact 
-    h3 
-      img(src=""+src, alt=""+alt)
+  .contact
+    h3
+      img(src="" + src alt="" + alt)
       span= title
     .contact__content
-      for link in links 
-        a(href=""+link.href target="_blank")= link.text
-      for text in texts 
+      each link in links
+        a(href="" + link.href target="_blank")= link.text
+      each text in texts
         p= text.text

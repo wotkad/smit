@@ -15,19 +15,19 @@
     }
     &__header {
       h3 {
-        @apply text-lg md:text-2xl leading-6 ml-4 md:ml-6 font-medium pr-10
+        @apply ml-4 pr-10 text-lg font-medium leading-6 md:ml-6 md:text-2xl
       }
-      @apply p-5 md:p-7 flex items-start md:items-center relative cursor-pointer
+      @apply relative flex cursor-pointer items-start p-5 md:items-center md:p-7
     }
     &__icon {
-      @apply w-6 h-6 md:w-9 md:h-9 rounded-full bg-green-50 flex items-center justify-center
+      @apply flex h-6 w-6 items-center justify-center rounded-full bg-green-50 md:h-9 md:w-9
     }
     &__close {
       svg {
         path {
           @apply transition-[stroke] duration-300 will-change-[stroke]
         }
-        @apply transition-[transform] duration-300 will-change-[transform] w-4 md:w-6
+        @apply w-4 transition-[transform] duration-300 will-change-[transform] md:w-6
       }
       &:hover {
         svg {
@@ -41,13 +41,13 @@
     }
     &__body {
       &__inner {
-        @apply md:grid md:grid-cols-[265px_1fr] lg:grid-cols-[455px_1fr] md:gap-x-9 lg:gap-x-12 pt-5 px-6 pb-8 md:pb-9 md:pr-8 lg:pr-7 md:pl-[88px]
+        @apply px-6 pb-8 pt-5 md:grid md:grid-cols-[265px_1fr] md:gap-x-9 md:pb-9 md:pl-[88px] md:pr-8 lg:grid-cols-[455px_1fr] lg:gap-x-12 lg:pr-7
       }
       @apply hidden
     }
     &__image {
       img {
-        @apply w-full h-full object-cover
+        @apply h-full w-full object-cover
       }
       @apply h-[209px]
     }
@@ -55,8 +55,8 @@
       span {
         @apply font-medium
       }
-      @apply max-w-[493px] font-extralight mt-4 md:mt-0
+      @apply mt-4 max-w-[493px] font-extralight md:mt-0
     }
-    @apply border-gray-500 border rounded-[10px] transition-[background-color] duration-300 will-change-[background-color]
+    @apply rounded-[10px] border border-gray-500 transition-[background-color] duration-300 will-change-[background-color]
   }
 }

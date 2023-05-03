@@ -1,0 +1,34 @@
+mixin case(title, text, slides, isHidden)
+  .case(class="" + isHidden)
+    h2.case__title= title
+    p.case__text !{ text }
+    .case__slider
+      .swiper.slider-three-centered
+        .swiper-wrapper
+          each slide in slides
+            .swiper-slide
+              img(src="" + slide.src alt="" + slide.alt)
+      .swiper-button-prev
+        svg(
+          fill="none"
+          viewBox="0 0 36 36"
+          xmlns="http://www.w3.org/2000/svg"
+          width="36"
+          height="36"
+        )
+          path(
+            d="M21 27L12 18L21 9L23.1 11.1L16.2 18L23.1 24.9L21 27Z"
+            fill="#969696"
+          )
+      .swiper-button-next
+        svg(
+          fill="none"
+          viewBox="0 0 36 36"
+          xmlns="http://www.w3.org/2000/svg"
+          width="36"
+          height="36"
+        )
+          path(
+            d="M15 9L24 18L15 27L12.9 24.9L19.8 18L12.9 11.1L15 9Z"
+            fill="#969696"
+          )

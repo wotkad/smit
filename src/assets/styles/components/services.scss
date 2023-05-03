@@ -5,11 +5,11 @@
     }
     &__more {
       p {
-        @apply text-green-400 will-change-[color,border-color] duration-300 transition-[color] border-b-2 border-green-400 tracking-[0.02em] leading-4 md:leading-[22px] md:text-xl font-medium
+        @apply border-b-2 border-green-400 font-medium leading-4 tracking-[0.02em] text-green-400 transition-[color] duration-300 will-change-[color,border-color] md:text-xl md:leading-[22px]
       }
       &:hover {
         p {
-          @apply lg:text-green-500 lg:border-green-500
+          @apply lg:border-green-500 lg:text-green-500
         }
         svg {
           path {
@@ -19,13 +19,13 @@
       }
       svg {
         path {
-          @apply will-change-[fill] duration-300 transition-[fill]
+          @apply transition-[fill] duration-300 will-change-[fill]
         }
         @apply w-4 md:w-6
       }
       @apply flex items-center gap-x-[2px] md:gap-x-[5px]
     }
-    @apply flex items-center justify-between mb-6 md:mb-[50px]
+    @apply mb-6 flex items-center justify-between md:mb-[50px]
   }
   &__slider {
     @apply relative

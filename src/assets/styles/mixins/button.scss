@@ -1,9 +1,9 @@
 @mixin button {
   span {
-    @apply text-white text-sm leading-6 md:text-lg tracking-[0.02em] font-medium
+    @apply text-sm font-medium leading-6 tracking-[0.02em] text-white md:text-lg
   }
   &:hover {
     @apply lg:bg-green-500
   }
-  @apply bg-green-400 duration-300 inline-flex items-center gap-x-[10px] md:gap-x-[14px] rounded-[5px] px-12 py-[10px] md:py-4 transition-[background-color] will-change-[background-color]
+  @apply inline-flex items-center gap-x-[10px] rounded-[5px] bg-green-400 px-12 py-[10px] transition-[background-color] duration-300 will-change-[background-color] md:gap-x-[14px] md:py-4
 }

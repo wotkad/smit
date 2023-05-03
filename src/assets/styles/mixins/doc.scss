@@ -1,7 +1,7 @@
 .doc {
   &__image {
     img {
-      @apply object-cover w-full h-full
+      @apply h-full w-full object-cover
     }
     @apply mb-6 h-[426px]
   }

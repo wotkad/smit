@@ -18,19 +18,7 @@ block content
         .page-container
           .page-wrapper
             include ../mixins/breadcrumbs.pug
-            +breadcrumbs(
-              [
-                {
-                  href: '/services',
-                  title: 'Услуги'
-                },
-                {
-                  href: '',
-                  title: 'Порошковая покраска изделий'
-                }
-              ],
-              false
-            )
+            +breadcrumbs([ { href: '/services', title: 'Услуги' }, { href: '', title: 'Порошковая покраска изделий' } ], false)
             include ../components/service-hero.pug
             include ../mixins/advantages.pug
             +advantages('Преимущества заказа у нас', 'service')

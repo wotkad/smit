@@ -1,31 +1,31 @@
 import Swiper, { Navigation, Pagination } from 'swiper';
 
 export default function sliderThree() {
-  let nextArrow = document.querySelector('.swiper ~ .swiper-button-next');
-  let prevArrow = document.querySelector('.swiper ~ .swiper-button-prev');
-  new Swiper('.swiper.slider-three', {
-    modules: [Navigation, Pagination],
-    slidesPerView: 1,
-    spaceBetween: 20,
-    grabCursor: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-    },
-    navigation: {
-      nextEl: nextArrow,
-      prevEl: prevArrow,
-    },
-    breakpoints: {
-      744: {
-        slidesPerView: 2,
-        spaceBetween: 31
+  Array.from($('.slider-three')).forEach(function(slider) {
+    new Swiper(slider, {
+      modules: [Navigation, Pagination],
+      slidesPerView: 1,
+      spaceBetween: 20,
+      grabCursor: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
       },
-      1212: {
-        slidesPerView: 3,
-        spaceBetween: 27
+      navigation: {
+        nextEl: $(slider).siblings('.swiper-button-next').get(0),
+        prevEl: $(slider).siblings('.swiper-button-prev').get(0)
+      },
+      breakpoints: {
+        744: {
+          slidesPerView: 2,
+          spaceBetween: 30
+        },
+        1212: {
+          slidesPerView: 3,
+          spaceBetween: 20
+        }
       }
-    }
+    });
   });
 }
 sliderThree();

@@ -1,21 +1,21 @@
 .manager {
   &__image {
     img {
-      @apply object-cover w-full h-full
+      @apply h-full w-full object-cover
     }
     @apply mb-[31px] h-[307px]
   }
   &__surname {
-    @apply text-2xl leading-6 text-green-400 font-medium mb-[6px] uppercase
+    @apply mb-[6px] text-2xl font-medium uppercase leading-6 text-green-400
   }
   &__name {
-    @apply text-lg leading-6 font-medium mb-3
+    @apply mb-3 text-lg font-medium leading-6
   }
   &__role {
     @apply font-extralight
   }
   &:after {
-    @apply content-[''] absolute bottom-0 left-0 h-[1px] w-[50px] bg-gray-200
+    @apply absolute bottom-0 left-0 h-[1px] w-[50px] bg-gray-200 content-['']
   }
   @apply relative pb-6 md:mt-[34px] lg:mt-0
 }

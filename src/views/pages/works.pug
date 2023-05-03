@@ -8,8 +8,8 @@ block basicSeo
   meta(content="Наши работы" name="keywords")
 
 block manifestBrowserconfigFiles
-  link(href="./manifest.json" rel="manifest" crossorigin)
-  meta(content="./browserconfig.xml" name="msapplication-config")
+  link(href="../manifest.json" rel="manifest" crossorigin)
+  meta(content="../browserconfig.xml" name="msapplication-config")
 
 block content
   main
@@ -18,15 +18,9 @@ block content
         .page-container
           .page-wrapper
             include ../mixins/breadcrumbs.pug
-            +breadcrumbs(
-              [
-                {
-                  href: '',
-                  title: 'Наши работы'
-                }
-              ],
-              false
-            )
+            +breadcrumbs([ { href: '', title: 'Наши работы' } ], false)
+            include ../components/cases.pug
             include ../mixins/services.pug
+            +services('Наши услуги')
             include ../components/clients.pug
           include ../components/footer.pug

@@ -1,26 +1,47 @@
-mixin vacancy(title, text, requirments, responsibilities, suggestions, isHidden)
-  .vacancy(class=""+isHidden)
+mixin vacancy(id, title, text, requirments, responsibilities, suggestions, isHidden)
+  .vacancy(class="" + isHidden)
     .vacancy__header
       h3= title
-      .vacancy__close 
-        svg(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
-          path(d="M4 9L12 17L20 9" stroke="#929292" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+      .vacancy__close
+        svg(
+          fill="none"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        )
+          path(
+            d="M4 9L12 17L20 9"
+            stroke="#929292"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          )
     .vacancy__body
       .vacancy__requirments
-        for requirment in requirments
+        each requirment in requirments
           .vacancy__requirment
-            img(src=""+requirment.src, alt=""+requirment.alt)
+            img(src="" + requirment.src alt="" + requirment.alt)
             span= requirment.text
-      p.vacancy__text !{text}
+      p.vacancy__text !{ text }
       h4.vacancy__heading Ваши обязанности:
       ul.vacancy__responsibilities
-        for responsibility in responsibilities
-          li.vacancy__responsibility !{responsibility.text}
+        each responsibility in responsibilities
+          li.vacancy__responsibility !{ responsibility.text }
       h4.vacancy__heading Мы предлагаем:
       ul.vacancy__suggestions
-        for suggestion in suggestions
-          li.vacancy__suggestion !{suggestion.text}
-      button(type="button").vacancy__button
+        each suggestion in suggestions
+          li.vacancy__suggestion !{ suggestion.text }
+      button.vacancy__button(type="button" data-id="" + id)
         span Откликнуться
-        svg(width='24', height='24', viewBox='0 0 24 24', fill='none', xmlns='http://www.w3.org/2000/svg')
-          path(d='M14 18L12.6 16.55L16.15 13H4V11H16.15L12.6 7.45L14 6L20 12L14 18Z', fill='white')
+        svg(
+          fill="none"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        )
+          path(
+            d="M14 18L12.6 16.55L16.15 13H4V11H16.15L12.6 7.45L14 6L20 12L14 18Z"
+            fill="white"
+          )

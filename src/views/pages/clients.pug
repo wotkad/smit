@@ -18,15 +18,7 @@ block content
         .page-container
           .page-wrapper
             include ../mixins/breadcrumbs.pug
-            +breadcrumbs(
-              [
-                {
-                  href: '',
-                  title: 'Клиенты'
-                }
-              ],
-              false
-            )
+            +breadcrumbs([ { href: '', title: 'Клиенты' } ], false)
             include ../components/docs.pug
             include ../components/reviews.pug
             include ../components/works.pug

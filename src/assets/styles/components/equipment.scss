@@ -3,13 +3,13 @@
     span {
       @apply font-medium
     }
-    @apply lg:max-w-[1014px] md:text-xl md:leading-7 font-extralight mb-11 md:mb-16 tracking-[0.02em]
+    @apply mb-11 font-extralight tracking-[0.02em] md:mb-16 md:text-xl md:leading-7 lg:max-w-[1014px]
   }
   &__items {
     @apply mt-[67px] md:mt-[97px] lg:mt-[100px]
   }
   &__more {
     @include button;
-    @apply w-full justify-center text-white mt-10 md:mt-[89px] lg:mt-[108px] lg:max-w-[230px] lg:relative lg:left-1/2 lg:-translate-x-1/2
+    @apply mt-10 w-full justify-center text-white md:mt-[89px] lg:relative lg:left-1/2 lg:mt-[108px] lg:max-w-[230px] lg:-translate-x-1/2
   }
 }

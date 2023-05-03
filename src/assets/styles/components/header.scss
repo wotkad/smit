@@ -52,7 +52,7 @@
           }
         }
       }
-      @apply py-[43px] bg-white
+      @apply bg-white py-[43px]
     }
     &.active {
       .header {
@@ -152,7 +152,7 @@
         @apply bg-green-300
       }
     }
-    @apply py-5 bg-white
+    @apply bg-white py-5
   }
   &__logo {
     svg {
@@ -165,7 +165,7 @@
     @apply flex items-center justify-between
   }
   &__menu {
-    @apply hidden lg:flex items-stretch gap-[52px]
+    @apply hidden items-stretch gap-[52px] lg:flex
   }
   &__link {
     a {
@@ -175,25 +175,25 @@
       &.active {
         @apply text-green-400
       }
-      @apply transition-[color] tracking-[0.02em] text-base duration-300 will-change-[color] text-white
+      @apply text-base tracking-[0.02em] text-white transition-[color] duration-300 will-change-[color]
     }
     svg {
       path {
         @apply transition-[stroke] duration-300 will-change-[stroke]
       }
-      @apply transition-[transform,opacity] duration-300 will-change-[transform,opacity] min-w-[12px] min-h-[12px]
+      @apply min-h-[12px] min-w-[12px] transition-[transform,opacity] duration-300 will-change-[transform,opacity]
     }
     &.active {
       a {
         @apply lg:text-green-400
       }
     }
-    @apply flex items-center relative gap-[10px] py-[10px]
+    @apply relative flex items-center gap-[10px] py-[10px]
   }
   &__dropdown {
     &:hover {
       .header__list {
-        @apply lg:opacity-100 lg:visible lg:pointer-events-auto
+        @apply lg:pointer-events-auto lg:visible lg:opacity-100
       }
       & > a {
         @apply lg:text-green-400
@@ -209,13 +209,13 @@
   &__list {
     .header__link {
       &:first-child {
-        @apply pt-0 border-none
+        @apply border-none pt-0
       }
       &:last-child {
         @apply pb-0
       }
       svg {
-        @apply opacity-0 absolute right-0
+        @apply absolute right-0 opacity-0
       }
       &:hover {
         & > a {
@@ -228,13 +228,13 @@
           @apply lg:opacity-100
         }
       }
-      @apply py-6 border-t border-gray-300 pr-3 text-gray-200
+      @apply border-t border-gray-300 py-6 pr-3 text-gray-200
     }
-    @apply pointer-events-none shadow-md absolute top-[44px] left-0 w-[394px] p-6 bg-white opacity-0 invisible transition-[opacity,visibility] will-change-[opacity,visibility] duration-300
+    @apply pointer-events-none invisible absolute left-0 top-[44px] w-[394px] bg-white p-6 opacity-0 shadow-md transition-[opacity,visibility] duration-300 will-change-[opacity,visibility]
   }
   &__phone {
     span {
-      @apply text-white text-sm leading-6 tracking-[0.02em] transition-[color] duration-300
+      @apply text-sm leading-6 tracking-[0.02em] text-white transition-[color] duration-300
     }
     svg {
       path {
@@ -252,12 +252,12 @@
       }
       @apply lg:bg-green-300
     }
-    @apply hidden lg:flex gap-[10px] items-center will-change-[background-color] transition-[background-color] duration-300 rounded-[5px] shadow-[0_4px_10px_rgba(0,_0,_0,_0.07)] bg-gray-400 py-[6px] px-3
+    @apply hidden items-center gap-[10px] rounded-[5px] bg-gray-400 px-3 py-[6px] shadow-[0_4px_10px_rgba(0,_0,_0,_0.07)] transition-[background-color] duration-300 will-change-[background-color] lg:flex
   }
   &__burger {
     svg {
       path {
-        @apply transition-[stroke] will-change-[stroke] duration-300
+        @apply transition-[stroke] duration-300 will-change-[stroke]
       }
     }
     @apply block lg:hidden
@@ -265,24 +265,24 @@
   &__mobmenu {
     &__phone {
       span {
-        @apply text-white text-sm leading-6 tracking-[0.02em] transition-[color] duration-300 will-change-[color]
+        @apply text-sm leading-6 tracking-[0.02em] text-white transition-[color] duration-300 will-change-[color]
       }
-      @apply flex gap-[10px] items-center rounded-[5px] bg-green-600 py-[6px] px-3 absolute bottom-[34px]
+      @apply absolute bottom-[34px] flex items-center gap-[10px] rounded-[5px] bg-green-600 px-3 py-[6px]
     }
     &.active {
       @apply translate-x-0
     }
     &__container {
-      @apply flex flex-col items-start gap-6 md:gap-9 max-h-[calc(100vh-143px)] md:max-h-[calc(100vh-170px)] overflow-y-auto
+      @apply flex max-h-[calc(100vh-143px)] flex-col items-start gap-6 overflow-y-auto md:max-h-[calc(100vh-170px)] md:gap-9
     }
     &__list {
       &__link {
-        @apply text-white font-extralight text-sm leading-5 mt-4 md:mt-6 inline-block tracking-[0.02em]
+        @apply mt-4 inline-block text-sm font-extralight leading-5 tracking-[0.02em] text-white md:mt-6
       }
       @apply hidden pl-[10px] md:pl-4
     }
     &__link {
-      @apply text-white tracking-[0.02em]
+      @apply tracking-[0.02em] text-white
     }
     &__dropdown {
       &__main {
@@ -291,7 +291,7 @@
             @apply rotate-180
           }
         }
-        @apply flex items-center gap-[10px] 
+        @apply flex items-center gap-[10px]
       }
       img {
         @apply transition-transform duration-300 will-change-transform
@@ -300,7 +300,7 @@
     &__close {
       @apply absolute right-[29px] top-5
     }
-    @apply z-[70] translate-x-full right-0 duration-300 will-change-transform transition-transform fixed w-[254px] md:w-[319px] min-h-screen top-0 bg-green-400 pl-[34px] md:pl-10 pr-[35px] md:pr-[53px] pb-[29px] md:pb-[34px] pt-[39px] md:pt-[66px]
+    @apply fixed right-0 top-0 z-[70] min-h-screen w-[254px] translate-x-full bg-green-400 pb-[29px] pl-[34px] pr-[35px] pt-[39px] transition-transform duration-300 will-change-transform md:w-[319px] md:pb-[34px] md:pl-10 md:pr-[53px] md:pt-[66px]
   }
-  @apply fixed top-0 left-0 w-full z-[50] py-5 lg:py-[47px] duration-300 transition-[padding,background-color]
+  @apply fixed left-0 top-0 z-[50] w-full py-5 transition-[padding,background-color] duration-300 lg:py-[47px]
 }

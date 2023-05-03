@@ -3,19 +3,19 @@
     @apply text-green-400
   }
   &__title {
-    @apply text-[38px] font-bold leading-6 mb-[11px]
+    @apply mb-[11px] text-[38px] font-bold leading-6
   }
   &__subtitle {
-    @apply text-base leading-[14px] font-extralight
+    @apply text-base font-extralight leading-[14px]
   }
   &__icon {
-    @apply rounded-md bg-green-200 w-[50px] h-[50px] flex items-center justify-center absolute top-5 right-5
+    @apply absolute right-5 top-5 flex h-[50px] w-[50px] items-center justify-center rounded-md bg-green-200
   }
   &__text {
-    @apply text-lg leading-[22px] font-medium min-h-[56px]
+    @apply min-h-[56px] text-lg font-medium leading-[22px]
   }
   &:after {
-    @apply content-[''] absolute bottom-[22px] left-[22px] h-[1px] w-[50px] bg-gray-200
+    @apply absolute bottom-[22px] left-[22px] h-[1px] w-[50px] bg-gray-200 content-['']
   }
-  @apply flex flex-col justify-between gap-[18px] items-start border relative border-gray-500 px-5 pt-[30px] pb-[25px] rounded-[10px]
+  @apply relative flex flex-col items-start justify-between gap-[18px] rounded-[10px] border border-gray-500 px-5 pb-[25px] pt-[30px]
 }
