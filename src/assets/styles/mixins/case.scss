@@ -35,7 +35,8 @@
   @apply border-b border-gray-300 py-9 md:py-[70px] lg:py-20
 }
 
-.lg-sub-html, .lg-toolbar {
+.lg-sub-html,
+.lg-toolbar {
   @apply hidden
 }
 
@@ -44,7 +45,7 @@
 }
 
 .lg-outer .lg-pager-cont {
-  @apply rounded-full mx-2 md:mx-4 w-2 h-2 shadow-none bg-white opacity-50 transition-[background-color,opacity] duration-300 will-change-[background-color,opacity]
+  @apply mx-2 h-2 w-2 rounded-full bg-white opacity-50 shadow-none transition-[background-color,opacity] duration-300 will-change-[background-color,opacity] md:mx-4
 }
 
 .lg-outer .lg-pager {
@@ -64,24 +65,24 @@
 }
 
 .lg-pager-outer {
-  @apply mb-0 relative bottom-[205px] md:bottom-[110px] lg:bottom-[18px]
+  @apply relative bottom-[205px] mb-0 md:bottom-[110px] lg:bottom-[18px]
 }
 
 .lg-next {
   &:before {
     @apply hidden
   }
-  @apply bg-[url(/assets/images/icons/angle-right-white.svg)] bg-no-repeat bg-center bg-cover w-9 h-9 hidden md:block md:right-[18px] lg:right-[75px]
+  @apply hidden h-9 w-9 bg-[url(/assets/images/icons/angle-right-white.svg)] bg-cover bg-center bg-no-repeat md:right-[18px] md:block lg:right-[75px]
 }
 
 .lg-prev {
   &:after {
     @apply hidden
   }
-  @apply bg-[url(/assets/images/icons/angle-left-white.svg)] bg-no-repeat bg-center bg-cover w-9 h-9 hidden md:block md:left-[18px] lg:left-[75px]
+  @apply hidden h-9 w-9 bg-[url(/assets/images/icons/angle-left-white.svg)] bg-cover bg-center bg-no-repeat md:left-[18px] md:block lg:left-[75px]
 }
 
 .lg-outer.lg-grab img.lg-object,
 .lg-outer.lg-grabbing img.lg-object {
-  @apply w-[333px] h-[211px] md:w-[621px] md:h-[403px] lg:w-[1170px] lg:h-[80vh] object-cover
+  @apply h-[211px] w-[333px] object-cover md:h-[403px] md:w-[621px] lg:h-[80vh] lg:w-[1170px]
 }
