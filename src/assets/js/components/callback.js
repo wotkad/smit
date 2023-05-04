@@ -1,6 +1,6 @@
 import successPopup from "./success-popup";
 import errorPopup from "./error-popup";
-import { validateEmail, validatePhone, validateName } from "./validator";
+import validator from "./validator";
 
 export default function callback() {
 
@@ -9,7 +9,7 @@ export default function callback() {
   if (form) {
     form.submit(function(e) {
       e.preventDefault();
-      if (validateName($('.label-name input').val()) && validateEmail($('.label-email input').val()) && validatePhone($('.label-phone input').val())) {
+      if (validator.validateName($('.label-name input').val()) && validator.validateEmail($('.label-email input').val()) && validator.validatePhone($('.label-phone input').val())) {
         fetch('/assets/files/callback.php', {
           method: 'POST',
           body: new FormData(form.get(0))

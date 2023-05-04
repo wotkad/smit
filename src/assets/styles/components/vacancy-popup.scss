@@ -1,0 +1,131 @@
+.vacancy-popup {
+  &__title {
+    h3 {
+      @apply text-[22px] font-bold leading-6 md:text-4xl
+    }
+    svg {
+      path {
+        @apply transition-[fill] duration-300 will-change-[fill]
+      }
+      &:hover {
+        path {
+          @apply lg:fill-green-400
+        }
+      }
+      @apply h-8 w-8 cursor-pointer
+    }
+    @apply mb-5 flex items-center justify-between md:mb-[37px] lg:mb-10
+  }
+  &__form {
+    &.scrolled {
+      &:before {
+        @apply opacity-0
+      }
+    }
+    &:before {
+      @apply absolute bottom-[132px] left-5 z-10 block h-16 w-[calc(100%-40px)] bg-gradient-to-t from-white to-transparent transition-[opacity] duration-300 will-change-[opacity] content-[''] md:hidden
+    }
+    @apply grid max-h-[386px] grid-cols-1 gap-x-0 gap-y-6 overflow-y-auto md:max-h-full md:grid-cols-2 md:gap-x-6 md:gap-y-[26px] md:overflow-y-hidden lg:gap-x-8
+  }
+  &__label {
+    &-required {
+      @apply text-red-400
+    }
+    &:first-child {
+      @apply z-20
+    }
+    input {
+      &:focus {
+        @apply border-green-700 bg-green-100
+      }
+      @apply mt-3 text-sm outline-none transition-[background-color,border-color] duration-300 will-change-[background-color,border-color] md:text-base
+    }
+    span {
+      @apply inline-block text-sm font-medium leading-6 tracking-[0.02em] md:text-base
+    }
+    img {
+      .error,
+      .success {
+        @apply hidden
+      }
+      @apply absolute bottom-4 right-4 hidden
+    }
+    &.success {
+      img.success {
+        @apply block
+      }
+    }
+    &.error {
+      img.error {
+        @apply block
+      }
+    }
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(6) {
+      @apply md:-order-none
+    }
+    &:nth-child(1) {
+      @apply order-1 md:-order-none
+    }
+    &:nth-child(2) {
+      @apply order-4 md:-order-none
+    }
+    &:nth-child(3) {
+      @apply order-2 md:-order-none
+    }
+    &:nth-child(4) {
+      @apply order-5 md:-order-none
+    }
+    &:nth-child(5) {
+      @apply order-3 md:-order-none
+    }
+    &:nth-child(6) {
+      @apply order-6 md:-order-none
+    }
+    @apply relative col-span-2 w-full md:col-auto
+  }
+  &__select {
+    &.active {
+      .vacancy-popup__input__icon {
+        @apply rotate-180
+      }
+    }
+    .vacancy-popup__input {
+      @apply cursor-pointer text-green-400 caret-transparent
+    }
+    @apply flex w-full items-center
+  }
+  &__input {
+    &__inner {
+      @apply relative flex items-center
+    }
+    &__icon {
+      @apply absolute bottom-4 right-4 cursor-pointer transition-[transform] duration-300 will-change-[transform]
+    }
+    @apply w-full rounded-[5px] border border-gray-500 bg-transparent p-4 text-sm font-medium leading-6
+  }
+  &__dropdown {
+    p {
+      &:hover {
+        @apply lg:text-green-400
+      }
+      &.active {
+        @apply text-green-400
+      }
+      @apply cursor-pointer p-4 text-sm font-medium transition-[color] duration-300 will-change-[color]
+    }
+    @apply absolute top-[75px] z-20 hidden w-full rounded-[5px] border border-gray-500 bg-white shadow-md
+  }
+  &__button {
+    @include button;
+    @apply absolute bottom-16 left-5 col-span-2 w-[calc(100%-40px)] justify-center text-white md:static md:w-full
+  }
+  &__policy {
+    @apply absolute bottom-5 left-5 col-span-2 -mt-4 w-[calc(100%-40px)] text-[11px] font-extralight leading-4 tracking-[0.02em] md:static
+  }
+  @apply fixed left-1/2 top-1/2 z-[100] hidden h-[590px] w-[340px] -translate-x-1/2 -translate-y-1/2 rounded-[5px] bg-white p-5 md:h-auto md:w-[688px] md:p-12 lg:w-[882px]
+}

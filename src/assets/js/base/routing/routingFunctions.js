@@ -18,6 +18,9 @@ import callback from '../../components/callback';
 import sliderOneCentered from '../../components/slider-one-centered';
 import sliderThreeCentered from '../../components/slider-three-centered';
 import showCases from '../../components/show-cases';
+import gallery from '../../components/gallery';
+import vacancyPopup from '../../components/vacancy-popup';
+import validator from '../../components/validator';
 
 export default function routingFunctions() {
   isCurrentPage();
@@ -40,4 +43,7 @@ export default function routingFunctions() {
   sliderOneCentered();
   sliderThreeCentered();
   showCases();
+  gallery();
+  vacancyPopup();
+  validator();
 }

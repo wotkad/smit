@@ -1,0 +1,97 @@
+.vacancy-popup
+  .vacancy-popup__title
+    h3.vacancy-popup__title__inner Откликнуться
+    .vacancy-popup__close
+      svg(
+        fill="none"
+        viewBox="0 0 32 32"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+      )
+        path(
+          d="M24.4003 7.61333C24.2769 7.48973 24.1304 7.39167 23.9691 7.32476C23.8078 7.25785 23.6349 7.22341 23.4603 7.22341C23.2857 7.22341 23.1128 7.25785 22.9515 7.32476C22.7902 7.39167 22.6436 7.48973 22.5203 7.61333L16.0003 14.12L9.4803 7.6C9.35686 7.47656 9.21031 7.37864 9.04902 7.31183C8.88774 7.24502 8.71487 7.21064 8.5403 7.21064C8.36572 7.21064 8.19286 7.24502 8.03157 7.31183C7.87029 7.37864 7.72374 7.47656 7.6003 7.6C7.47686 7.72344 7.37894 7.86999 7.31213 8.03128C7.24532 8.19256 7.21094 8.36543 7.21094 8.54C7.21094 8.71458 7.24532 8.88744 7.31213 9.04873C7.37894 9.21001 7.47686 9.35656 7.6003 9.48L14.1203 16L7.6003 22.52C7.47686 22.6434 7.37894 22.79 7.31213 22.9513C7.24532 23.1126 7.21094 23.2854 7.21094 23.46C7.21094 23.6346 7.24532 23.8074 7.31213 23.9687C7.37894 24.13 7.47686 24.2766 7.6003 24.4C7.72374 24.5234 7.87029 24.6214 8.03157 24.6882C8.19286 24.755 8.36572 24.7894 8.5403 24.7894C8.71487 24.7894 8.88774 24.755 9.04902 24.6882C9.21031 24.6214 9.35686 24.5234 9.4803 24.4L16.0003 17.88L22.5203 24.4C22.6437 24.5234 22.7903 24.6214 22.9516 24.6882C23.1129 24.755 23.2857 24.7894 23.4603 24.7894C23.6349 24.7894 23.8077 24.755 23.969 24.6882C24.1303 24.6214 24.2769 24.5234 24.4003 24.4C24.5237 24.2766 24.6217 24.13 24.6885 23.9687C24.7553 23.8074 24.7897 23.6346 24.7897 23.46C24.7897 23.2854 24.7553 23.1126 24.6885 22.9513C24.6217 22.79 24.5237 22.6434 24.4003 22.52L17.8803 16L24.4003 9.48C24.907 8.97333 24.907 8.12 24.4003 7.61333Z"
+          fill="#7D7D7D"
+        )
+  form.vacancy-popup__form(action="#")
+    .vacancy-popup__label
+      span Выберите вакансию
+      .vacancy-popup__input__inner
+        .vacancy-popup__select
+          input.vacancy-popup__input(
+            type="text"
+            placeholder="Выберите вакансию"
+            autocomplete="off"
+            name="vacancy_name"
+            required
+          )
+          svg.vacancy-popup__input__icon(
+            fill="none"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+          )
+            path(
+              d="M18 10L12 16L6 10L7.4 8.6L12 13.2L16.6 8.6L18 10Z"
+              fill="#969696"
+            )
+        .vacancy-popup__dropdown
+          p(data-id="1" data-vacancy="Сотрудник гибочной линии") Сотрудник гибочной линии
+          p(data-id="2" data-vacancy="Сотрудник гибочной линии 2") Сотрудник гибочной линии 2
+          p(data-id="3" data-vacancy="Сотрудник гибочной линии 3") Сотрудник гибочной линии 3
+          p(data-id="4" data-vacancy="Сотрудник гибочной линии 4") Сотрудник гибочной линии 4
+    .vacancy-popup__label.label-name
+      span Ваше имя <span class="vacancy-popup__label-required">*</span>
+      input.vacancy-popup__input(
+        type="text"
+        placeholder="Введите имя"
+        autocomplete="off"
+        maxlength="50"
+        minlength="2"
+        name="name"
+        required
+      )
+      img.success(
+        src="/assets/images/icons/check-circle-green.svg"
+        alt="check-circle-green"
+      )
+      img.error(
+        src="/assets/images/icons/error-circle-red.svg"
+        alt="error-circle-red"
+      )
+    .vacancy-popup__label.label-phone
+      span Телефон <span class="vacancy-popup__label-required">*</span>
+      input.vacancy-popup__input(
+        type="text"
+        placeholder="+7 (___) ___-__-__"
+        autocomplete="off"
+        name="phone"
+        required
+      )
+      img.success(
+        src="/assets/images/icons/check-circle-green.svg"
+        alt="check-circle-green"
+      )
+      img.error(
+        src="/assets/images/icons/error-circle-red.svg"
+        alt="error-circle-red"
+      )
+    .vacancy-popup__label.label-email
+      span E-mail
+      input.vacancy-popup__input(
+        type="email"
+        placeholder="Введите ваш e-mail"
+        autocomplete="off"
+        name="email"
+      )
+      img.success(
+        src="/assets/images/icons/check-circle-green.svg"
+        alt="check-circle-green"
+      )
+      img.error(
+        src="/assets/images/icons/error-circle-red.svg"
+        alt="error-circle-red"
+      )
+    button.vacancy-popup__button(type="submit") Отправить
+    .vacancy-popup__policy Нажимая кнопку “Отправить”, вы даете согласие на обработку ваших персональных данных.

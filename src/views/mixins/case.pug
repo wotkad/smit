@@ -4,9 +4,9 @@ mixin case(title, text, slides, isHidden)
     p.case__text !{ text }
     .case__slider
       .swiper.slider-three-centered
-        .swiper-wrapper
+        .swiper-wrapper.gallery
           each slide in slides
-            .swiper-slide
+            .swiper-slide(data-src="" + slide.src)
               img(src="" + slide.src alt="" + slide.alt)
       .swiper-button-prev
         svg(

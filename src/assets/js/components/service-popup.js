@@ -1,7 +1,7 @@
 import successPopup from "./success-popup";
 import errorPopup from "./error-popup";
 import { enablePageScroll, disablePageScroll } from 'scroll-lock';
-import { validateEmail, validatePhone, validateName } from "./validator";
+import validator from "./validator";
 
 export default function servicesPopup() {
 
@@ -109,7 +109,7 @@ export default function servicesPopup() {
   if (form) {
     form.submit(function(e) {
       e.preventDefault();
-      if (validateName($('.service-popup__label-name input').val()) && validateEmail($('.service-popup__label-email input').val()) && validatePhone($('.service-popup__label-phone input').val())) {
+      if (validator.validateName($('.label-name input').val()) && validator.validateEmail($('.label-email input').val()) && validator.validatePhone($('.label-phone input').val())) {
         fetch('/assets/files/service.php', {
           method: 'POST',
           body: new FormData(form.get(0))
