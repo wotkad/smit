@@ -13,9 +13,9 @@
       @apply max-h-[227px] min-h-[227px] md:max-h-[250px] md:min-h-[250px] lg:max-h-[404px] lg:min-h-[404px]
     }
     &.swiper-horizontal > .swiper-pagination-bullets {
-      @apply bottom-[30px] left-auto hidden md:right-[30px] md:w-auto lg:flex
+      @apply bottom-[30px] left-auto flex
     }
-    @apply order-2 -mx-[21px] w-[calc(100%+42px)] pb-0 md:order-3 md:-mx-[30px] md:w-[calc(100%+60px)] lg:order-2 lg:mx-0 lg:w-full
+    @apply order-2 pb-0 md:order-3 lg:order-2
   }
   &__content {
     h1 {

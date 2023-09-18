@@ -1,15 +1,30 @@
 .case {
   &__slider {
-    @apply relative
+    .swiper-horizontal > .swiper-pagination-bullets {
+      @apply block bottom-4
+    }
+    @apply relative md:w-1/2
+  }
+  &__images {
+    @apply col-span-1 flex flex-col md:flex-row justify-between gap-4 md:gap-[26px] lg:gap-5 mt-[42px] lg:mt-0
+  }
+  &__content {
+    @apply flex col-span-1 flex-col gap-6 items-start
+  }
+  &__map {
+    img {
+      @apply h-full w-full object-cover block
+    }
+    @apply max-h-[228px] min-h-[228px] md:max-h-[218px] md:min-h-[218px]
   }
   .swiper {
     &-slide {
       img {
         @apply h-full w-full object-cover
       }
-      @apply max-h-[227px] min-h-[227px] md:max-h-[250px] md:min-h-[250px]
+      @apply max-h-[227px] min-h-[227px] md:max-h-[218px] md:min-h-[218px]
     }
-    @apply -mx-[21px] w-[calc(100%+42px)] pb-0 md:-mx-[30px] md:w-[calc(100%+60px)] lg:mx-0 lg:w-full
+    @apply pb-0
   }
   &:first-child {
     @apply pt-0
@@ -18,13 +33,13 @@
     @apply border-none
   }
   &__title {
-    @apply mb-4 text-2xl font-bold md:mb-8 md:text-[32px] md:leading-10 lg:mb-7
+    @apply text-2xl font-bold md:text-[32px] md:leading-10
   }
   &__text {
     span {
       @apply font-medium
     }
-    @apply mb-8 font-extralight tracking-[0.02em] md:mb-12 lg:mb-[60px]
+    @apply font-extralight tracking-[0.02em] flex gap-2
   }
   &-noborder {
     @apply border-none
@@ -32,7 +47,7 @@
   &-hidden {
     @apply hidden
   }
-  @apply border-b border-gray-300 py-9 md:py-[70px] lg:py-20
+  @apply border-b border-gray-300 py-9 md:py-[70px] lg:py-20 lg:grid lg:grid-cols-2 lg:gap-5
 }
 
 .lg-sub-html,

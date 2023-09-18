@@ -1,10 +1,13 @@
 .client {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   &__icon {
     img {
       @apply w-full max-w-[118px] object-contain
     }
   }
   &-hidden {
-    @apply hidden md:block
+    @apply hidden md:flex
   }
 }

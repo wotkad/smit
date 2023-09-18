@@ -1,5 +1,6 @@
 .opportunities {
   &__items {
+    counter-reset: opportunity;
     @apply grid grid-cols-1 gap-x-[58px] gap-y-[75px] md:grid-cols-2 md:gap-y-20 lg:grid-cols-3 lg:gap-x-[100px]
   }
 }

@@ -1,0 +1,10 @@
+.tech-cycle {
+  &__content {
+    p {
+      @apply text-base font-extralight mt-4
+    }
+    img {
+      @apply md:float-right mb-6 md:ml-[30px] md:mb-[30px] lg:ml-[60px] lg:mb-[60px] md:w-1/2 md:h-[324px] lg:h-full object-cover
+    }
+  }
+}

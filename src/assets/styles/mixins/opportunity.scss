@@ -1,8 +1,11 @@
 .opportunity {
   &__icon {
-    img {
-      @apply h-12 w-12
+    &:before {
+      counter-increment: opportunity;
+      content: "0" counter(opportunity);
+      @apply text-xl leading-10 font-bold text-green-400 absolute
     }
+    @apply flex min-h-[50px] min-w-[50px] items-center justify-center rounded-md bg-green-200 relative
   }
   &__text {
     h3 {

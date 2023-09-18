@@ -7,7 +7,7 @@
       span {
         @apply font-medium
       }
-      @apply font-extralight tracking-[0.02em]
+      @apply font-extralight tracking-[0.02em] text-xl
     }
     @apply col-span-2 lg:col-span-1
   }
@@ -16,7 +16,7 @@
       img {
         @apply h-full w-full object-cover
       }
-      @apply max-h-[227px] min-h-[227px] md:max-h-[294px] md:min-h-[294px]
+      @apply max-h-[227px] min-h-[227px] md:max-h-[469px] md:min-h-[469px] lg:max-h-[410px] lg:min-h-[410px]
     }
     &.swiper-horizontal > .swiper-pagination-bullets {
       @apply bottom-[17px] flex md:bottom-9 md:left-auto md:right-[43px] md:w-auto
@@ -45,7 +45,12 @@
     @apply col-span-2 flex items-center gap-x-6 md:col-auto
   }
   &__icon {
-    @apply flex min-h-[50px] min-w-[50px] items-center justify-center rounded-md bg-green-200
+    &:before {
+      counter-increment: advantage;
+      content: "0" counter(advantage);
+      @apply text-xl leading-10 font-bold text-green-400 absolute
+    }
+    @apply flex min-h-[50px] min-w-[50px] items-center justify-center rounded-md bg-green-200 relative
   }
   &.no-padding {
     @apply pb-0

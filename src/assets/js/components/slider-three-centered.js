@@ -4,10 +4,9 @@ export default function sliderThreeCentered() {
   Array.from($('.slider-three-centered')).forEach(function(slider) {
     new Swiper(slider, {
       modules: [Navigation],
-      slidesPerView: 1.5,
+      slidesPerView: 1,
       spaceBetween: 20,
       grabCursor: true,
-      centeredSlides: true,
       initialSlide: 1,
       navigation: {
         nextEl: $(slider).siblings('.swiper-button-next').get(0),

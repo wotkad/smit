@@ -3,7 +3,7 @@
   @apply mx-2
 }
 .swiper-horizontal > .swiper-pagination-bullets {
-  @apply bottom-0 flex w-full items-center justify-center lg:hidden
+  @apply bottom-1 flex w-full items-center justify-center lg:hidden
 }
 .swiper {
   &-wrapper {
@@ -15,7 +15,10 @@
   &-pagination {
     &-bullet {
       &-active {
-        @apply bg-green-400
+        &:before {
+          @apply content-[''] transition-all absolute w-4 h-4 bg-green-400 opacity-30 rounded-full left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2
+        }
+        @apply bg-green-400 relative
       }
       @apply h-2 w-2 bg-gray-600 opacity-100 transition-[background-color] duration-300 will-change-[background-color]
     }
