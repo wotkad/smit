@@ -4,7 +4,6 @@ import { enablePageScroll, disablePageScroll } from 'scroll-lock';
 import validator from "./validator";
 
 export default function servicesPopup() {
-
   let button = $('.calculator__button, .service-hero__button');
   let buttonService = $('.service-hero__button');
   let popup = $('.service-popup');
@@ -21,6 +20,20 @@ export default function servicesPopup() {
     bg.fadeOut(function() {
       enablePageScroll();
     });
+  });
+  bg.on('click', function() {
+    popup.fadeOut();
+    bg.fadeOut(function() {
+      enablePageScroll();
+    });
+  });
+  $(window).on('keydown', function(e) {
+    if ( e.keyCode == 27 ) {
+      popup.fadeOut();
+      bg.fadeOut(function() {
+        enablePageScroll()
+      });
+    }
   });
 
   buttonService.on('click', function() {
@@ -39,20 +52,34 @@ export default function servicesPopup() {
     let button = $('.service-popup__select');
     let container = $('.service-popup__dropdown');
     let items = $('.service-popup__dropdown p');
-    let input = $('.service-popup__select input');
+    let materials = $('.service-popup__label-material .service-popup__dropdown p');
+    let fastening_types = $('.service-popup__label-fastening_type .service-popup__dropdown p');
     let inputs = $('.service-popup__label input');
     button.on('click', function() {
       $(this).toggleClass('active');
-      container.toggle();
+      $(this).next().toggle();
+      button.not(this).removeClass('active');
+      button.not(this).next().hide();
     });
-    items.on('click', function() {
+    materials.on('click', function() {
       const index = $(this).index();
-      input.val($(this).text());
-      $('.calculator__input[name="service_name"]').val($(this).text());
+      $('.service-popup__label-material .service-popup__input[name="service_material"]').val($(this).text());
+      $('.calculator__label-material .calculator__input[name="service_material"]').val($(this).text());
       items.removeClass('active');
       $(this).addClass('active');
-      $('.calculator__dropdown p').eq(index).addClass('active');
-      $('.service-popup__dropdown p').eq(index).addClass('active');
+      $('.service-popup__label-material .service-popup__dropdown p').eq(index).addClass('active');
+      $('.calculator__label-material .calculator__dropdown p').eq(index).addClass('active');
+      container.hide();
+      button.removeClass('active');
+    });
+    fastening_types.on('click', function() {
+      const index = $(this).index();
+      $('.service-popup__label-fastening_type .service-popup__input[name="service_fastening_type"]').val($(this).text());
+      $('.calculator__label-fastening_type .calculator__input[name="service_fastening_type"]').val($(this).text());
+      items.removeClass('active');
+      $(this).addClass('active');
+      $('.calculator__label-fastening_type .calculator__dropdown p').eq(index).addClass('active');
+      $('.service-popup__label-fastening_type .service-popup__dropdown p').eq(index).addClass('active');
       container.hide();
       button.removeClass('active');
     });
@@ -62,17 +89,26 @@ export default function servicesPopup() {
       }
       const index = $(this).index();
       const name = $(this).attr('name');
-      if ($(this).prop('name') == 'service_name') {
+      if ($(this).prop('name') == 'service_material') {
         $(this).val('');
-        $('.calculator__input[name="service_name"]').val('');
+        $('.calculator__input[name="service_material"]').val('');
+        $('.calculator__dropdown p').eq(index).removeClass('active');
+        $('.service-popup__dropdown p').eq(index).removeClass('active');
+      }
+      if ($(this).prop('name') == 'service_fastening_type') {
+        $(this).val('');
+        $('.calculator__input[name="service_fastening_type"]').val('');
         $('.calculator__dropdown p').eq(index).removeClass('active');
         $('.service-popup__dropdown p').eq(index).removeClass('active');
       }
       if ($(this).prop('name') == 'count') {
         $('.calculator__input[name="count"]').val($(this).val());
       }
-      if ($(this).prop('name') == 'param_value') {
-        $('.calculator__input[name="param_value"]').val($(this).val());
+      if ($(this).prop('name') == 'height') {
+        $('.calculator__input[name="height"]').val($(this).val());
+      }
+      if ($(this).prop('name') == 'length') {
+        $('.calculator__input[name="length"]').val($(this).val());
       }
       if ($(this).val()) {
         $('.service-popup__label input[name="' + name + '"]').parent().addClass('success');
@@ -125,7 +161,7 @@ export default function servicesPopup() {
               $('.service-popup__label').removeClass('success');
               $('.calculator__label').removeClass('success');
             });
-          } else if (response.status !== 200) {
+          } else {
             popup.fadeOut(function() {
               errorPopup();
             });

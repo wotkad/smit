@@ -14,15 +14,15 @@
           fill="#7D7D7D"
         )
   form.service-popup__form(action="#")
-    .service-popup__label
-      span Выберите услугу
+    .service-popup__label.service-popup__label-material
+      span Выберите материал
       .service-popup__input__inner
         .service-popup__select
           input.service-popup__input(
             type="text"
-            placeholder="Выберите услугу"
+            placeholder="Выберите материал"
             autocomplete="off"
-            name="service_name"
+            name="service_material"
             required
           )
           svg.service-popup__input__icon(
@@ -37,9 +37,9 @@
               fill="#969696"
             )
         .service-popup__dropdown
-          p(data-id="1" data-price="150 000") Лазерная резка металла
-          p(data-id="2" data-price="145 000") Лазерная резка металла 2
-          p(data-id="3" data-price="166 000") Лазерная резка металла 3
+          p(data-id="1" data-price="150 000") Материал 1
+          p(data-id="2" data-price="145 000") Материал 2
+          p(data-id="3" data-price="166 000") Материал 3
     .service-popup__label.label-name
       span Ваше имя <span class="service-popup__label-required">*</span>
       input.service-popup__input(
@@ -59,18 +59,32 @@
         src="/assets/images/icons/error-circle-red.svg"
         alt="error-circle-red"
       )
-    .service-popup__label
-      span Количество (м)
-      input.service-popup__input(
-        type="text"
-        placeholder="Введите количество"
-        autocomplete="off"
-        name="count"
-      )
-      img.success(
-        src="/assets/images/icons/check-circle-green.svg"
-        alt="check-circle-green"
-      )
+    .service-popup__label.service-popup__label-fastening_type
+      span Выберите тип крепления
+      .service-popup__input__inner
+        .service-popup__select
+          input.service-popup__input(
+            type="text"
+            placeholder="Выберите тип крепления"
+            autocomplete="off"
+            name="service_fastening_type"
+            required
+          )
+          svg.service-popup__input__icon(
+            fill="none"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+          )
+            path(
+              d="M18 10L12 16L6 10L7.4 8.6L12 13.2L16.6 8.6L18 10Z"
+              fill="#969696"
+            )
+        .service-popup__dropdown
+          p(data-id="1" data-price="150 000") Тип крепления 1
+          p(data-id="2" data-price="145 000") Тип крепления 2
+          p(data-id="3" data-price="166 000") Тип крепления 3
     .service-popup__label.label-phone
       span Телефон <span class="service-popup__label-required">*</span>
       input.service-popup__input(
@@ -89,24 +103,25 @@
         alt="error-circle-red"
       )
     .service-popup__label
-      span И еще какой-то параметр
+      span Количество
       input.service-popup__input(
         type="text"
-        placeholder="Введите значение параметра"
+        placeholder="Введите количество"
         autocomplete="off"
-        name="param_value"
+        name="count"
       )
       img.success(
         src="/assets/images/icons/check-circle-green.svg"
         alt="check-circle-green"
       )
     .service-popup__label.label-email
-      span E-mail
+      span E-mail <span class="service-popup__label-required">*</span>
       input.service-popup__input(
         type="email"
         placeholder="Введите ваш e-mail"
         autocomplete="off"
         name="email"
+        required
       )
       img.success(
         src="/assets/images/icons/check-circle-green.svg"
@@ -115,6 +130,30 @@
       img.error(
         src="/assets/images/icons/error-circle-red.svg"
         alt="error-circle-red"
+      )
+    .service-popup__label
+      span Длина
+      input.service-popup__input(
+        type="text"
+        placeholder="Длина"
+        autocomplete="off"
+        name="length"
+      )
+      img.success(
+        src="/assets/images/icons/check-circle-green.svg"
+        alt="check-circle-green"
+      )
+    .service-popup__label
+      span Высота
+      input.service-popup__input(
+        type="text"
+        placeholder="Высота"
+        autocomplete="off"
+        name="height"
+      )
+      img.success(
+        src="/assets/images/icons/check-circle-green.svg"
+        alt="check-circle-green"
       )
     button.service-popup__button(type="submit") Оформить заказ
     .service-popup__policy Нажимая кнопку "Оформить заказ", вы даете согласие на обработку ваших персональных данных.

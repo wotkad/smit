@@ -9,7 +9,7 @@
     @apply grid grid-cols-1 gap-y-[42px] md:gap-y-14 lg:grid-cols-[1fr_578px] lg:gap-x-5 lg:gap-y-0
   }
   &__map {
-    img {
+    iframe {
       @apply h-full w-full object-cover
     }
     @apply h-[520px] overflow-hidden rounded-[6px] border border-gray-550

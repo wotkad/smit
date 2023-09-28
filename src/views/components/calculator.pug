@@ -4,15 +4,15 @@ section#calculator.calculator.section__gapper.section-gray
       h2.section__title Калькулятор стоимости
       .calculator__form
         .calculator__inputs
-          .calculator__label
-            span Выберите услугу
+          .calculator__label.calculator__label-material
+            span Выберите материал
             .calculator__input__inner
               .calculator__select
                 input.calculator__input(
                   type="text"
-                  placeholder="Выберите услугу"
+                  placeholder="Выберите материал"
                   autocomplete="off"
-                  name="service_name"
+                  name="service_material"
                 )
                 svg.calculator__input__icon(
                   fill="none"
@@ -26,9 +26,58 @@ section#calculator.calculator.section__gapper.section-gray
                     fill="#969696"
                   )
               .calculator__dropdown
-                p(data-price="150 000") Лазерная резка металла
-                p(data-price="145 000") Лазерная резка металла 2
-                p(data-price="166 000") Лазерная резка металла 3
+                p(data-price="150 000") Материал 1
+                p(data-price="145 000") Материал 2
+                p(data-price="166 000") Материал 3
+          .calculator__label.calculator__label-fastening_type
+            span Выберите тип крепления
+            .calculator__input__inner
+              .calculator__select
+                input.calculator__input(
+                  type="text"
+                  placeholder="Выберите тип крепления"
+                  autocomplete="off"
+                  name="service_fastening_type"
+                )
+                svg.calculator__input__icon(
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                )
+                  path(
+                    d="M18 10L12 16L6 10L7.4 8.6L12 13.2L16.6 8.6L18 10Z"
+                    fill="#969696"
+                  )
+              .calculator__dropdown
+                p(data-price="150 000") Тип крепления 1
+                p(data-price="145 000") Тип крепления 2
+                p(data-price="166 000") Тип крепления 3
+          .calculator__label
+            span Длина
+            input.calculator__input(
+              type="text"
+              placeholder="Длина"
+              autocomplete="off"
+              name="length"
+            )
+            img.success(
+              src="/assets/images/icons/check-circle-green.svg"
+              alt="check-circle-green"
+            )
+          .calculator__label
+            span Высота
+            input.calculator__input(
+              type="text"
+              placeholder="Высота"
+              autocomplete="off"
+              name="height"
+            )
+            img.success(
+              src="/assets/images/icons/check-circle-green.svg"
+              alt="check-circle-green"
+            )
           .calculator__label
             span Количество (м)
             input.calculator__input(
@@ -36,18 +85,6 @@ section#calculator.calculator.section__gapper.section-gray
               placeholder="Введите количество"
               autocomplete="off"
               name="count"
-            )
-            img.success(
-              src="/assets/images/icons/check-circle-green.svg"
-              alt="check-circle-green"
-            )
-          .calculator__label
-            span И еще какой-то параметр
-            input.calculator__input(
-              type="text"
-              placeholder="Введите значение параметра"
-              autocomplete="off"
-              name="param_value"
             )
             img.success(
               src="/assets/images/icons/check-circle-green.svg"

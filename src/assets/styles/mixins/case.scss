@@ -12,7 +12,7 @@
     @apply col-span-1 flex flex-col items-start gap-6
   }
   &__map {
-    img {
+    iframe {
       @apply block h-full w-full object-cover
     }
     @apply max-h-[228px] min-h-[228px] md:max-h-[218px] md:min-h-[218px]

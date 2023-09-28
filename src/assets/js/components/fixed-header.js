@@ -1,14 +1,14 @@
 function fixedHeader() {
   let header = $('header');
   function checker() {
-    if (window.pageYOffset !== 0) {
+    if ($('main').scrollTop() !== 0) {
       header.addClass('active');
     } else {
       header.removeClass('active');
     }
   }
   checker();
-  $(window).on('scroll', function() {
+  $('main').on('scroll', function() {
     checker();
   })
 }

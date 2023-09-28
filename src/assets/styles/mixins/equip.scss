@@ -27,6 +27,7 @@
     @apply col-span-1
   }
   &__facts {
+    counter-reset: equipment;
     h4 {
       @apply col-span-2 text-2xl font-bold leading-10 lg:col-span-3
     }
@@ -46,8 +47,8 @@
   }
   &__icon {
     &:before {
-      counter-increment: advantage;
-      content: "0" counter(advantage);
+      counter-increment: equipment;
+      content: "0" counter(equipment);
       @apply absolute text-xl font-bold leading-10 text-green-400
     }
     @apply relative flex min-h-[50px] min-w-[50px] items-center justify-center rounded-md bg-green-200

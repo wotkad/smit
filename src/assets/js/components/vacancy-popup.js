@@ -104,7 +104,7 @@ export default function vacancyPopup() {
               successPopup('Ваша заявка принята', 'Наши менеджеры перезвонят вам в ближайшее время');
               $('.vacancy-popup__label').removeClass('success');
             });
-          } else if (response.status !== 200) {
+          } else {
             popup.fadeOut(function() {
               errorPopup();
             });

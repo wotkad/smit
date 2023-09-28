@@ -15,5 +15,6 @@
     img {
       @apply float-right mb-[23px] h-[227px] w-full object-cover md:mb-[34px] md:ml-[38px] md:h-[324px] md:w-[328px] lg:mb-[65px] lg:ml-[102px] lg:h-[285px] lg:w-[573px]
     }
+    @apply md:min-h-[339px] lg:min-h-[285px]
   }
 }

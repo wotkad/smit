@@ -1,24 +1,24 @@
+const validateName = (name) => {
+  if (name.length >= 2 && name.length < 50) {
+    return name.match(
+      /^[а-яА-Я]/
+    );
+  }
+}
+
+const validateEmail = (email) => {
+  return email.match(
+    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  );
+};
+
+const validatePhone = (phone) => {
+  return phone.match(
+    /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/
+  );
+}
+
 export default function validator() {
-
-  const validateName = (name) => {
-    if (name.length >= 2 && name.length < 50) {
-      return name.match(
-        /^[а-яА-Я]/
-      );
-    }
-  }
-
-  const validateEmail = (email) => {
-    return email.match(
-      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    );
-  };
-
-  const validatePhone = (phone) => {
-    return phone.match(
-      /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/
-    );
-  }
 
   const validatedName = () => {
     const name = $('.label-name input').val();
@@ -67,4 +67,7 @@ export default function validator() {
   $('.label-phone input').on('input', validatedPhone);
 
 }
+validator.validateName = validateName;
+validator.validateEmail = validateEmail;
+validator.validatePhone = validatePhone;
 validator();

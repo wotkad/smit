@@ -18,7 +18,7 @@ export default function callback() {
             form.get(0).reset();
             successPopup('Ваша заявка принята', 'Наши менеджеры перезвонят вам в ближайшее время');
             $('.callback__form__label').removeClass('success');
-          } else if (response.status == 200) {
+          } else {
             errorPopup();
           }
         });
