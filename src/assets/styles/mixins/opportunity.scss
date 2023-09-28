@@ -3,9 +3,9 @@
     &:before {
       counter-increment: opportunity;
       content: "0" counter(opportunity);
-      @apply text-xl leading-10 font-bold text-green-400 absolute
+      @apply absolute text-xl font-bold leading-10 text-green-400
     }
-    @apply flex min-h-[50px] min-w-[50px] items-center justify-center rounded-md bg-green-200 relative
+    @apply relative flex min-h-[50px] min-w-[50px] items-center justify-center rounded-md bg-green-200
   }
   &__text {
     h3 {

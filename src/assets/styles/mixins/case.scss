@@ -1,19 +1,19 @@
 .case {
   &__slider {
     .swiper-horizontal > .swiper-pagination-bullets {
-      @apply block bottom-4
+      @apply bottom-4 block
     }
     @apply relative md:w-1/2
   }
   &__images {
-    @apply col-span-1 flex flex-col md:flex-row justify-between gap-4 md:gap-[26px] lg:gap-5 mt-[42px] lg:mt-0
+    @apply col-span-1 mt-[42px] flex flex-col justify-between gap-4 md:flex-row md:gap-[26px] lg:mt-0 lg:gap-5
   }
   &__content {
-    @apply flex col-span-1 flex-col gap-6 items-start
+    @apply col-span-1 flex flex-col items-start gap-6
   }
   &__map {
     img {
-      @apply h-full w-full object-cover block
+      @apply block h-full w-full object-cover
     }
     @apply max-h-[228px] min-h-[228px] md:max-h-[218px] md:min-h-[218px]
   }
@@ -39,7 +39,7 @@
     span {
       @apply font-medium
     }
-    @apply font-extralight tracking-[0.02em] flex gap-2
+    @apply flex gap-2 font-extralight tracking-[0.02em]
   }
   &-noborder {
     @apply border-none
@@ -47,7 +47,7 @@
   &-hidden {
     @apply hidden
   }
-  @apply border-b border-gray-300 py-9 md:py-[70px] lg:py-20 lg:grid lg:grid-cols-2 lg:gap-5
+  @apply border-b border-gray-300 py-9 md:py-[70px] lg:grid lg:grid-cols-2 lg:gap-5 lg:py-20
 }
 
 .lg-sub-html,

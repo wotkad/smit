@@ -16,9 +16,9 @@
     &-bullet {
       &-active {
         &:before {
-          @apply content-[''] transition-all absolute w-4 h-4 bg-green-400 opacity-30 rounded-full left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2
+          @apply absolute left-1/2 top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-green-400 opacity-30 transition-all content-['']
         }
-        @apply bg-green-400 relative
+        @apply relative bg-green-400
       }
       @apply h-2 w-2 bg-gray-600 opacity-100 transition-[background-color] duration-300 will-change-[background-color]
     }

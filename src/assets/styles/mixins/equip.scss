@@ -7,7 +7,7 @@
       span {
         @apply font-medium
       }
-      @apply font-extralight tracking-[0.02em] text-xl
+      @apply text-xl font-extralight tracking-[0.02em]
     }
     @apply col-span-2 lg:col-span-1
   }
@@ -48,9 +48,9 @@
     &:before {
       counter-increment: advantage;
       content: "0" counter(advantage);
-      @apply text-xl leading-10 font-bold text-green-400 absolute
+      @apply absolute text-xl font-bold leading-10 text-green-400
     }
-    @apply flex min-h-[50px] min-w-[50px] items-center justify-center rounded-md bg-green-200 relative
+    @apply relative flex min-h-[50px] min-w-[50px] items-center justify-center rounded-md bg-green-200
   }
   &.no-padding {
     @apply pb-0
