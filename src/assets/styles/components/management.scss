@@ -5,10 +5,7 @@
     }
     @apply mb-[42px] font-extralight tracking-[0.02em] md:mb-[55px] lg:mb-[45px] lg:max-w-[1070px]
   }
-  .swiper {
-    &-pagination {
-      @apply flex md:hidden
-    }
-    @apply pb-[42px]
+  &__items {
+    @apply pb-[42px] grid grid-cols-4 gap-4 md:gap-8 lg:gap-10
   }
 }
