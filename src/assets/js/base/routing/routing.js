@@ -27,7 +27,8 @@ barba.hooks.before((data) => {
 
 barba.hooks.after((data) => {
   const nextPath = data.next.url.path;
-  checkHeader(nextPath);
+	checkHeader(nextPath);
+	loadCalc();
 });
 
 barba.hooks.beforeLeave((data) => {
@@ -54,7 +55,7 @@ barba.init({
         });
       },
       afterLeave(data) {
-        $('body,html').animate({scrollTop: 0}, 0);
+        $('main').animate({scrollTop: 0}, 0);
         return gsap.to(data.current.container, 0, {
           display: 'none',
         });

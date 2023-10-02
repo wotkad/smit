@@ -68,5 +68,5 @@
     }
     @apply max-h-full overflow-visible
   }
-  @apply max-h-[480px] overflow-hidden rounded-[10px] border border-gray-500 bg-gray-100 px-6 pb-6 md:max-h-[375px] lg:max-h-[305px] lg:px-8 lg:pb-8
+  @apply max-h-[480px] w-full overflow-hidden rounded-[10px] border border-gray-500 bg-gray-100 px-6 pb-6 md:max-h-[375px] lg:max-h-[305px] lg:px-8 lg:pb-8
 }

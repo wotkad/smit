@@ -22,4 +22,10 @@ export default function successPopup(title, text) {
       enablePageScroll();
     });
   });
+  bg.on('click', function() {
+    popup.fadeOut();
+    bg.fadeOut(function() {
+      enablePageScroll();
+    });
+  });
 }

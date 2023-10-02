@@ -92,24 +92,39 @@ export default function vacancyPopup() {
   if (form) {
     form.submit(function(e) {
       e.preventDefault();
-      if (validator.validateName($('.label-name input').val()) && validator.validateEmail($('.label-email input').val()) && validator.validatePhone($('.label-phone input').val())) {
-        fetch('/assets/files/vacancy.php', {
-          method: 'POST',
-          body: new FormData(form.get(0))
-        }).then((response) => {
-          if (response.status == 200) {
-            form.get(0).reset();
-            $('.vacancy-popup__dropdown p').removeClass('active');
-            popup.fadeOut(function() {
-              successPopup('Ваша заявка принята', 'Наши менеджеры перезвонят вам в ближайшее время');
-              $('.vacancy-popup__label').removeClass('success');
-            });
-          } else {
-            popup.fadeOut(function() {
-              errorPopup();
-            });
-          }
-        });
+		 if (validator.validateName($('.label-name input').val()) && validator.validateEmail($('.label-email input').val()) && validator.validatePhone($('.label-phone input').val())) {
+			
+			grecaptcha.ready(function() {
+				grecaptcha.execute(recaptcha_token, { action: 'submit' }).then(function (token) {
+
+					let url = form.get(0).action;
+					let formData = new FormData(form.get(0));
+					formData.append('token', token);
+			 
+					fetch(url, {
+						method: 'POST',
+						headers: {
+							'X-CSRFToken' : String(formData.get('csrfmiddlewaretoken')),
+						},
+						body: formData
+					}).then((response) => {
+						if (response.status === 200) {
+							form.get(0).reset();
+							$('.vacancy-popup__dropdown p').removeClass('active');
+							popup.fadeOut(function() {
+							successPopup('Ваша заявка принята', 'Наши менеджеры перезвонят вам в ближайшее время');
+							$('.vacancy-popup__label').removeClass('success');
+							});
+						} else {
+							popup.fadeOut(function() {
+							errorPopup();
+							});
+						}
+					});
+					
+				});
+			});
+			 
       }
     });
   }

@@ -16,4 +16,10 @@ export default function errorPopup() {
       enablePageScroll();
     });
   });
+  bg.on('click', function() {
+    popup.fadeOut();
+    bg.fadeOut(function() {
+      enablePageScroll();
+    });
+  });
 }

@@ -145,28 +145,43 @@ export default function servicesPopup() {
   if (form) {
     form.submit(function(e) {
       e.preventDefault();
-      if (validator.validateName($('.label-name input').val()) && validator.validateEmail($('.label-email input').val()) && validator.validatePhone($('.label-phone input').val())) {
-        fetch('/assets/files/service.php', {
-          method: 'POST',
-          body: new FormData(form.get(0))
-        }).then((response) => {
-          if (response.status == 200) {
-            form.get(0).reset();
-            $('.service-popup__dropdown p').removeClass('active');
-            $('.calculator__select input').val('');
-            $('.calculator__label input').val('');
-            $('.calculator__dropdown p').removeClass('active');
-            popup.fadeOut(function() {
-              successPopup('Спасибо за заказ', 'Наши менеджеры перезвонят вам для подтверждения заявки и уточнения деталей заказа');
-              $('.service-popup__label').removeClass('success');
-              $('.calculator__label').removeClass('success');
-            });
-          } else {
-            popup.fadeOut(function() {
-              errorPopup();
-            });
-          }
-        });
+		 if (validator.validateName($('.label-name input').val()) && validator.validateEmail($('.label-email input').val()) && validator.validatePhone($('.label-phone input').val()) && validateInputs()) {
+			
+			grecaptcha.ready(function() {
+				grecaptcha.execute(recaptcha_token, { action: 'submit' }).then(function (token) {
+					
+					let formData = new FormData(form.get(0));
+					let url = form.get(0).action;
+					formData.append('token', token);
+
+					fetch(url, {
+						method: 'POST',
+						headers: {
+							'X-CSRFToken' : String(formData.get('csrfmiddlewaretoken')),
+						},
+						body: formData,
+					}).then((response) => {
+						if (response.status === 200) {
+							form.get(0).reset();
+							$('.service-popup__dropdown p').removeClass('active');
+							$('.calculator__select input').val('');
+							$('.calculator__label input').val('');
+							$('.calculator__dropdown p').removeClass('active');
+							popup.fadeOut(function() {
+							successPopup('Спасибо за заказ', 'Наши менеджеры перезвонят вам для подтверждения заявки и уточнения деталей заказа');
+							$('.service-popup__label').removeClass('success');
+							$('.calculator__label').removeClass('success');
+							});
+						} else {
+							popup.fadeOut(function() {
+							errorPopup();
+							});
+						}
+					});
+
+				});
+			});
+			 
       }
     });
   }

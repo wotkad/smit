@@ -25,7 +25,7 @@
       }
       @apply flex items-center gap-x-[2px] md:gap-x-[5px]
     }
-    @apply mb-6 flex items-center justify-between md:mb-[50px]
+    @apply mb-6 flex md:items-center justify-between md:mb-[50px] flex-col md:flex-row gap-2
   }
   &__slider {
     @apply relative
