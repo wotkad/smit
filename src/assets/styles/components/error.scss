@@ -12,7 +12,7 @@
     &:hover {
       @apply border-b-green-400
     }
-    @apply transition-[border-color] duration-300 text-green-400 border-b border-transparent
+    @apply border-b border-transparent text-green-400 transition-[border-color] duration-300
   }
   @apply pt-10
 }

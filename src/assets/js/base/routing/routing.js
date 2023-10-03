@@ -38,7 +38,29 @@ barba.hooks.beforeLeave((data) => {
   nextItem.addClass("active");
 });
 
+barba.hooks.enter((data) => {
+  var $newPageHead = $('<head />').html(
+    $.parseHTML(
+      data.next.html.match(/<head[^>]*>([\s\S.]*)<\/head>/i)[0], // <- use data argument
+      document,
+      true
+    )
+  );
+  var headTags = [
+    "meta[name='keywords']",
+    "meta[name='description']",
+    "meta[property='og:title']",
+    "meta[property='og:description']",
+    "meta[property='og:type']",
+    "meta[property='og:image']",
+    "meta[property='og:url']",
+  ].join(',');
+  $('head').find(headTags).remove();
+  $newPageHead.find(headTags).appendTo('head');
+});
+
 barba.init({
+  sync: true,
   preventRunning: true,
   requestError: (trigger, action, url, response) => {
     if (action === "click" && response.status && response.status === 404) {
