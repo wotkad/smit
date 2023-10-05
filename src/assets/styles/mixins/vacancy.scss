@@ -15,7 +15,7 @@
     @apply mt-4 font-extralight tracking-[0.02em] lg:mt-7
   }
   &__heading {
-    @apply mt-[14px] text-lg font-medium leading-6 md:mt-[30px] lg:mt-6
+    @apply mt-[14px] text-lg font-medium leading-6 md:mt-[30px] lg:mt-6 mb-4
   }
   ul {
     li {
@@ -27,7 +27,7 @@
       }
       @apply relative line-clamp-1 pl-5 text-sm font-extralight leading-5 md:text-base
     }
-    @apply mt-[17px] flex list-disc flex-col items-start gap-y-3 tracking-[0.02em]
+    @apply flex list-disc flex-col items-start gap-y-3 tracking-[0.02em]
   }
   &__requirments {
     @apply flex flex-wrap gap-[14px]

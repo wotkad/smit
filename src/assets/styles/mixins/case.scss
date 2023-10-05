@@ -13,9 +13,8 @@
   }
   &__map {
     iframe {
-      @apply block h-full w-full object-cover
+      @apply block h-full w-full object-cover max-h-[228px] min-h-[228px] md:max-h-[218px] md:min-h-[218px]
     }
-    @apply max-h-[228px] min-h-[228px] md:max-h-[218px] md:min-h-[218px]
   }
   .swiper {
     &-slide {

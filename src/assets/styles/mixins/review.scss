@@ -3,7 +3,7 @@
     img {
       @apply h-full w-full object-cover
     }
-    @apply mb-4 h-[308px]
+    @apply mb-4 h-[308px] w-full
   }
   &__title {
     @apply inline-block text-xl leading-6
@@ -14,5 +14,5 @@
     }
     @apply line-clamp-3 font-extralight  tracking-[0.02em]
   }
-  @apply relative flex flex-col items-start gap-5 rounded-[10px] border border-gray-500 p-[34px]
+  @apply relative flex flex-col items-start gap-5 rounded-[10px] border border-gray-500 p-[34px] h-full
 }

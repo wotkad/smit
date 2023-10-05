@@ -6,11 +6,10 @@ export default function mobileMenu() {
   let close = $('.header__mobmenu__close');
   let items = $('.header__mobmenu a');
   let bg = $('.bg');
-  let scrollableElement = document.querySelector('.header__mobmenu__list');
   button.on('click', function() {
     menu.addClass('active');
     bg.fadeIn();
-    disablePageScroll(scrollableElement);
+    disablePageScroll();
   });
   close.on('click', function() {
     menu.removeClass('active');
