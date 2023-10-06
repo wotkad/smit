@@ -1,7 +1,7 @@
 .manager {
   &__image {
     img {
-      @apply h-full w-full object-cover
+      @apply h-full w-full object-cover object-top
     }
     @apply mb-[31px] h-[307px]
   }
