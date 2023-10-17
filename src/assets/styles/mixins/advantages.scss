@@ -2,4 +2,5 @@
   &__items {
     @apply grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-[30px] lg:grid-cols-4 lg:gap-x-5
   }
+  @apply relative z-20
 }

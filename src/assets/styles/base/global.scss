@@ -12,6 +12,9 @@ body {
     @apply py-10 md:py-[50px]
   }
   &__title {
+    &-center {
+      @apply text-center
+    }
     @apply mb-8 text-[28px] font-bold leading-[38px] md:mb-[50px] md:text-4xl md:leading-6
   }
   &-gray {

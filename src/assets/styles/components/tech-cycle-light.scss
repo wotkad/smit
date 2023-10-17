@@ -3,7 +3,16 @@
     p {
       @apply mt-4 text-base font-extralight
     }
-    img {
+    .swiper {
+      &-slide {
+        img {
+          @apply h-full w-full object-cover
+        }
+        @apply max-h-[227px] min-h-[227px] md:max-h-[250px] md:min-h-[250px] lg:max-h-[404px] lg:min-h-[404px]
+      }
+      &.swiper-horizontal > .swiper-pagination-bullets {
+        @apply bottom-[30px] left-auto flex
+      }
       @apply mb-6 object-cover md:float-right md:mb-[30px] md:ml-[30px] md:h-[324px] md:w-1/2 lg:mb-[60px] lg:ml-[60px] lg:h-full
     }
   }
