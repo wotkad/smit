@@ -2,47 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://localhost:8080/</loc>
-    <lastmod>2023-10-17</lastmod>
+    <lastmod>2023-10-18</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>http://localhost:8080/about/</loc>
-    <lastmod>2023-10-17</lastmod>
+    <lastmod>2023-10-18</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>http://localhost:8080/services/</loc>
-    <lastmod>2023-10-17</lastmod>
+    <lastmod>2023-10-18</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>http://localhost:8080/service/</loc>
-    <lastmod>2023-10-17</lastmod>
+    <lastmod>2023-10-18</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>http://localhost:8080/equipment/</loc>
-    <lastmod>2023-10-17</lastmod>
+    <lastmod>2023-10-18</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>http://localhost:8080/works/</loc>
-    <lastmod>2023-10-17</lastmod>
+    <lastmod>2023-10-18</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>http://localhost:8080/clients/</loc>
-    <lastmod>2023-10-17</lastmod>
+    <lastmod>2023-10-18</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>http://localhost:8080/contacts/</loc>
-    <lastmod>2023-10-17</lastmod>
+    <lastmod>2023-10-18</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>http://localhost:8080/services</loc>
-    <lastmod>2023-10-17</lastmod>
+    <lastmod>2023-10-18</lastmod>
     <changefreq>monthly</changefreq>
   </url>
 </urlset>

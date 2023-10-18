@@ -17,7 +17,7 @@
       @apply absolute left-0 top-0 z-[5] h-full w-full bg-black opacity-60 content-['']
     }
     video {
-      @apply min-h-[500px] w-full object-cover md:min-h-screen
+      @apply min-h-[500px] w-full object-cover md:h-screen
     }
     @apply absolute left-0 top-0 min-h-[500px] w-full md:min-h-screen
   }
