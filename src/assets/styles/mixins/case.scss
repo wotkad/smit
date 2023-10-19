@@ -50,8 +50,17 @@
 }
 
 .lg-sub-html,
-.lg-toolbar {
+.lg-download,
+.lg-counter {
   @apply hidden
+}
+
+.lg-toolbar {
+  @apply h-0
+}
+
+.lg-toolbar .lg-icon {
+  @apply text-white
 }
 
 .lg-backdrop.in {

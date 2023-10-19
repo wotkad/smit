@@ -6,13 +6,19 @@
     @apply mb-5 h-[216px] overflow-hidden
   }
   &__title {
-    @apply text-xl font-medium leading-6
+    &:hover {
+      @apply text-green-400
+    }
+    @apply text-xl font-medium leading-6 transition-[color] duration-300 cursor-pointer
   }
   &:after {
     @apply absolute bottom-[34px] left-[34px] h-[1px] w-[75px] bg-gray-200 content-['']
   }
   &-hidden {
     @apply hidden md:block
+  }
+  .gallery {
+    @apply hidden
   }
   @apply relative rounded-[10px] border border-gray-500 p-[34px] pb-[54px]
 }

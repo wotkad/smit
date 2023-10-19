@@ -11,13 +11,16 @@ export default function gallery() {
       plugins: [lgPager]
     });
   });
-  $('.case__slider, .lg-outer').on('click', function() {
+  $('.case__slider, .lg-outer, .work__title').on('click', function() {
     if ($('html').hasClass('lg-on')) {
       disablePageScroll();
     } else {
       clearQueueScrollLocks();
       enablePageScroll();
     }
+  });
+  $('.work__title').on('click', function() {
+    $(this).next().find('img').trigger("click");
   });
 }
 gallery();
