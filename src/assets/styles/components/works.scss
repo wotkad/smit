@@ -31,6 +31,6 @@
   }
   &__more {
     @include button;
-    @apply mt-[26px] block w-full justify-center md:hidden
+    @apply mt-[26px] md:mt-10 relative left-1/2 -translate-x-1/2
   }
 }
