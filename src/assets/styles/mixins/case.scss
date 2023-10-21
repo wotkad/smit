@@ -107,5 +107,5 @@
 
 .lg-outer.lg-grab img.lg-object,
 .lg-outer.lg-grabbing img.lg-object {
-  @apply h-[211px] w-[333px] object-cover md:h-[403px] md:w-[621px] lg:h-[80vh] lg:w-[1170px]
+  @apply h-[70vh] w-auto object-contain max-w-[80vw] lg:h-[80vh]
 }
