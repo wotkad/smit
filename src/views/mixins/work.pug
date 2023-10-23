@@ -1,14 +1,15 @@
 mixin work(src, alt, title)
-  .work(class="")
-    .work__image
-      img(src="" + src alt="" + alt)
-    h3.work__title= title
-    .gallery#gallery
-      div(data-src="/assets/images/work.png")
-        img(src="/assets/images/work.png" alt="work")
-      div(data-src="/assets/images/work.png")
-        img(src="/assets/images/work.png" alt="work")
-      div(data-src="/assets/images/work.png")
-        img(src="/assets/images/work.png" alt="work")
-      div(data-src="/assets/images/work.png")
-        img(src="/assets/images/work.png" alt="work")
+  .work
+    .work__container
+      .work__image
+        img(src="" + src alt="" + alt)
+      h3.work__title= title
+      .gallery#gallery
+        div(data-src="/assets/images/work.png")
+          img(src="/assets/images/work.png" alt="work")
+        div(data-src="/assets/images/work.png")
+          img(src="/assets/images/work.png" alt="work")
+        div(data-src="/assets/images/work.png")
+          img(src="/assets/images/work.png" alt="work")
+        div(data-src="/assets/images/work.png")
+          img(src="/assets/images/work.png" alt="work")

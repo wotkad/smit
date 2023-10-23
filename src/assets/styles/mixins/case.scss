@@ -12,9 +12,13 @@
     @apply col-span-1 flex flex-col items-start gap-6
   }
   &__map {
-    iframe {
-      @apply block h-full w-full object-cover max-h-[228px] min-h-[228px] md:max-h-[218px] md:min-h-[218px]
+    .map-image {
+      @apply w-full h-full block object-cover max-h-[228px] min-h-[228px] md:max-h-[218px] md:min-h-[218px]
     }
+    iframe {
+      @apply hidden transition-[opacity] duration-300 h-full w-full object-cover max-h-[228px] min-h-[228px] md:max-h-[218px] md:min-h-[218px]
+    }
+    @apply w-full
   }
   .swiper {
     &-slide {
