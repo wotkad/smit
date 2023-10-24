@@ -21,6 +21,7 @@ import showCases from '../../components/show-cases';
 import gallery from '../../components/gallery';
 import vacancyPopup from '../../components/vacancy-popup';
 import validator from '../../components/validator';
+import uploadMap from '../../components/upload-map';
 
 export default function routingFunctions() {
   isCurrentPage();
@@ -46,4 +47,5 @@ export default function routingFunctions() {
   gallery();
   vacancyPopup();
   validator();
+  uploadMap();
 }
