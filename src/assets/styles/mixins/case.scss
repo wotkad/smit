@@ -23,7 +23,12 @@
   .swiper {
     &-slide {
       img {
-        @apply h-full w-full object-cover
+        @apply h-full w-full object-cover transition-[transform] duration-300
+      }
+      &:hover {
+        img {
+          @apply scale-110
+        }
       }
       @apply max-h-[227px] min-h-[227px] md:max-h-[218px] md:min-h-[218px]
     }
