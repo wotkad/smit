@@ -22,6 +22,7 @@ import gallery from '../../components/gallery';
 import vacancyPopup from '../../components/vacancy-popup';
 import validator from '../../components/validator';
 import uploadMap from '../../components/upload-map';
+import popupComeback from '../../components/popup-comeback';
 
 export default function routingFunctions() {
   isCurrentPage();
@@ -48,4 +49,5 @@ export default function routingFunctions() {
   vacancyPopup();
   validator();
   uploadMap();
+  popupComeback();
 }

@@ -12,9 +12,18 @@
       }
       @apply mt-3 font-extralight tracking-[0.02em] md:mt-[14px]
     }
-    img {
-      @apply float-right mb-[23px] h-[227px] w-full object-cover md:mb-[34px] md:ml-[38px] md:h-[324px] md:w-[328px] lg:mb-[65px] lg:ml-[102px] lg:h-[285px] lg:w-[573px]
-    }
     @apply md:min-h-[339px] lg:min-h-[285px]
+  }
+  &__video {
+    &:before {
+      @apply content-[''] absolute left-0 top-0 bg-[#2D2D2D] opacity-70 z-10 w-full h-full
+    }
+    @apply relative flex justify-center items-center rounded-[10px] mb-[30px] overflow-hidden
+  }
+  &__button {
+    span {
+      @apply text-white text-lg leading-6
+    }
+    @apply flex flex-col gap-6 absolute items-center z-20
   }
 }

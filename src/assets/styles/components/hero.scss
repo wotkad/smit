@@ -3,23 +3,35 @@
     br {
       @apply block lg:hidden
     }
-    @apply mb-8 max-w-[400px] text-[28px] font-bold leading-[38px] text-white md:text-5xl md:leading-[64px] lg:max-w-[637px]
+    @apply text-[28px] font-bold leading-[38px] text-white md:text-5xl md:leading-[64px] lg:max-w-[890px]
   }
   &__button {
     @include button;
-    @apply absolute bottom-[46px] w-full justify-center md:static md:w-auto md:justify-start
+    @apply w-full mt-10 justify-center relative md:w-auto md:justify-start lg:mt-14
   }
   &__wrapper {
-    @apply relative z-10 flex min-h-[500px] flex-col items-start justify-center md:min-h-screen
+    @apply relative z-10 mt-10 flex min-h-[704px] flex-col items-start justify-center md:min-h-screen pt-[84px] mb-8 md:mb-0 md:pt-0
+  }
+  &__items {
+    li {
+      &:before {
+        @apply content-[''] absolute -left-6 w-2 h-2 bg-green-400 rounded top-2
+      }
+      span {
+        @apply font-extrabold text-2xl leading-6
+      }
+      @apply relative text-white text-sm md:text-lg leading-6
+    }
+    @apply mt-10 lg:mt-14 flex flex-col md:flex-row md:flex-wrap gap-y-6 md:gap-y-4 md:gap-x-10 overflow-hidden max-w-[919px]
   }
   &__video {
     &:before {
       @apply absolute left-0 top-0 z-[5] h-full w-full bg-black opacity-60 content-['']
     }
     video {
-      @apply min-h-[500px] w-full object-cover md:h-screen
+      @apply min-h-[704px] w-full object-cover md:h-screen
     }
-    @apply absolute left-0 top-0 min-h-[500px] w-full md:min-h-screen
+    @apply absolute left-0 top-0 min-h-[704px] w-full md:min-h-screen
   }
-  @apply -mt-[86px] min-h-[500px] md:-mt-[126px] md:mb-6 md:min-h-screen lg:-mt-[139px] lg:mb-8
+  @apply -mt-[128px] min-h-[704px] md:min-h-screen md:-mt-[166px] lg:-mt-[179px] lg:mb-8 pb-10 md:pb-0 relative
 }

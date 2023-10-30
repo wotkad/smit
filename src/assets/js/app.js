@@ -38,3 +38,4 @@ require("./components/slider-one-centered");
 require("./components/slider-three-centered");
 require("./components/gallery");
 require("./components/upload-map");
+require("./components/popup-comeback");

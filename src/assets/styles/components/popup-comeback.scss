@@ -1,0 +1,29 @@
+.popup-comeback {
+  &__title {
+    @apply mb-4 font-bold leading-10 md:leading-6 text-[34px] text-center
+  }
+  &__logo {
+    @apply mb-10 flex justify-center
+  }
+  &__close {
+    svg {
+      path {
+        @apply transition-[fill] duration-300 will-change-[fill]
+      }
+      &:hover {
+        path {
+          @apply lg:fill-green-400
+        }
+      }
+      @apply h-8 w-8 cursor-pointer
+    }
+    @apply absolute top-6 right-6
+  }
+  &__description {
+    @apply text-base text-gray-200 text-center mb-10
+  }
+  &__link {
+    @apply bg-green-400 py-4 px-12 rounded-[5px] inline-flex items-center gap-[10px] text-white left-1/2 relative -translate-x-1/2
+  }
+  @apply fixed left-1/2 top-1/2 hidden z-[100] w-[335px] -translate-x-1/2 -translate-y-1/2 rounded-[5px] bg-white p-5 md:w-[480px] px-8 py-10 md:py-14 lg:w-[575px]
+}
