@@ -10,7 +10,7 @@
     @apply relative mt-10 w-full justify-center md:w-auto md:justify-start lg:mt-14
   }
   &__wrapper {
-    @apply relative z-10 mb-8 mt-10 flex min-h-[704px] flex-col items-start justify-center pt-[84px] md:mb-0 md:min-h-screen md:pt-0
+    @apply relative z-10 mb-8 mt-10 flex min-h-[704px] flex-col items-start justify-center pt-[84px] md:mb-0 md:min-h-screen
   }
   &__items {
     li {
