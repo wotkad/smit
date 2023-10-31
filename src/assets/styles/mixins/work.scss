@@ -12,7 +12,7 @@
     @apply absolute bottom-[34px] left-[34px] h-[1px] w-[75px] bg-gray-200 content-['']
   }
   &-hidden {
-    @apply hidden md:block
+    @apply hidden
   }
   .gallery {
     @apply hidden
