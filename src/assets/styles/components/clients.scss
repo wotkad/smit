@@ -3,10 +3,10 @@
     span {
       @apply font-medium
     }
-    @apply font-extralight tracking-[0.02em] lg:max-w-[919px] text-center mx-auto
+    @apply mx-auto text-center font-extralight tracking-[0.02em] lg:max-w-[919px]
   }
   &__items {
-    @apply mt-11 md:mt-16 grid grid-cols-1 gap-y-[30px] px-6 md:grid-cols-2 md:gap-[70px] md:px-0 lg:grid-cols-4 lg:gap-x-[137px] lg:gap-y-[60px]
+    @apply mt-11 grid grid-cols-1 gap-y-[30px] px-6 md:mt-16 md:grid-cols-2 md:gap-[70px] md:px-0 lg:grid-cols-4 lg:gap-x-[137px] lg:gap-y-[60px]
   }
   &__more {
     @include button;

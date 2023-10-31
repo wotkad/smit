@@ -3,7 +3,7 @@
     img {
       @apply h-full w-full object-cover
     }
-    @apply mb-6 h-[426px] overflow-hidden border-gray-500 rounded-lg border
+    @apply mb-6 h-[426px] overflow-hidden rounded-lg border border-gray-500
   }
   &__title {
     span {

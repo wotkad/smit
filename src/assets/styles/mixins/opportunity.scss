@@ -1,9 +1,9 @@
 .opportunity {
   &__icon {
     img {
-      @apply w-6 h-6
+      @apply h-6 w-6
     }
-    @apply relative flex min-h-[50px] min-w-[50px] max-w-[50px] max-h-[50px] items-center justify-center rounded-md bg-green-200
+    @apply relative flex max-h-[50px] min-h-[50px] min-w-[50px] max-w-[50px] items-center justify-center rounded-md bg-green-200
   }
   &__text {
     h3 {

@@ -31,6 +31,6 @@
   }
   &__more {
     @include button;
-    @apply mt-[26px] md:mt-10 relative left-1/2 -translate-x-1/2
+    @apply relative left-1/2 mt-[26px] -translate-x-1/2 md:mt-10
   }
 }

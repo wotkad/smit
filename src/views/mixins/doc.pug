@@ -1,6 +1,6 @@
 mixin doc(src, alt, title, isHidden)
   .doc(class="" + isHidden)
-    .gallery#gallery
+    #gallery.gallery
       .doc__image(data-src="" + src)
         img(src="" + src alt="" + alt)
     h3.doc__title !{ title }

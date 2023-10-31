@@ -7,22 +7,22 @@
   }
   &__button {
     @include button;
-    @apply w-full mt-10 justify-center relative md:w-auto md:justify-start lg:mt-14
+    @apply relative mt-10 w-full justify-center md:w-auto md:justify-start lg:mt-14
   }
   &__wrapper {
-    @apply relative z-10 mt-10 flex min-h-[704px] flex-col items-start justify-center md:min-h-screen pt-[84px] mb-8 md:mb-0 md:pt-0
+    @apply relative z-10 mb-8 mt-10 flex min-h-[704px] flex-col items-start justify-center pt-[84px] md:mb-0 md:min-h-screen md:pt-0
   }
   &__items {
     li {
       &:before {
-        @apply content-[''] absolute -left-6 w-2 h-2 bg-green-400 rounded top-2
+        @apply absolute -left-6 top-2 h-2 w-2 rounded bg-green-400 content-['']
       }
       span {
-        @apply font-extrabold text-2xl leading-6
+        @apply text-2xl font-extrabold leading-6
       }
-      @apply relative text-white text-sm md:text-lg leading-6
+      @apply relative text-sm leading-6 text-white md:text-lg
     }
-    @apply mt-10 lg:mt-14 flex flex-col md:flex-row md:flex-wrap gap-y-6 md:gap-y-4 md:gap-x-10 overflow-hidden max-w-[919px]
+    @apply mt-10 flex max-w-[919px] flex-col gap-y-6 overflow-hidden md:flex-row md:flex-wrap md:gap-x-10 md:gap-y-4 lg:mt-14
   }
   &__video {
     &:before {
@@ -33,5 +33,5 @@
     }
     @apply absolute left-0 top-0 min-h-[704px] w-full md:min-h-screen
   }
-  @apply -mt-[128px] min-h-[704px] md:min-h-screen md:-mt-[166px] lg:-mt-[179px] lg:mb-8 pb-10 md:pb-0 relative
+  @apply relative -mt-[128px] min-h-[704px] pb-10 md:-mt-[166px] md:min-h-screen md:pb-0 lg:-mt-[179px] lg:mb-8
 }

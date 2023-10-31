@@ -15,7 +15,7 @@
     &.swiper-horizontal > .swiper-pagination-bullets {
       @apply bottom-[30px] left-auto flex
     }
-    @apply order-2 pb-0 md:order-3 lg:order-2 max-h-[404px]
+    @apply order-2 max-h-[404px] pb-0 md:order-3 lg:order-2
   }
   &__content {
     h1 {

@@ -13,10 +13,10 @@
   }
   &__map {
     .map-image {
-      @apply w-full h-full block object-cover max-h-[228px] min-h-[228px] md:max-h-[218px] md:min-h-[218px]
+      @apply block h-full max-h-[228px] min-h-[228px] w-full object-cover md:max-h-[218px] md:min-h-[218px]
     }
     iframe {
-      @apply hidden transition-[opacity] duration-300 h-full w-full object-cover max-h-[228px] min-h-[228px] md:max-h-[218px] md:min-h-[218px]
+      @apply hidden h-full max-h-[228px] min-h-[228px] w-full object-cover transition-[opacity] duration-300 md:max-h-[218px] md:min-h-[218px]
     }
     @apply w-full
   }
@@ -116,5 +116,5 @@
 
 .lg-outer.lg-grab img.lg-object,
 .lg-outer.lg-grabbing img.lg-object {
-  @apply h-[70vh] w-auto object-contain max-w-[80vw] lg:h-[80vh]
+  @apply h-[70vh] w-auto max-w-[80vw] object-contain lg:h-[80vh]
 }

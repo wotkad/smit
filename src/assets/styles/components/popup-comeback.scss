@@ -1,6 +1,6 @@
 .popup-comeback {
   &__title {
-    @apply mb-4 font-bold leading-10 md:leading-6 text-[34px] text-center
+    @apply mb-4 text-center text-[34px] font-bold leading-10 md:leading-6
   }
   &__logo {
     @apply mb-10 flex justify-center
@@ -17,13 +17,13 @@
       }
       @apply h-8 w-8 cursor-pointer
     }
-    @apply absolute top-6 right-6
+    @apply absolute right-6 top-6
   }
   &__description {
-    @apply text-base text-gray-200 text-center mb-10
+    @apply mb-10 text-center text-base text-gray-200
   }
   &__link {
-    @apply bg-green-400 py-4 px-12 rounded-[5px] inline-flex items-center gap-[10px] text-white left-1/2 relative -translate-x-1/2
+    @apply relative left-1/2 inline-flex -translate-x-1/2 items-center gap-[10px] rounded-[5px] bg-green-400 px-12 py-4 text-white
   }
-  @apply fixed left-1/2 top-1/2 hidden z-[100] w-[335px] -translate-x-1/2 -translate-y-1/2 rounded-[5px] bg-white p-5 md:w-[480px] px-8 py-10 md:py-14 lg:w-[575px]
+  @apply fixed left-1/2 top-1/2 z-[100] hidden w-[335px] -translate-x-1/2 -translate-y-1/2 rounded-[5px] bg-white p-5 px-8 py-10 md:w-[480px] md:py-14 lg:w-[575px]
 }
