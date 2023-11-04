@@ -1,4 +1,11 @@
 .equipment {
+  &__wrapper {
+    .hero__items {
+      li {
+        @apply text-gray-200
+      }
+    }
+  }
   &__text {
     span {
       @apply font-medium
