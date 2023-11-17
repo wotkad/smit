@@ -31,6 +31,9 @@
     video {
       @apply min-h-[704px] w-full object-cover md:h-screen
     }
+    img {
+      @apply min-h-[704px] w-full object-cover md:h-screen
+    }
     @apply absolute left-0 top-0 min-h-[704px] w-full md:min-h-screen
   }
   @apply relative -mt-[128px] min-h-[704px] pb-10 md:-mt-[166px] md:min-h-screen md:pb-0 lg:-mt-[179px] lg:mb-8

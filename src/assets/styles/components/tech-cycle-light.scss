@@ -3,6 +3,22 @@
     p {
       @apply mt-4 text-base font-extralight
     }
+    h3 {
+      @apply font-bold text-2xl mt-4
+    }
+    h4 {
+      @apply font-bold text-xl mt-4
+    }
+    table {
+      th,
+      td {
+        @apply border-l border-b p-2 text-sm lg:text-base
+      }
+      th {
+        @apply text-left lg:text-center
+      }
+      @apply mt-8 border
+    }
     .swiper {
       &-slide {
         img {
@@ -13,7 +29,7 @@
       &.swiper-horizontal > .swiper-pagination-bullets {
         @apply bottom-[30px] left-auto flex
       }
-      @apply mb-6 object-cover md:float-right md:mb-[30px] md:ml-[30px] md:h-[324px] md:w-1/2 lg:mb-[60px] lg:ml-[60px] lg:h-full
+      @apply pb-0 mb-6 object-cover md:float-right md:mb-[30px] md:ml-[30px] md:h-[324px] md:w-1/2 lg:mb-[60px] lg:ml-[60px] lg:h-full
     }
   }
 }
