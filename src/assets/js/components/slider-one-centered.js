@@ -1,12 +1,16 @@
-import Swiper, { Pagination } from 'swiper';
+import Swiper, { Autoplay, Pagination } from 'swiper';
 
 export default function sliderOneCentered() {
   new Swiper('.swiper.slider-one-centered', {
-    modules: [Pagination],
+    modules: [Pagination, Autoplay],
     slidesPerView: 1,
     initialSlide: 1,
     spaceBetween: 20,
     grabCursor: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
     breakpoints: {
       746: {
         slidesPerView: 1,
