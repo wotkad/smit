@@ -24,6 +24,19 @@ block content
             +advantages('Преимущества заказа у нас', 'service')
             include ../components/opportunities.pug
             //- include ../components/tech-cycle.pug
+            section.about-hero.section__gapper
+              .wrapper
+                .about-hero__wrapper
+                  .about-hero__video
+                    iframe(
+                      src="https://www.youtube.com/embed/-CTlz5PJRZs?si=2aogKMc_2SS02gbl"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                      frameborder="0"
+                      title="YouTube video player"
+                      width="560"
+                      height="315"
+                    )
             include ../components/tech-cycle-light.pug
             include ../components/calculator.pug
             include ../mixins/services.pug
